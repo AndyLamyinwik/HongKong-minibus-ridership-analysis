@@ -1,0 +1,11 @@
+mode,metric,month,value,unit,same_month_2019_daily_recovery_pct,measurement_basis
+FRANCHISED_BUS,passenger_journeys_thousands,2022-03-01,57666.497,thousand_journeys,44.07724315508469,reported
+FRANCHISED_BUS,average_daily_journeys_thousands,2022-03-01,1860.209580645162,thousand_journeys_per_day,44.07724315508469,reported
+GMB,passenger_journeys_thousands,2022-02-01,22635.134,thousand_journeys,55.61608572300908,reported
+GMB,average_daily_journeys_thousands,2022-03-01,760.75035483871,thousand_journeys_per_day,49.98942058105874,reported
+MTR,passenger_journeys_thousands,2022-02-01,69507.64,thousand_journeys,45.97302235792734,reported
+MTR,average_daily_journeys_thousands,2022-03-01,2321.606483870963,thousand_journeys_per_day,41.53591656476083,reported
+PLB,passenger_journeys_thousands,2022-02-01,25850.933,thousand_journeys,53.37058265979064,mixed
+PLB,average_daily_journeys_thousands,2022-03-01,868.751225806452,thousand_journeys_per_day,48.04102339503785,mixed
+RMB,passenger_journeys_thousands,2022-02-01,3215.799,thousand_journeys,41.55975389298098,estimated
+RMB,average_daily_journeys_thousands,2022-03-01,108.000870967742,thousand_journeys_per_day,37.69267098492696,estimated

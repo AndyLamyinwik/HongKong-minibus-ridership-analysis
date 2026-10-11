@@ -1,0 +1,272 @@
+{
+  "td_dictionary": {
+    "filename": "mttd_dataspec_eng.pdf",
+    "format": "PDF",
+    "role": "Definitions and units; no numerical extraction in the pipeline."
+  },
+  "td_revision": {
+    "columns": [
+      "DATA_REVISION_DATE"
+    ],
+    "filename": "DATA_LAST_REVISION_DATE_eng.csv",
+    "format": "CSV",
+    "record_count": 1,
+    "revision_date": [
+      "2026-09-21"
+    ]
+  },
+  "td_table21": {
+    "columns": [
+      "YR_MTH",
+      "MODE",
+      "TTD_PTO_CODE",
+      "FRANCHISE_TYPE",
+      "RAIL_LINE",
+      "PAX",
+      "PAX_INDI"
+    ],
+    "dimension_blank_counts": {
+      "FRANCHISE_TYPE": 2571,
+      "MODE": 0,
+      "RAIL_LINE": 2408,
+      "TTD_PTO_CODE": 0,
+      "YR_MTH": 0
+    },
+    "filename": "table21_eng.csv",
+    "first_month": "2013-01-01",
+    "format": "CSV",
+    "last_month": "2026-07-01",
+    "month_count": 163,
+    "numeric_fields": {
+      "PAX": {
+        "blank_or_unavailable_count": 0,
+        "input_dtype": "string",
+        "negative_count": 0,
+        "prepared_dtype": "Float64 (nullable)",
+        "zero_count": 0
+      }
+    },
+    "operator_codes": [
+      "CTB",
+      "GMB",
+      "HKT",
+      "KMB",
+      "LFS",
+      "LRB",
+      "LWB",
+      "MTRC",
+      "NLB",
+      "NWFB",
+      "NWFF",
+      "RMB",
+      "RS",
+      "STF",
+      "TAX"
+    ],
+    "record_count": 2897,
+    "source_key": [
+      "YR_MTH",
+      "MODE",
+      "TTD_PTO_CODE",
+      "FRANCHISE_TYPE",
+      "RAIL_LINE"
+    ],
+    "source_modes": [
+      "Ferries",
+      "Fran_Bus",
+      "LRB",
+      "PLB",
+      "RS",
+      "Railways",
+      "TAX"
+    ],
+    "status_counts": {
+      "PAX_INDI": {
+        "": 2872,
+        "#": 24,
+        "*": 1
+      }
+    }
+  },
+  "td_table21s": {
+    "columns": [
+      "YR_MTH",
+      "MODE",
+      "TTD_PTO_CODE",
+      "RAIL_LINE",
+      "AVG_DAILY_PAX",
+      "AVG_DAILY_PAX_INDI"
+    ],
+    "dimension_blank_counts": {
+      "MODE": 0,
+      "RAIL_LINE": 2245,
+      "TTD_PTO_CODE": 0,
+      "YR_MTH": 0
+    },
+    "filename": "table21s_eng.csv",
+    "first_month": "2013-01-01",
+    "format": "CSV",
+    "last_month": "2026-07-01",
+    "month_count": 163,
+    "numeric_fields": {
+      "AVG_DAILY_PAX": {
+        "blank_or_unavailable_count": 0,
+        "input_dtype": "string",
+        "negative_count": 0,
+        "prepared_dtype": "Float64 (nullable)",
+        "zero_count": 0
+      }
+    },
+    "operator_codes": [
+      "CTB",
+      "GMB",
+      "HKT",
+      "KMB",
+      "LFS",
+      "LRB",
+      "LWB",
+      "MTRC",
+      "NLB",
+      "NWFB",
+      "NWFF",
+      "RMB",
+      "RS",
+      "STF",
+      "TAX"
+    ],
+    "record_count": 2734,
+    "source_key": [
+      "YR_MTH",
+      "MODE",
+      "TTD_PTO_CODE",
+      "RAIL_LINE"
+    ],
+    "source_modes": [
+      "Ferries",
+      "Fran_Bus",
+      "LRB",
+      "PLB",
+      "RS",
+      "Railways",
+      "TAX"
+    ],
+    "status_counts": {
+      "AVG_DAILY_PAX_INDI": {
+        "": 2709,
+        "#": 24,
+        "*": 1
+      }
+    }
+  },
+  "td_table22": {
+    "columns": [
+      "YR_MTH",
+      "MODE",
+      "TTD_PTO_CODE",
+      "FRANCHISE_TYPE",
+      "RAIL_LINE",
+      "BUS_TYPE_CODE",
+      "KM",
+      "KM_INDI",
+      "KM_CROSS_HARBOUR",
+      "KM_CROSS_HARBOUR_INDI",
+      "NO_FLEET",
+      "NO_FLEET_INDI",
+      "PAX_CAP",
+      "PAX_CAP_INDI"
+    ],
+    "dimension_blank_counts": {
+      "BUS_TYPE_CODE": 2897,
+      "FRANCHISE_TYPE": 4127,
+      "MODE": 0,
+      "RAIL_LINE": 4616,
+      "TTD_PTO_CODE": 0,
+      "YR_MTH": 0
+    },
+    "filename": "table22_eng.csv",
+    "first_month": "2013-01-01",
+    "format": "CSV",
+    "last_month": "2026-07-01",
+    "month_count": 163,
+    "numeric_fields": {
+      "KM": {
+        "blank_or_unavailable_count": 2627,
+        "input_dtype": "string",
+        "negative_count": 0,
+        "prepared_dtype": "Float64 (nullable)",
+        "zero_count": 396
+      },
+      "KM_CROSS_HARBOUR": {
+        "blank_or_unavailable_count": 4490,
+        "input_dtype": "string",
+        "negative_count": 0,
+        "prepared_dtype": "Float64 (nullable)",
+        "zero_count": 0
+      },
+      "NO_FLEET": {
+        "blank_or_unavailable_count": 0,
+        "input_dtype": "string",
+        "negative_count": 0,
+        "prepared_dtype": "Float64 (nullable)",
+        "zero_count": 200
+      },
+      "PAX_CAP": {
+        "blank_or_unavailable_count": 2209,
+        "input_dtype": "string",
+        "negative_count": 0,
+        "prepared_dtype": "Float64 (nullable)",
+        "zero_count": 0
+      }
+    },
+    "operator_codes": [
+      "CTB",
+      "GMB",
+      "HKT",
+      "KMB",
+      "LFS",
+      "LRB",
+      "LWB",
+      "MTRC",
+      "NLB",
+      "NWFB",
+      "NWFF",
+      "RMB",
+      "RS",
+      "STF",
+      "TAX"
+    ],
+    "record_count": 5105,
+    "source_key": [
+      "YR_MTH",
+      "MODE",
+      "TTD_PTO_CODE",
+      "FRANCHISE_TYPE",
+      "RAIL_LINE",
+      "BUS_TYPE_CODE"
+    ],
+    "source_modes": [
+      "Ferries",
+      "Fran_Bus",
+      "LRB",
+      "PLB",
+      "RS",
+      "Railways",
+      "TAX"
+    ],
+    "status_counts": {
+      "KM_CROSS_HARBOUR_INDI": {
+        "": 5105
+      },
+      "KM_INDI": {
+        "": 5091,
+        "#": 14
+      },
+      "NO_FLEET_INDI": {
+        "": 5105
+      },
+      "PAX_CAP_INDI": {
+        "": 5105
+      }
+    }
+  }
+}

@@ -1,0 +1,906 @@
+{
+  "analysis_version": "1.0.0",
+  "check_counts": {
+    "fail": 0,
+    "pass": 54,
+    "warning": 3
+  },
+  "checks": [
+    {
+      "check_id": "phase2_validated_run",
+      "details": {
+        "check_counts": {
+          "fail": 0,
+          "pass": 103,
+          "warning": 4
+        },
+        "status": "passed_with_warnings"
+      },
+      "message": "Inputs must come from a successful Phase 2 validation run.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "official_snapshot_hashes",
+      "details": {
+        "mismatched_files": []
+      },
+      "message": "All preserved official source files match the reviewed hashes.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_database_integrity",
+      "details": {},
+      "message": "The existing database passes integrity and foreign-key checks.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_csv_sql_monthly_passenger_journeys",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "component_count": 0.0,
+          "includes_estimates": 0.0,
+          "is_derived": 0.0,
+          "is_provisional": 0.0,
+          "is_revised": 0.0,
+          "passenger_journeys_thousands": 0.0
+        },
+        "problems": [],
+        "rows": 660
+      },
+      "message": "Existing CSV and SQLite observations agree, including quality metadata and nullness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_coverage_monthly_passenger_journeys",
+      "details": {
+        "missing_keys": [],
+        "rows": 660,
+        "unexpected_keys": []
+      },
+      "message": "All required month/mode observations must occur exactly once.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_estimates_monthly_passenger_journeys",
+      "details": {},
+      "message": "RMB and mixed PLB qualifications are retained independently of source flags.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_units_values_monthly_passenger_journeys",
+      "details": {},
+      "message": "Analysis inputs retain valid measurements and their documented units.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_csv_sql_monthly_average_daily_journeys",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "average_daily_journeys_thousands": 0.0,
+          "component_count": 0.0,
+          "includes_estimates": 0.0,
+          "is_derived": 0.0,
+          "is_provisional": 0.0,
+          "is_revised": 0.0
+        },
+        "problems": [],
+        "rows": 660
+      },
+      "message": "Existing CSV and SQLite observations agree, including quality metadata and nullness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_coverage_monthly_average_daily_journeys",
+      "details": {
+        "missing_keys": [],
+        "rows": 660,
+        "unexpected_keys": []
+      },
+      "message": "All required month/mode observations must occur exactly once.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_estimates_monthly_average_daily_journeys",
+      "details": {},
+      "message": "RMB and mixed PLB qualifications are retained independently of source flags.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_units_values_monthly_average_daily_journeys",
+      "details": {},
+      "message": "Analysis inputs retain valid measurements and their documented units.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_csv_sql_monthly_minibus_fleet",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "cross_harbour_vehicle_km_thousands": 0.0,
+          "is_provisional": 0.0,
+          "is_revised": 0.0,
+          "licensed_vehicles": 0.0,
+          "passenger_capacity": 0.0,
+          "source_capacity_text": 0.0,
+          "source_fleet_text": 0.0,
+          "source_row_number": 0.0,
+          "vehicle_km_thousands": 0.0
+        },
+        "problems": [],
+        "rows": 264
+      },
+      "message": "Existing CSV and SQLite observations agree, including quality metadata and nullness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_coverage_monthly_minibus_fleet",
+      "details": {
+        "missing_keys": [],
+        "rows": 264,
+        "unexpected_keys": []
+      },
+      "message": "All required month/mode observations must occur exactly once.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "input_units_values_monthly_minibus_fleet",
+      "details": {},
+      "message": "Analysis inputs retain valid measurements and their documented units.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "phase2_metadata_consistency",
+      "details": {},
+      "message": "SQLite validation metadata agrees with the preserved Phase 2 JSON.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "annual_totals_twelve_months",
+      "details": {},
+      "message": "Each annual total equals exactly twelve monthly flows, with no summed daily rates.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_ridership_plb_identity",
+      "details": {
+        "maximum_absolute_residual_thousands": 7.275957614183426e-12
+      },
+      "message": "GMB plus RMB equals PLB within floating-point calculation tolerance.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "annual_ridership_plb_identity",
+      "details": {
+        "maximum_absolute_residual_thousands": 1.1641532182693481e-10
+      },
+      "message": "GMB plus RMB equals PLB within floating-point calculation tolerance.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_market_share_denominator",
+      "details": {},
+      "message": "Four nonoverlapping series equal the PLB + MTR + franchised-bus denominator.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_market_share_100_percent",
+      "details": {
+        "maximum_absolute_residual_percentage_points": 1.4210854715202004e-14
+      },
+      "message": "Comparison-group shares sum to 100%, without adding PLB again.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "annual_market_share_denominator",
+      "details": {},
+      "message": "Four nonoverlapping series equal the PLB + MTR + franchised-bus denominator.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "annual_market_share_100_percent",
+      "details": {
+        "maximum_absolute_residual_percentage_points": 1.4210854715202004e-14
+      },
+      "message": "Comparison-group shares sum to 100%, without adding PLB again.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "daily_calendar_weighting",
+      "details": {},
+      "message": "Calendar-day-weighted daily rates reproduce annual monthly-flow totals, including leap years.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "recovery_baseline_100",
+      "details": {},
+      "message": "Each mode's own full-year 2019 recovery index is 100%.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "seasonality_period_grain",
+      "details": {},
+      "message": "Calendar profiles contain equal-year observations within each stated period.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "within_year_daily_normalization",
+      "details": {},
+      "message": "Each year's day-weighted normalized monthly daily profile has baseline 100.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_proxy_units",
+      "details": {},
+      "message": "Fleet normalization converts thousands to individual journeys and uses licensed stock.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sql_pandas_annual_ridership",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "absolute_yoy_change_thousands": 0.0,
+          "includes_estimates": 0.0,
+          "is_provisional": 0.0,
+          "is_revised": 0.0,
+          "passenger_journeys_thousands": 0.0,
+          "year": 0.0,
+          "yoy_change_pct": 7.105427357601002e-15
+        },
+        "problems": [],
+        "rows": 55
+      },
+      "message": "Independently calculated Pandas and SQL results agree, including undefined values and metadata.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sql_pandas_monthly_yoy",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "absolute_yoy_change_thousands": 0.0,
+          "passenger_journeys_thousands": 0.0,
+          "prior_year_journeys_thousands": 0.0,
+          "yoy_change_pct": 1.4210854715202004e-14
+        },
+        "problems": [],
+        "rows": 660
+      },
+      "message": "Independently calculated Pandas and SQL results agree, including undefined values and metadata.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sql_pandas_annual_market_share",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "comparison_group_journeys_thousands": 4.656612873077393e-10,
+          "includes_estimates": 0.0,
+          "passenger_journeys_thousands": 0.0,
+          "share_pct": 7.105427357601002e-15,
+          "year": 0.0
+        },
+        "problems": [],
+        "rows": 44
+      },
+      "message": "Independently calculated Pandas and SQL results agree, including undefined values and metadata.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sql_pandas_monthly_market_share",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "comparison_group_journeys_thousands": 5.820766091346741e-11,
+          "includes_estimates": 0.0,
+          "passenger_journeys_thousands": 0.0,
+          "share_pct": 1.4210854715202004e-14
+        },
+        "problems": [],
+        "rows": 528
+      },
+      "message": "Independently calculated Pandas and SQL results agree, including undefined values and metadata.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sql_pandas_recovery_2019",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "absolute_change_thousands": 0.0,
+          "baseline_2019_journeys_thousands": 0.0,
+          "change_pct": 5.329070518200751e-15,
+          "includes_estimates": 0.0,
+          "journeys_2025_thousands": 0.0,
+          "recovery_pct": 1.4210854715202004e-14
+        },
+        "problems": [],
+        "rows": 5
+      },
+      "message": "Independently calculated Pandas and SQL results agree, including undefined values and metadata.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sql_pandas_fleet_normalized",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "average_daily_journeys_per_licensed_vehicle": 5.684341886080802e-14,
+          "average_daily_journeys_thousands": 0.0,
+          "includes_estimates": 0.0,
+          "licensed_vehicles": 0.0
+        },
+        "problems": [],
+        "rows": 264
+      },
+      "message": "Independently calculated Pandas and SQL results agree, including undefined values and metadata.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "annual_reference_revision_reasons",
+      "details": {
+        "investigation": "reports/reference_discrepancies.md",
+        "outside_tolerance": 6
+      },
+      "message": "Six older provisional annual references differ beyond rounding; publication updates are supported, but case-specific revision reasons remain unresolved.",
+      "severity": "warning",
+      "status": "warning"
+    },
+    {
+      "check_id": "estimation_and_service_boundaries",
+      "details": {},
+      "message": "RMB and PLB include estimates; all comparison-group denominators contain RMB. MTR service coverage changes, and these aggregate data do not identify causal effects or individual switching.",
+      "severity": "warning",
+      "status": "warning"
+    },
+    {
+      "check_id": "seasonality_and_fleet_proxy",
+      "details": {},
+      "message": "Calendar profiles have five pre-period and three post-period years; within-year normalization does not remove trend or calendar shifts. Licensed stock is a deployment proxy and enters RMB estimation.",
+      "severity": "warning",
+      "status": "warning"
+    },
+    {
+      "check_id": "export_monthly_ridership",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "absolute_yoy_change_thousands": 7.275957614183426e-12,
+          "annual_average_daily_journeys_thousands": 0.0,
+          "average_daily_journeys_thousands": 0.0,
+          "baseline_2019_same_month_daily_thousands": 0.0,
+          "calendar_days": 0.0,
+          "calendar_month": 0.0,
+          "component_count": 0.0,
+          "includes_estimates": 0.0,
+          "is_derived": 0.0,
+          "is_provisional": 0.0,
+          "is_revised": 0.0,
+          "passenger_journeys_thousands": 0.0,
+          "prior_year_journeys_thousands": 0.0,
+          "same_month_2019_daily_recovery_pct": 0.0,
+          "within_year_daily_index": 0.0,
+          "year": 0.0,
+          "yoy_change_pct": 1.4210854715202004e-14
+        },
+        "problems": [],
+        "rows": 660
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_monthly_yoy",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "absolute_yoy_change_thousands": 7.275957614183426e-12,
+          "passenger_journeys_thousands": 0.0,
+          "prior_year_journeys_thousands": 0.0,
+          "yoy_change_pct": 1.4210854715202004e-14
+        },
+        "problems": [],
+        "rows": 660
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_annual_ridership",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "absolute_yoy_change_thousands": 1.4551915228366852e-11,
+          "includes_estimates": 0.0,
+          "is_provisional": 0.0,
+          "is_revised": 0.0,
+          "passenger_journeys_thousands": 0.0,
+          "year": 0.0,
+          "yoy_change_pct": 3.552713678800501e-15
+        },
+        "problems": [],
+        "rows": 55
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_monthly_market_share",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "comparison_group_journeys_thousands": 0.0,
+          "includes_estimates": 0.0,
+          "passenger_journeys_thousands": 0.0,
+          "share_pct": 0.0
+        },
+        "problems": [],
+        "rows": 528
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_annual_market_share",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "comparison_group_journeys_thousands": 0.0,
+          "includes_estimates": 0.0,
+          "passenger_journeys_thousands": 0.0,
+          "share_pct": 0.0,
+          "year": 0.0
+        },
+        "problems": [],
+        "rows": 44
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_minibus_composition",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "passenger_journeys_thousands": 0.0,
+          "plb_journeys_thousands": 0.0,
+          "share_of_plb_pct": 0.0
+        },
+        "problems": [],
+        "rows": 264
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_annual_minibus_composition",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "passenger_journeys_thousands": 0.0,
+          "plb_journeys_thousands": 0.0,
+          "share_of_plb_pct": 0.0,
+          "year": 0.0
+        },
+        "problems": [],
+        "rows": 22
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_annual_recovery",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "baseline_2019_journeys_thousands": 0.0,
+          "passenger_journeys_thousands": 0.0,
+          "recovery_pct": 0.0,
+          "year": 0.0
+        },
+        "problems": [],
+        "rows": 55
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_recovery_2019",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "absolute_change_thousands": 0.0,
+          "baseline_2019_journeys_thousands": 0.0,
+          "change_pct": 0.0,
+          "includes_estimates": 0.0,
+          "journeys_2025_thousands": 0.0,
+          "recovery_pct": 0.0
+        },
+        "problems": [],
+        "rows": 5
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_period_summary",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "calendar_days": 0.0,
+          "includes_estimates": 0.0,
+          "mean_annual_passenger_journeys_thousands": 0.0,
+          "months": 0.0,
+          "total_passenger_journeys_thousands": 0.0,
+          "weighted_average_daily_journeys_thousands": 0.0,
+          "years": 0.0
+        },
+        "problems": [],
+        "rows": 15
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_monthly_minima",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "same_month_2019_daily_recovery_pct": 0.0,
+          "value": 0.0
+        },
+        "problems": [],
+        "rows": 10
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_seasonality",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "calendar_month": 0.0,
+          "mean_average_daily_journeys_thousands": 0.0,
+          "mean_passenger_journeys_thousands": 0.0,
+          "mean_within_year_daily_index": 0.0,
+          "observations": 0.0,
+          "population_cv_daily_pct": 0.0,
+          "population_sd_daily_thousands": 0.0
+        },
+        "problems": [],
+        "rows": 180
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_seasonality_ranges",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "peak_calendar_month": 0.0,
+          "peak_daily_index": 0.0,
+          "range_index_points": 0.0,
+          "trough_calendar_month": 0.0,
+          "trough_daily_index": 0.0
+        },
+        "problems": [],
+        "rows": 15
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_fleet_normalized",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "average_daily_journeys_per_licensed_vehicle": 0.0,
+          "average_daily_journeys_thousands": 0.0,
+          "includes_estimates": 0.0,
+          "licensed_vehicles": 0.0
+        },
+        "problems": [],
+        "rows": 264
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_annual_fleet",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "annual_passenger_journeys_thousands": 0.0,
+          "average_daily_journeys_per_licensed_vehicle": 0.0,
+          "calendar_days": 0.0,
+          "day_weighted_month_end_licensed_vehicles": 0.0,
+          "december_licensed_vehicles": 0.0,
+          "includes_estimates": 0.0,
+          "licensed_vehicle_days_proxy": 0.0,
+          "mean_month_end_licensed_vehicles": 0.0,
+          "year": 0.0
+        },
+        "problems": [],
+        "rows": 22
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_endpoint_comparison",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "absolute_change_2015_2025_thousands": 0.0,
+          "baseline_2015_2018_mean_annual_thousands": 0.0,
+          "change_2015_2025_pct": 0.0,
+          "includes_estimates": 0.0,
+          "journeys_2015_thousands": 0.0,
+          "journeys_2019_thousands": 0.0,
+          "journeys_2025_thousands": 0.0,
+          "recovery_2025_vs_2015_2018_mean_pct": 0.0,
+          "recovery_2025_vs_2019_pct": 0.0
+        },
+        "problems": [],
+        "rows": 5
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_trend_segments",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "absolute_change_thousands": 0.0,
+          "annual_decreases": 0.0,
+          "annual_increases": 0.0,
+          "annual_unchanged": 0.0,
+          "change_pct": 0.0,
+          "end_journeys_thousands": 0.0,
+          "end_year": 0.0,
+          "start_journeys_thousands": 0.0,
+          "start_year": 0.0
+        },
+        "problems": [],
+        "rows": 25
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_minibus_change_contributions",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "absolute_change_thousands": 0.0,
+          "contribution_to_plb_change_pct": 0.0,
+          "end_year": 0.0,
+          "plb_absolute_change_thousands": 0.0,
+          "start_year": 0.0
+        },
+        "problems": [],
+        "rows": 10
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "export_annual_reference_comparisons",
+      "details": {
+        "equal": true,
+        "maximum_absolute_differences": {
+          "current_snapshot_total_thousands": 0.0,
+          "difference_thousands": 0.0,
+          "endpoint_2015_change_sensitivity_pp": 9.020562075079397e-17,
+          "endpoint_2019_recovery_sensitivity_pp": 6.591949208711867e-17,
+          "reference_value_thousands": 0.0,
+          "relative_difference_pct": 0.0,
+          "rounding_tolerance_thousands": 0.0,
+          "within_rounding_tolerance": 0.0
+        },
+        "problems": [],
+        "rows": 9
+      },
+      "message": "Analytical CSV round-trip preserves values, units, metadata and defined missingness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "research_figures",
+      "details": {},
+      "message": "Seven exploratory figures are generated as actual PNG files.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "phase1_phase2_inputs_unchanged",
+      "details": {},
+      "message": "All raw, processed, database and source-configuration files retain their original bytes.",
+      "severity": "error",
+      "status": "pass"
+    }
+  ],
+  "comparison_group": [
+    "GMB",
+    "RMB",
+    "MTR",
+    "FRANCHISED_BUS"
+  ],
+  "figures": [
+    {
+      "figure_id": "01_monthly_minibus_ridership",
+      "filename": "01_monthly_minibus_ridership.png",
+      "source_tables": [
+        "monthly_ridership"
+      ],
+      "title": "Monthly minibus passenger journeys, 2015\u20132025"
+    },
+    {
+      "figure_id": "02_annual_minibus_ridership",
+      "filename": "02_annual_minibus_ridership.png",
+      "source_tables": [
+        "annual_ridership"
+      ],
+      "title": "Annual minibus passenger journeys, 2015\u20132025"
+    },
+    {
+      "figure_id": "03_minibus_composition",
+      "filename": "03_minibus_composition.png",
+      "source_tables": [
+        "minibus_composition"
+      ],
+      "title": "Composition of Public Light Bus journeys"
+    },
+    {
+      "figure_id": "04_recovery_2019_baseline",
+      "filename": "04_recovery_2019_baseline.png",
+      "source_tables": [
+        "annual_recovery"
+      ],
+      "title": "Passenger journeys relative to the 2019 baseline"
+    },
+    {
+      "figure_id": "05_comparison_group_market_share",
+      "filename": "05_comparison_group_market_share.png",
+      "source_tables": [
+        "annual_market_share"
+      ],
+      "title": "Passenger shares within the defined transport comparison group"
+    },
+    {
+      "figure_id": "06_minibus_seasonality",
+      "filename": "06_minibus_seasonality.png",
+      "source_tables": [
+        "seasonality"
+      ],
+      "title": "Calendar-month patterns in average daily minibus journeys"
+    },
+    {
+      "figure_id": "07_fleet_and_fleet_normalized_ridership",
+      "filename": "07_fleet_and_fleet_normalized_ridership.png",
+      "source_tables": [
+        "annual_fleet"
+      ],
+      "title": "Minibus journeys and licensed fleet, 2015\u20132025"
+    }
+  ],
+  "input_sha256": {
+    "config/reference_values.csv": "d488deae8bf7a1f2029721c17168d5a2ade2eaf38a026c082be9876a71c5f586",
+    "config/sources.json": "7e2fe83837aeb65f47f803533528dc7ead76a7b9df9d3dfa600d1efe5101d619",
+    "data/processed/monthly_average_daily_journeys.csv": "d1ea4d69e038ad5f1c085d39fde059d62786f2726da6ac32a0f4a629fca92b5a",
+    "data/processed/monthly_minibus_fleet.csv": "1bb4a16bf3225b6aaa69e9c23ec750d2f8fe352309868120b41b148228f7a527",
+    "data/processed/monthly_passenger_journeys.csv": "8c1595419f6ed8ed2608c7814fc4ad423ab6c0b0ce7cc98666a71910e28ec401",
+    "data/processed/source_inspection.json": "4c73420fce6681f0aa2d8e70c51d39e934fa638f98edf62e874b9f4550005035",
+    "data/processed/transport.sqlite": "507040aa4ae96c9c059cbfc6b4ba4094504e4621dc097a02a23e6c17a3ba1a52",
+    "data/processed/validation_summary.json": "52638ada600c739c558f681e7163819bd24f7225fb28b674ff7da178bc92639e",
+    "data/raw/DATA_LAST_REVISION_DATE_eng.csv": "f90baba66cf2144b5369cb8e1ee2bdcd449260b95d64d8dc82cba21d0c296191",
+    "data/raw/mttd_dataspec_eng.pdf": "213f990f1bc2902c190a7f00825a407ad42b00dcdd53fa00cdda1ab49ce028e6",
+    "data/raw/table21_eng.csv": "a219225a6000ac73be3d77f40f6266be243bbb751467aaaf9f867ab88c6d09a5",
+    "data/raw/table21s_eng.csv": "5d12a79d1953b40705fcf8987756021f98d4cf0388a5f7300bc8bac4e25e873d",
+    "data/raw/table22_eng.csv": "9362477f7883fd3bc6d27d8fe9ccd972592b28108c5cfb8608bad555ec1221c7"
+  },
+  "phase2_check_counts": {
+    "fail": 0,
+    "pass": 103,
+    "warning": 4
+  },
+  "record_counts": {
+    "annual_fleet": 22,
+    "annual_market_share": 44,
+    "annual_minibus_composition": 22,
+    "annual_recovery": 55,
+    "annual_reference_comparisons": 9,
+    "annual_ridership": 55,
+    "endpoint_comparison": 5,
+    "fleet_normalized": 264,
+    "minibus_change_contributions": 10,
+    "minibus_composition": 264,
+    "monthly_market_share": 528,
+    "monthly_minima": 10,
+    "monthly_ridership": 660,
+    "monthly_yoy": 660,
+    "period_summary": 15,
+    "recovery_2019": 5,
+    "seasonality": 180,
+    "seasonality_ranges": 15,
+    "trend_segments": 25
+  },
+  "scope": {
+    "end_month": "2025-12-01",
+    "months": 132,
+    "start_month": "2015-01-01"
+  },
+  "sql_record_counts": {
+    "annual_market_share": 44,
+    "annual_ridership": 55,
+    "fleet_normalized": 264,
+    "monthly_market_share": 528,
+    "monthly_yoy": 660,
+    "recovery_2019": 5
+  },
+  "sql_sha256": {
+    "sql/analysis/annual_market_share.sql": "59aff592b95b1e3c8085742da717d342b2da7058aa6666947f20eba4b16edf9b",
+    "sql/analysis/annual_ridership.sql": "326397d792cc07d84122b66477cb494e85e166bcdaf4f7cd9bbf4fc9c5b0b758",
+    "sql/analysis/fleet_normalized.sql": "3fc2befb5f02b02b26d9ffc742db1af2271214198258d48047bf6c7662ca62f7",
+    "sql/analysis/monthly_market_share.sql": "0dbf8c0a4c9cc4afea06476ffb8cf94af7852f34abca403626f8e42fdb356eff",
+    "sql/analysis/monthly_yoy.sql": "5eeb751d051ea30dcfedb1505a11927a191193cbf7a3c28f77f144f8321a6c53",
+    "sql/analysis/recovery_2019.sql": "db8c3c6ba1ec8fcdc58fd82dbf1bb131bb27ef7a87bce1efb8109d94252aa540"
+  },
+  "status": "passed_with_warnings"
+}

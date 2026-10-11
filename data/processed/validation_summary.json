@@ -1,0 +1,1530 @@
+{
+  "check_counts": {
+    "fail": 0,
+    "pass": 103,
+    "warning": 4
+  },
+  "checks": [
+    {
+      "check_id": "hash_td_table21",
+      "details": {
+        "actual_sha256": "a219225a6000ac73be3d77f40f6266be243bbb751467aaaf9f867ab88c6d09a5",
+        "bytes": 130116,
+        "expected_sha256": "a219225a6000ac73be3d77f40f6266be243bbb751467aaaf9f867ab88c6d09a5",
+        "filename": "table21_eng.csv"
+      },
+      "message": "Raw bytes must match the reviewed Phase 1 snapshot.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "schema_td_table21",
+      "details": {
+        "actual": [
+          "YR_MTH",
+          "MODE",
+          "TTD_PTO_CODE",
+          "FRANCHISE_TYPE",
+          "RAIL_LINE",
+          "PAX",
+          "PAX_INDI"
+        ],
+        "expected": [
+          "YR_MTH",
+          "MODE",
+          "TTD_PTO_CODE",
+          "FRANCHISE_TYPE",
+          "RAIL_LINE",
+          "PAX",
+          "PAX_INDI"
+        ]
+      },
+      "message": "Source column names and order must match the reviewed schema.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "dates_td_table21",
+      "details": {
+        "invalid_rows": []
+      },
+      "message": "Reference months must be valid six-digit YYYYMM tokens.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "duplicates_td_table21",
+      "details": {
+        "duplicate_rows": []
+      },
+      "message": "Full source dimension keys must be unique; duplicate records are rejected, never dropped.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "numeric_td_table21_PAX",
+      "details": {
+        "examples": {},
+        "invalid_count": 0
+      },
+      "message": "PAX: nonblank tokens must be finite numbers.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "nonnegative_td_table21_PAX",
+      "details": {
+        "negative_rows": []
+      },
+      "message": "PAX: negative values are invalid.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "indicators_td_table21_PAX_INDI",
+      "details": {
+        "unrecognized": []
+      },
+      "message": "Status tokens must be recognized; estimate labels are separate from these tokens.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "hash_td_table21s",
+      "details": {
+        "actual_sha256": "5d12a79d1953b40705fcf8987756021f98d4cf0388a5f7300bc8bac4e25e873d",
+        "bytes": 132032,
+        "expected_sha256": "5d12a79d1953b40705fcf8987756021f98d4cf0388a5f7300bc8bac4e25e873d",
+        "filename": "table21s_eng.csv"
+      },
+      "message": "Raw bytes must match the reviewed Phase 1 snapshot.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "schema_td_table21s",
+      "details": {
+        "actual": [
+          "YR_MTH",
+          "MODE",
+          "TTD_PTO_CODE",
+          "RAIL_LINE",
+          "AVG_DAILY_PAX",
+          "AVG_DAILY_PAX_INDI"
+        ],
+        "expected": [
+          "YR_MTH",
+          "MODE",
+          "TTD_PTO_CODE",
+          "RAIL_LINE",
+          "AVG_DAILY_PAX",
+          "AVG_DAILY_PAX_INDI"
+        ]
+      },
+      "message": "Source column names and order must match the reviewed schema.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "dates_td_table21s",
+      "details": {
+        "invalid_rows": []
+      },
+      "message": "Reference months must be valid six-digit YYYYMM tokens.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "duplicates_td_table21s",
+      "details": {
+        "duplicate_rows": []
+      },
+      "message": "Full source dimension keys must be unique; duplicate records are rejected, never dropped.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "numeric_td_table21s_AVG_DAILY_PAX",
+      "details": {
+        "examples": {},
+        "invalid_count": 0
+      },
+      "message": "AVG_DAILY_PAX: nonblank tokens must be finite numbers.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "nonnegative_td_table21s_AVG_DAILY_PAX",
+      "details": {
+        "negative_rows": []
+      },
+      "message": "AVG_DAILY_PAX: negative values are invalid.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "indicators_td_table21s_AVG_DAILY_PAX_INDI",
+      "details": {
+        "unrecognized": []
+      },
+      "message": "Status tokens must be recognized; estimate labels are separate from these tokens.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "hash_td_table22",
+      "details": {
+        "actual_sha256": "9362477f7883fd3bc6d27d8fe9ccd972592b28108c5cfb8608bad555ec1221c7",
+        "bytes": 319427,
+        "expected_sha256": "9362477f7883fd3bc6d27d8fe9ccd972592b28108c5cfb8608bad555ec1221c7",
+        "filename": "table22_eng.csv"
+      },
+      "message": "Raw bytes must match the reviewed Phase 1 snapshot.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "schema_td_table22",
+      "details": {
+        "actual": [
+          "YR_MTH",
+          "MODE",
+          "TTD_PTO_CODE",
+          "FRANCHISE_TYPE",
+          "RAIL_LINE",
+          "BUS_TYPE_CODE",
+          "KM",
+          "KM_INDI",
+          "KM_CROSS_HARBOUR",
+          "KM_CROSS_HARBOUR_INDI",
+          "NO_FLEET",
+          "NO_FLEET_INDI",
+          "PAX_CAP",
+          "PAX_CAP_INDI"
+        ],
+        "expected": [
+          "YR_MTH",
+          "MODE",
+          "TTD_PTO_CODE",
+          "FRANCHISE_TYPE",
+          "RAIL_LINE",
+          "BUS_TYPE_CODE",
+          "KM",
+          "KM_INDI",
+          "KM_CROSS_HARBOUR",
+          "KM_CROSS_HARBOUR_INDI",
+          "NO_FLEET",
+          "NO_FLEET_INDI",
+          "PAX_CAP",
+          "PAX_CAP_INDI"
+        ]
+      },
+      "message": "Source column names and order must match the reviewed schema.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "dates_td_table22",
+      "details": {
+        "invalid_rows": []
+      },
+      "message": "Reference months must be valid six-digit YYYYMM tokens.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "duplicates_td_table22",
+      "details": {
+        "duplicate_rows": []
+      },
+      "message": "Full source dimension keys must be unique; duplicate records are rejected, never dropped.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "numeric_td_table22_KM",
+      "details": {
+        "examples": {},
+        "invalid_count": 0
+      },
+      "message": "KM: nonblank tokens must be finite numbers.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "nonnegative_td_table22_KM",
+      "details": {
+        "negative_rows": []
+      },
+      "message": "KM: negative values are invalid.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "numeric_td_table22_KM_CROSS_HARBOUR",
+      "details": {
+        "examples": {},
+        "invalid_count": 0
+      },
+      "message": "KM_CROSS_HARBOUR: nonblank tokens must be finite numbers.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "nonnegative_td_table22_KM_CROSS_HARBOUR",
+      "details": {
+        "negative_rows": []
+      },
+      "message": "KM_CROSS_HARBOUR: negative values are invalid.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "numeric_td_table22_NO_FLEET",
+      "details": {
+        "examples": {},
+        "invalid_count": 0
+      },
+      "message": "NO_FLEET: nonblank tokens must be finite numbers.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "nonnegative_td_table22_NO_FLEET",
+      "details": {
+        "negative_rows": []
+      },
+      "message": "NO_FLEET: negative values are invalid.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "numeric_td_table22_PAX_CAP",
+      "details": {
+        "examples": {},
+        "invalid_count": 0
+      },
+      "message": "PAX_CAP: nonblank tokens must be finite numbers.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "nonnegative_td_table22_PAX_CAP",
+      "details": {
+        "negative_rows": []
+      },
+      "message": "PAX_CAP: negative values are invalid.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "indicators_td_table22_KM_INDI",
+      "details": {
+        "unrecognized": []
+      },
+      "message": "Status tokens must be recognized; estimate labels are separate from these tokens.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "indicators_td_table22_KM_CROSS_HARBOUR_INDI",
+      "details": {
+        "unrecognized": []
+      },
+      "message": "Status tokens must be recognized; estimate labels are separate from these tokens.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "indicators_td_table22_NO_FLEET_INDI",
+      "details": {
+        "unrecognized": []
+      },
+      "message": "Status tokens must be recognized; estimate labels are separate from these tokens.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "indicators_td_table22_PAX_CAP_INDI",
+      "details": {
+        "unrecognized": []
+      },
+      "message": "Status tokens must be recognized; estimate labels are separate from these tokens.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "hash_td_revision",
+      "details": {
+        "actual_sha256": "f90baba66cf2144b5369cb8e1ee2bdcd449260b95d64d8dc82cba21d0c296191",
+        "bytes": 37,
+        "expected_sha256": "f90baba66cf2144b5369cb8e1ee2bdcd449260b95d64d8dc82cba21d0c296191",
+        "filename": "DATA_LAST_REVISION_DATE_eng.csv"
+      },
+      "message": "Raw bytes must match the reviewed Phase 1 snapshot.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "schema_td_revision",
+      "details": {
+        "actual": [
+          "DATA_REVISION_DATE"
+        ],
+        "expected": [
+          "DATA_REVISION_DATE"
+        ]
+      },
+      "message": "Source column names and order must match the reviewed schema.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "source_revision_date",
+      "details": {
+        "actual": [
+          "2026-09-21"
+        ],
+        "expected": "2026-09-21"
+      },
+      "message": "The revision metadata must match the manifest.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "hash_td_dictionary",
+      "details": {
+        "actual_sha256": "213f990f1bc2902c190a7f00825a407ad42b00dcdd53fa00cdda1ab49ce028e6",
+        "bytes": 367151,
+        "expected_sha256": "213f990f1bc2902c190a7f00825a407ad42b00dcdd53fa00cdda1ab49ce028e6",
+        "filename": "mttd_dataspec_eng.pdf"
+      },
+      "message": "Raw bytes must match the reviewed Phase 1 snapshot.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "format_td_dictionary",
+      "details": {},
+      "message": "The specification must be an actual PDF.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "target_components_td_table21",
+      "details": {
+        "actual_rows": 1422,
+        "expected_rows": 1422,
+        "missing_key_count": 0,
+        "missing_keys": [],
+        "unexpected_key_count": 0,
+        "unexpected_keys": []
+      },
+      "message": "All target components must be present exactly once under the documented historical category definitions.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "required_td_table21_PAX",
+      "details": {
+        "missing_count": 0,
+        "missing_rows": []
+      },
+      "message": "Required target measurements cannot be missing; interpolation and zero replacement are prohibited.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "target_components_td_table21s",
+      "details": {
+        "actual_rows": 1290,
+        "expected_rows": 1290,
+        "missing_key_count": 0,
+        "missing_keys": [],
+        "unexpected_key_count": 0,
+        "unexpected_keys": []
+      },
+      "message": "All target components must be present exactly once under the documented historical category definitions.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "required_td_table21s_AVG_DAILY_PAX",
+      "details": {
+        "missing_count": 0,
+        "missing_rows": []
+      },
+      "message": "Required target measurements cannot be missing; interpolation and zero replacement are prohibited.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "target_components_td_table22",
+      "details": {
+        "actual_rows": 264,
+        "expected_rows": 264,
+        "missing_key_count": 0,
+        "missing_keys": [],
+        "unexpected_key_count": 0,
+        "unexpected_keys": []
+      },
+      "message": "All target components must be present exactly once under the documented historical category definitions.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "required_td_table22_NO_FLEET",
+      "details": {
+        "missing_count": 0,
+        "missing_rows": []
+      },
+      "message": "Required target measurements cannot be missing; interpolation and zero replacement are prohibited.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "required_td_table22_PAX_CAP",
+      "details": {
+        "missing_count": 0,
+        "missing_rows": []
+      },
+      "message": "Required target measurements cannot be missing; interpolation and zero replacement are prohibited.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "integer_td_table22_NO_FLEET",
+      "details": {},
+      "message": "Licensed fleet and capacity must be positive integer counts.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "integer_td_table22_PAX_CAP",
+      "details": {},
+      "message": "Licensed fleet and capacity must be positive integer counts.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_passenger_journeys_coverage",
+      "details": {
+        "missing_keys": [],
+        "month_count": 132,
+        "rows": 660,
+        "unexpected_keys": []
+      },
+      "message": "Exactly 132 continuous months and five defined modes are required.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_passenger_journeys_unique",
+      "details": {},
+      "message": "Month/mode keys must be unique.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_passenger_journeys_values",
+      "details": {},
+      "message": "Passenger values must be present and nonnegative; zeros are preserved if published.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_passenger_journeys_units",
+      "details": {
+        "expected_unit": "thousand_journeys"
+      },
+      "message": "The measure uses one explicit compatible unit.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_passenger_journeys_method_and_flags",
+      "details": {
+        "bad_rows": []
+      },
+      "message": "RMB estimates, mixed PLB values, and source status flags must be retained independently.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_passenger_journeys_lineage",
+      "details": {
+        "bad_rows": [],
+        "lineage_rows": 1686
+      },
+      "message": "Every component must have an unambiguous source record in the same month.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_passenger_journeys_status_propagation",
+      "details": {
+        "bad_rows": []
+      },
+      "message": "Aggregate status text must retain every contributing source status token.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_passenger_journeys_source_values",
+      "details": {
+        "mismatches": []
+      },
+      "message": "Every analytical value must equal its source components without rounding or adjustment.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_passenger_journeys_plb_identity",
+      "details": {},
+      "message": "PLB equals GMB plus RMB where both are available.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_average_daily_journeys_coverage",
+      "details": {
+        "missing_keys": [],
+        "month_count": 132,
+        "rows": 660,
+        "unexpected_keys": []
+      },
+      "message": "Exactly 132 continuous months and five defined modes are required.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_average_daily_journeys_unique",
+      "details": {},
+      "message": "Month/mode keys must be unique.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_average_daily_journeys_values",
+      "details": {},
+      "message": "Passenger values must be present and nonnegative; zeros are preserved if published.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_average_daily_journeys_units",
+      "details": {
+        "expected_unit": "thousand_journeys_per_day"
+      },
+      "message": "The measure uses one explicit compatible unit.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_average_daily_journeys_method_and_flags",
+      "details": {
+        "bad_rows": []
+      },
+      "message": "RMB estimates, mixed PLB values, and source status flags must be retained independently.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_average_daily_journeys_lineage",
+      "details": {
+        "bad_rows": [],
+        "lineage_rows": 1554
+      },
+      "message": "Every component must have an unambiguous source record in the same month.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_average_daily_journeys_status_propagation",
+      "details": {
+        "bad_rows": []
+      },
+      "message": "Aggregate status text must retain every contributing source status token.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_average_daily_journeys_source_values",
+      "details": {
+        "mismatches": []
+      },
+      "message": "Every analytical value must equal its source components without rounding or adjustment.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "monthly_average_daily_journeys_plb_identity",
+      "details": {},
+      "message": "PLB equals GMB plus RMB where both are available.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_coverage",
+      "details": {
+        "missing_keys": [],
+        "rows": 264
+      },
+      "message": "Both minibus fleet series require every target month.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_unique",
+      "details": {},
+      "message": "Fleet month/mode keys must be unique.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_counts",
+      "details": {},
+      "message": "Required fleet and capacity values are present positive integer counts.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_units",
+      "details": {},
+      "message": "Fleet stocks, capacity and kilometres retain separate units.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_basis",
+      "details": {},
+      "message": "RMB licensed fleet is administrative data, independent of the RMB patronage estimate label.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_structural_blanks",
+      "details": {},
+      "message": "Unsupported minibus mileage observations remain null, never zero.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_source_licensed_vehicles",
+      "details": {},
+      "message": "Fleet measure equals its retained source token, including nullness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_source_passenger_capacity",
+      "details": {},
+      "message": "Fleet measure equals its retained source token, including nullness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_source_vehicle_km_thousands",
+      "details": {},
+      "message": "Fleet measure equals its retained source token, including nullness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "fleet_source_cross_harbour_vehicle_km_thousands",
+      "details": {},
+      "message": "Fleet measure equals its retained source token, including nullness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "operator_monthly_daily_reconciliation",
+      "details": {
+        "comparisons": 1290,
+        "max_absolute_difference_thousands": 1.6007106751203537e-10,
+        "mismatches": [],
+        "tolerance_thousands": 1e-07
+      },
+      "message": "Monthly totals agree with operator daily averages multiplied by actual calendar days; Citybus franchises are combined first.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "aggregate_monthly_daily_reconciliation",
+      "details": {
+        "comparisons": 660,
+        "max_absolute_difference_thousands": 3.2014213502407074e-10,
+        "tolerance_thousands": 1e-07
+      },
+      "message": "The five analytical series reconcile on the same calendar basis.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "annual_reference_contract",
+      "details": {
+        "actual_rows": 9,
+        "missing_keys": [],
+        "unexpected_keys": []
+      },
+      "message": "Nine distinct selected annual references require their documented publication, year, mode, official URL, and finite value.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "cross_vintage_annual_references",
+      "details": {
+        "comparison_count": 9,
+        "comparisons": [
+          {
+            "current_snapshot_total_thousands": 485329.687,
+            "difference_thousands": -26.313,
+            "mode": "GMB",
+            "notes": "Whole-thousand annual reference from Phase 1; older provisional vintage",
+            "passenger_journeys_thousands": "485356",
+            "publication": "Annual Transport Digest 2025 section 5.3",
+            "reference_value_thousands": 485356.0,
+            "rounding_tolerance_thousands": 0.5,
+            "source_indicator": "#",
+            "source_url": "https://www.td.gov.hk/mini_site/atd/2025/en/section5-3.html",
+            "within_rounding_tolerance": false,
+            "year": "2024"
+          },
+          {
+            "current_snapshot_total_thousands": 53489.623,
+            "difference_thousands": -2.377,
+            "mode": "RMB",
+            "notes": "Whole-thousand annual reference from Phase 1; older provisional vintage",
+            "passenger_journeys_thousands": "53492",
+            "publication": "Annual Transport Digest 2025 section 5.3",
+            "reference_value_thousands": 53492.0,
+            "rounding_tolerance_thousands": 0.5,
+            "source_indicator": "#",
+            "source_url": "https://www.td.gov.hk/mini_site/atd/2025/en/section5-3.html",
+            "within_rounding_tolerance": false,
+            "year": "2024"
+          },
+          {
+            "current_snapshot_total_thousands": 538819.31,
+            "difference_thousands": -28.69,
+            "mode": "PLB",
+            "notes": "Whole-thousand annual reference from Phase 1; older provisional vintage",
+            "passenger_journeys_thousands": "538848",
+            "publication": "Annual Transport Digest 2025 section 5.3",
+            "reference_value_thousands": 538848.0,
+            "rounding_tolerance_thousands": 0.5,
+            "source_indicator": "#",
+            "source_url": "https://www.td.gov.hk/mini_site/atd/2025/en/section5-3.html",
+            "within_rounding_tolerance": false,
+            "year": "2024"
+          },
+          {
+            "current_snapshot_total_thousands": 485329.687,
+            "difference_thousands": -0.313,
+            "mode": "GMB",
+            "notes": "Whole-thousand annual reference from Phase 1; older publication snapshot",
+            "passenger_journeys_thousands": "485330",
+            "publication": "December 2025 Monthly Traffic and Transport Digest Table 2.1",
+            "reference_value_thousands": 485330.0,
+            "rounding_tolerance_thousands": 0.5,
+            "source_indicator": "",
+            "source_url": "https://www.td.gov.hk/filemanager/en/content_5378/2512_e.pdf",
+            "within_rounding_tolerance": true,
+            "year": "2024"
+          },
+          {
+            "current_snapshot_total_thousands": 53489.623,
+            "difference_thousands": -0.377,
+            "mode": "RMB",
+            "notes": "Whole-thousand annual reference from Phase 1; older publication snapshot",
+            "passenger_journeys_thousands": "53490",
+            "publication": "December 2025 Monthly Traffic and Transport Digest Table 2.1",
+            "reference_value_thousands": 53490.0,
+            "rounding_tolerance_thousands": 0.5,
+            "source_indicator": "",
+            "source_url": "https://www.td.gov.hk/filemanager/en/content_5378/2512_e.pdf",
+            "within_rounding_tolerance": true,
+            "year": "2024"
+          },
+          {
+            "current_snapshot_total_thousands": 538819.31,
+            "difference_thousands": 0.31,
+            "mode": "PLB",
+            "notes": "Whole-thousand annual reference from Phase 1; older publication snapshot",
+            "passenger_journeys_thousands": "538819",
+            "publication": "December 2025 Monthly Traffic and Transport Digest Table 2.1",
+            "reference_value_thousands": 538819.0,
+            "rounding_tolerance_thousands": 0.5,
+            "source_indicator": "",
+            "source_url": "https://www.td.gov.hk/filemanager/en/content_5378/2512_e.pdf",
+            "within_rounding_tolerance": true,
+            "year": "2024"
+          },
+          {
+            "current_snapshot_total_thousands": 495802.414,
+            "difference_thousands": -309.586,
+            "mode": "GMB",
+            "notes": "Whole-thousand annual reference from Phase 1; older provisional vintage",
+            "passenger_journeys_thousands": "496112",
+            "publication": "December 2025 Monthly Traffic and Transport Digest Table 2.1",
+            "reference_value_thousands": 496112.0,
+            "rounding_tolerance_thousands": 0.5,
+            "source_indicator": "#",
+            "source_url": "https://www.td.gov.hk/filemanager/en/content_5378/2512_e.pdf",
+            "within_rounding_tolerance": false,
+            "year": "2025"
+          },
+          {
+            "current_snapshot_total_thousands": 50742.718,
+            "difference_thousands": -30.282,
+            "mode": "RMB",
+            "notes": "Whole-thousand annual reference from Phase 1; older provisional vintage",
+            "passenger_journeys_thousands": "50773",
+            "publication": "December 2025 Monthly Traffic and Transport Digest Table 2.1",
+            "reference_value_thousands": 50773.0,
+            "rounding_tolerance_thousands": 0.5,
+            "source_indicator": "#",
+            "source_url": "https://www.td.gov.hk/filemanager/en/content_5378/2512_e.pdf",
+            "within_rounding_tolerance": false,
+            "year": "2025"
+          },
+          {
+            "current_snapshot_total_thousands": 546545.132,
+            "difference_thousands": -340.868,
+            "mode": "PLB",
+            "notes": "Whole-thousand annual reference from Phase 1; older provisional vintage",
+            "passenger_journeys_thousands": "546886",
+            "publication": "December 2025 Monthly Traffic and Transport Digest Table 2.1",
+            "reference_value_thousands": 546886.0,
+            "rounding_tolerance_thousands": 0.5,
+            "source_indicator": "#",
+            "source_url": "https://www.td.gov.hk/filemanager/en/content_5378/2512_e.pdf",
+            "within_rounding_tolerance": false,
+            "year": "2025"
+          }
+        ],
+        "outside_rounding_tolerance_count": 6,
+        "scope": "Selected 2024/2025 minibus annual references only; not a full annual-publication audit."
+      },
+      "message": "Older annual publications differ from the current CSV snapshot beyond whole-thousand rounding. Retain both vintages and review differences; no source values are changed.",
+      "severity": "warning",
+      "status": "warning"
+    },
+    {
+      "check_id": "rmb_estimation_limit",
+      "details": {},
+      "message": "RMB patronage is estimated without published confidence intervals; PLB contains that estimated component. Blank status flags do not make it observed.",
+      "severity": "warning",
+      "status": "warning"
+    },
+    {
+      "check_id": "service_scope_limit",
+      "details": {},
+      "message": "MTR includes changing services and cross-boundary journeys. Aggregate data cannot establish individual mode switching or causal demand effects.",
+      "severity": "warning",
+      "status": "warning"
+    },
+    {
+      "check_id": "licensed_fleet_limit",
+      "details": {},
+      "message": "Licensed fleet is a month-end administrative stock, not deployed service. RMB patronage estimates partly depend on fleet counts; unsupported mileage remains null.",
+      "severity": "warning",
+      "status": "warning"
+    },
+    {
+      "check_id": "csv_monthly_passenger_journeys_shape",
+      "details": {},
+      "message": "CSV export preserves columns and record count.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "csv_monthly_passenger_journeys_values",
+      "details": {
+        "mismatched_columns": []
+      },
+      "message": "CSV round-trip preserves values, identifiers, status text, and nullness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "csv_monthly_average_daily_journeys_shape",
+      "details": {},
+      "message": "CSV export preserves columns and record count.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "csv_monthly_average_daily_journeys_values",
+      "details": {
+        "mismatched_columns": []
+      },
+      "message": "CSV round-trip preserves values, identifiers, status text, and nullness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "csv_monthly_minibus_fleet_shape",
+      "details": {},
+      "message": "CSV export preserves columns and record count.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "csv_monthly_minibus_fleet_values",
+      "details": {
+        "mismatched_columns": []
+      },
+      "message": "CSV round-trip preserves values, identifiers, status text, and nullness.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_integrity",
+      "details": [
+        "ok"
+      ],
+      "message": "SQLite file integrity",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_foreign_keys",
+      "details": [],
+      "message": "SQLite foreign-key integrity",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_count_daily_lineage",
+      "details": {
+        "actual": 1554,
+        "expected": 1554
+      },
+      "message": "Persisted row count for daily_lineage",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_count_daily_source_records",
+      "details": {
+        "actual": 1290,
+        "expected": 1290
+      },
+      "message": "Persisted row count for daily_source_records",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_count_monthly_average_daily_journeys",
+      "details": {
+        "actual": 660,
+        "expected": 660
+      },
+      "message": "Persisted row count for monthly_average_daily_journeys",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_count_monthly_minibus_fleet",
+      "details": {
+        "actual": 264,
+        "expected": 264
+      },
+      "message": "Persisted row count for monthly_minibus_fleet",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_count_monthly_passenger_journeys",
+      "details": {
+        "actual": 660,
+        "expected": 660
+      },
+      "message": "Persisted row count for monthly_passenger_journeys",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_count_passenger_lineage",
+      "details": {
+        "actual": 1686,
+        "expected": 1686
+      },
+      "message": "Persisted row count for passenger_lineage",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_count_passenger_source_records",
+      "details": {
+        "actual": 1422,
+        "expected": 1422
+      },
+      "message": "Persisted row count for passenger_source_records",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_count_source_files",
+      "details": {
+        "actual": 5,
+        "expected": 5
+      },
+      "message": "Persisted row count for source_files",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_count_transport_modes",
+      "details": {
+        "actual": 5,
+        "expected": 5
+      },
+      "message": "Persisted row count for transport_modes",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_views",
+      "details": {
+        "missing": []
+      },
+      "message": "Required SQL views exist",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_passenger_lineage_counts",
+      "details": [],
+      "message": "Each passenger observation has its declared source components",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_daily_lineage_counts",
+      "details": [],
+      "message": "Each daily observation has its declared source components",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_values_passenger_source_records",
+      "details": {
+        "mismatched_columns": []
+      },
+      "message": "Persisted SQLite values, identifiers, source tokens and nullness equal the prepared records.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_values_daily_source_records",
+      "details": {
+        "mismatched_columns": []
+      },
+      "message": "Persisted SQLite values, identifiers, source tokens and nullness equal the prepared records.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_values_monthly_passenger_journeys",
+      "details": {
+        "mismatched_columns": []
+      },
+      "message": "Persisted SQLite values, identifiers, source tokens and nullness equal the prepared records.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_values_monthly_average_daily_journeys",
+      "details": {
+        "mismatched_columns": []
+      },
+      "message": "Persisted SQLite values, identifiers, source tokens and nullness equal the prepared records.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_values_monthly_minibus_fleet",
+      "details": {
+        "mismatched_columns": []
+      },
+      "message": "Persisted SQLite values, identifiers, source tokens and nullness equal the prepared records.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_values_passenger_lineage",
+      "details": {
+        "mismatched_columns": []
+      },
+      "message": "Persisted SQLite values, identifiers, source tokens and nullness equal the prepared records.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "sqlite_values_daily_lineage",
+      "details": {
+        "mismatched_columns": []
+      },
+      "message": "Persisted SQLite values, identifiers, source tokens and nullness equal the prepared records.",
+      "severity": "error",
+      "status": "pass"
+    },
+    {
+      "check_id": "raw_sources_unchanged",
+      "details": {},
+      "message": "Raw hashes remain unchanged after preparation and database construction.",
+      "severity": "error",
+      "status": "pass"
+    }
+  ],
+  "error": null,
+  "outputs_published": true,
+  "pipeline_version": "1.0.0",
+  "publication_state": "published",
+  "record_counts": {
+    "daily_lineage": 1554,
+    "daily_source_records": 1290,
+    "monthly_average_daily_journeys": 660,
+    "monthly_minibus_fleet": 264,
+    "monthly_passenger_journeys": 660,
+    "passenger_lineage": 1686,
+    "passenger_source_records": 1422
+  },
+  "source_files": [
+    {
+      "file_format": "CSV",
+      "filename": "table21_eng.csv",
+      "publisher": "Transport Department, HKSAR Government, via DATA.GOV.HK",
+      "retrieved_on": "2026-10-11",
+      "revision_date": "2026-09-21",
+      "sha256": "a219225a6000ac73be3d77f40f6266be243bbb751467aaaf9f867ab88c6d09a5",
+      "size_bytes": 130116,
+      "source_id": "td_table21",
+      "source_url": "https://www.td.gov.hk/datagovhk_tis/mttd-csv/en/table21_eng.csv"
+    },
+    {
+      "file_format": "CSV",
+      "filename": "table21s_eng.csv",
+      "publisher": "Transport Department, HKSAR Government, via DATA.GOV.HK",
+      "retrieved_on": "2026-10-11",
+      "revision_date": "2026-09-21",
+      "sha256": "5d12a79d1953b40705fcf8987756021f98d4cf0388a5f7300bc8bac4e25e873d",
+      "size_bytes": 132032,
+      "source_id": "td_table21s",
+      "source_url": "https://www.td.gov.hk/datagovhk_tis/mttd-csv/en/table21s_eng.csv"
+    },
+    {
+      "file_format": "CSV",
+      "filename": "table22_eng.csv",
+      "publisher": "Transport Department, HKSAR Government, via DATA.GOV.HK",
+      "retrieved_on": "2026-10-11",
+      "revision_date": "2026-09-21",
+      "sha256": "9362477f7883fd3bc6d27d8fe9ccd972592b28108c5cfb8608bad555ec1221c7",
+      "size_bytes": 319427,
+      "source_id": "td_table22",
+      "source_url": "https://www.td.gov.hk/datagovhk_tis/mttd-csv/en/table22_eng.csv"
+    },
+    {
+      "file_format": "CSV",
+      "filename": "DATA_LAST_REVISION_DATE_eng.csv",
+      "publisher": "Transport Department, HKSAR Government, via DATA.GOV.HK",
+      "retrieved_on": "2026-10-11",
+      "revision_date": "2026-09-21",
+      "sha256": "f90baba66cf2144b5369cb8e1ee2bdcd449260b95d64d8dc82cba21d0c296191",
+      "size_bytes": 37,
+      "source_id": "td_revision",
+      "source_url": "https://www.td.gov.hk/datagovhk_tis/mttd-csv/en/DATA_LAST_REVISION_DATE_eng.csv"
+    },
+    {
+      "file_format": "PDF",
+      "filename": "mttd_dataspec_eng.pdf",
+      "publisher": "Transport Department, HKSAR Government, via DATA.GOV.HK",
+      "retrieved_on": "2026-10-11",
+      "revision_date": "2026-09-21",
+      "sha256": "213f990f1bc2902c190a7f00825a407ad42b00dcdd53fa00cdda1ab49ce028e6",
+      "size_bytes": 367151,
+      "source_id": "td_dictionary",
+      "source_url": "https://www.td.gov.hk/datagovhk_tis/mttd-csv/en/mttd_dataspec_eng.pdf"
+    }
+  ],
+  "source_inspection": {
+    "td_dictionary": {
+      "filename": "mttd_dataspec_eng.pdf",
+      "format": "PDF",
+      "role": "Definitions and units; no numerical extraction in the pipeline."
+    },
+    "td_revision": {
+      "columns": [
+        "DATA_REVISION_DATE"
+      ],
+      "filename": "DATA_LAST_REVISION_DATE_eng.csv",
+      "format": "CSV",
+      "record_count": 1,
+      "revision_date": [
+        "2026-09-21"
+      ]
+    },
+    "td_table21": {
+      "columns": [
+        "YR_MTH",
+        "MODE",
+        "TTD_PTO_CODE",
+        "FRANCHISE_TYPE",
+        "RAIL_LINE",
+        "PAX",
+        "PAX_INDI"
+      ],
+      "dimension_blank_counts": {
+        "FRANCHISE_TYPE": 2571,
+        "MODE": 0,
+        "RAIL_LINE": 2408,
+        "TTD_PTO_CODE": 0,
+        "YR_MTH": 0
+      },
+      "filename": "table21_eng.csv",
+      "first_month": "2013-01-01",
+      "format": "CSV",
+      "last_month": "2026-07-01",
+      "month_count": 163,
+      "numeric_fields": {
+        "PAX": {
+          "blank_or_unavailable_count": 0,
+          "input_dtype": "string",
+          "negative_count": 0,
+          "prepared_dtype": "Float64 (nullable)",
+          "zero_count": 0
+        }
+      },
+      "operator_codes": [
+        "CTB",
+        "GMB",
+        "HKT",
+        "KMB",
+        "LFS",
+        "LRB",
+        "LWB",
+        "MTRC",
+        "NLB",
+        "NWFB",
+        "NWFF",
+        "RMB",
+        "RS",
+        "STF",
+        "TAX"
+      ],
+      "record_count": 2897,
+      "source_key": [
+        "YR_MTH",
+        "MODE",
+        "TTD_PTO_CODE",
+        "FRANCHISE_TYPE",
+        "RAIL_LINE"
+      ],
+      "source_modes": [
+        "Ferries",
+        "Fran_Bus",
+        "LRB",
+        "PLB",
+        "RS",
+        "Railways",
+        "TAX"
+      ],
+      "status_counts": {
+        "PAX_INDI": {
+          "": 2872,
+          "#": 24,
+          "*": 1
+        }
+      }
+    },
+    "td_table21s": {
+      "columns": [
+        "YR_MTH",
+        "MODE",
+        "TTD_PTO_CODE",
+        "RAIL_LINE",
+        "AVG_DAILY_PAX",
+        "AVG_DAILY_PAX_INDI"
+      ],
+      "dimension_blank_counts": {
+        "MODE": 0,
+        "RAIL_LINE": 2245,
+        "TTD_PTO_CODE": 0,
+        "YR_MTH": 0
+      },
+      "filename": "table21s_eng.csv",
+      "first_month": "2013-01-01",
+      "format": "CSV",
+      "last_month": "2026-07-01",
+      "month_count": 163,
+      "numeric_fields": {
+        "AVG_DAILY_PAX": {
+          "blank_or_unavailable_count": 0,
+          "input_dtype": "string",
+          "negative_count": 0,
+          "prepared_dtype": "Float64 (nullable)",
+          "zero_count": 0
+        }
+      },
+      "operator_codes": [
+        "CTB",
+        "GMB",
+        "HKT",
+        "KMB",
+        "LFS",
+        "LRB",
+        "LWB",
+        "MTRC",
+        "NLB",
+        "NWFB",
+        "NWFF",
+        "RMB",
+        "RS",
+        "STF",
+        "TAX"
+      ],
+      "record_count": 2734,
+      "source_key": [
+        "YR_MTH",
+        "MODE",
+        "TTD_PTO_CODE",
+        "RAIL_LINE"
+      ],
+      "source_modes": [
+        "Ferries",
+        "Fran_Bus",
+        "LRB",
+        "PLB",
+        "RS",
+        "Railways",
+        "TAX"
+      ],
+      "status_counts": {
+        "AVG_DAILY_PAX_INDI": {
+          "": 2709,
+          "#": 24,
+          "*": 1
+        }
+      }
+    },
+    "td_table22": {
+      "columns": [
+        "YR_MTH",
+        "MODE",
+        "TTD_PTO_CODE",
+        "FRANCHISE_TYPE",
+        "RAIL_LINE",
+        "BUS_TYPE_CODE",
+        "KM",
+        "KM_INDI",
+        "KM_CROSS_HARBOUR",
+        "KM_CROSS_HARBOUR_INDI",
+        "NO_FLEET",
+        "NO_FLEET_INDI",
+        "PAX_CAP",
+        "PAX_CAP_INDI"
+      ],
+      "dimension_blank_counts": {
+        "BUS_TYPE_CODE": 2897,
+        "FRANCHISE_TYPE": 4127,
+        "MODE": 0,
+        "RAIL_LINE": 4616,
+        "TTD_PTO_CODE": 0,
+        "YR_MTH": 0
+      },
+      "filename": "table22_eng.csv",
+      "first_month": "2013-01-01",
+      "format": "CSV",
+      "last_month": "2026-07-01",
+      "month_count": 163,
+      "numeric_fields": {
+        "KM": {
+          "blank_or_unavailable_count": 2627,
+          "input_dtype": "string",
+          "negative_count": 0,
+          "prepared_dtype": "Float64 (nullable)",
+          "zero_count": 396
+        },
+        "KM_CROSS_HARBOUR": {
+          "blank_or_unavailable_count": 4490,
+          "input_dtype": "string",
+          "negative_count": 0,
+          "prepared_dtype": "Float64 (nullable)",
+          "zero_count": 0
+        },
+        "NO_FLEET": {
+          "blank_or_unavailable_count": 0,
+          "input_dtype": "string",
+          "negative_count": 0,
+          "prepared_dtype": "Float64 (nullable)",
+          "zero_count": 200
+        },
+        "PAX_CAP": {
+          "blank_or_unavailable_count": 2209,
+          "input_dtype": "string",
+          "negative_count": 0,
+          "prepared_dtype": "Float64 (nullable)",
+          "zero_count": 0
+        }
+      },
+      "operator_codes": [
+        "CTB",
+        "GMB",
+        "HKT",
+        "KMB",
+        "LFS",
+        "LRB",
+        "LWB",
+        "MTRC",
+        "NLB",
+        "NWFB",
+        "NWFF",
+        "RMB",
+        "RS",
+        "STF",
+        "TAX"
+      ],
+      "record_count": 5105,
+      "source_key": [
+        "YR_MTH",
+        "MODE",
+        "TTD_PTO_CODE",
+        "FRANCHISE_TYPE",
+        "RAIL_LINE",
+        "BUS_TYPE_CODE"
+      ],
+      "source_modes": [
+        "Ferries",
+        "Fran_Bus",
+        "LRB",
+        "PLB",
+        "RS",
+        "Railways",
+        "TAX"
+      ],
+      "status_counts": {
+        "KM_CROSS_HARBOUR_INDI": {
+          "": 5105
+        },
+        "KM_INDI": {
+          "": 5091,
+          "#": 14
+        },
+        "NO_FLEET_INDI": {
+          "": 5105
+        },
+        "PAX_CAP_INDI": {
+          "": 5105
+        }
+      }
+    }
+  },
+  "status": "passed_with_warnings",
+  "study_window": {
+    "end_month": "2025-12-01",
+    "expected_months": 132,
+    "start_month": "2015-01-01"
+  }
+}

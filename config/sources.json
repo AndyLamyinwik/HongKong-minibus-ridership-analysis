@@ -1,0 +1,13 @@
+{
+  "snapshot_retrieved_on": "2026-10-11",
+  "expected_revision_date": "2026-09-21",
+  "publisher": "Transport Department, HKSAR Government, via DATA.GOV.HK",
+  "terms_url": "https://data.gov.hk/en/terms-and-conditions",
+  "files": [
+    {"source_id": "td_table21", "filename": "table21_eng.csv", "file_format": "CSV", "sha256": "a219225a6000ac73be3d77f40f6266be243bbb751467aaaf9f867ab88c6d09a5", "size_bytes": 130116},
+    {"source_id": "td_table21s", "filename": "table21s_eng.csv", "file_format": "CSV", "sha256": "5d12a79d1953b40705fcf8987756021f98d4cf0388a5f7300bc8bac4e25e873d", "size_bytes": 132032},
+    {"source_id": "td_table22", "filename": "table22_eng.csv", "file_format": "CSV", "sha256": "9362477f7883fd3bc6d27d8fe9ccd972592b28108c5cfb8608bad555ec1221c7", "size_bytes": 319427},
+    {"source_id": "td_revision", "filename": "DATA_LAST_REVISION_DATE_eng.csv", "file_format": "CSV", "sha256": "f90baba66cf2144b5369cb8e1ee2bdcd449260b95d64d8dc82cba21d0c296191", "size_bytes": 37},
+    {"source_id": "td_dictionary", "filename": "mttd_dataspec_eng.pdf", "file_format": "PDF", "sha256": "213f990f1bc2902c190a7f00825a407ad42b00dcdd53fa00cdda1ab49ce028e6", "size_bytes": 367151}
+  ]
+}

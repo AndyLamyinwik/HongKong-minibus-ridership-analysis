@@ -1,0 +1,37 @@
+# Local environments and Python caches
+.venv*/
+venv/
+env/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# Credentials and machine-specific configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.pem
+*.key
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+
+# Isolated validation runs and transactional staging
+.portfolio-qa/
+# Local specification retained for validation; public redistribution is unresolved.
+data/raw/mttd_dataspec_eng.pdf
+data/processed/.build-*/
+analysis/.analysis-build-*/
+analysis/.figure-preview/
+analysis/.pytest-tmp-*/
