@@ -35,3 +35,7 @@ data/processed/.build-*/
 analysis/.analysis-build-*/
 analysis/.figure-preview/
 analysis/.pytest-tmp-*/
+
+# Static website dependencies and development cache
+node_modules/
+.vite/

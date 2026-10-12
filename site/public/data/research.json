@@ -1,0 +1,1150 @@
+{
+  "schema_version": 1,
+  "study": {
+    "start_year": 2015,
+    "end_year": 2025,
+    "months": 132
+  },
+  "units": {
+    "journeys": "thousands of passenger journeys",
+    "index": "own 2015 annual journeys = 100",
+    "percentage": "percent",
+    "stock": "licensed vehicles at December month-end",
+    "vehicle_days_proxy": "licensed vehicle-days proxy",
+    "fleet_proxy": "passenger journeys per licensed vehicle-day proxy",
+    "share_change": "percentage points"
+  },
+  "annual": [
+    {
+      "year": 2015,
+      "mode": "GMB",
+      "journeys_thousands": 558174.697,
+      "index_2015": 100.0,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2015,
+      "mode": "RMB",
+      "journeys_thousands": 120826.736,
+      "index_2015": 100.0,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2016,
+      "mode": "GMB",
+      "journeys_thousands": 559012.841,
+      "index_2015": 100.15015800689366,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2016,
+      "mode": "RMB",
+      "journeys_thousands": 112458.956,
+      "index_2015": 93.07456257032385,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2017,
+      "mode": "GMB",
+      "journeys_thousands": 554627.554,
+      "index_2015": 99.36451024758651,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2017,
+      "mode": "RMB",
+      "journeys_thousands": 107780.447,
+      "index_2015": 89.20248164280461,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2018,
+      "mode": "GMB",
+      "journeys_thousands": 554059.369,
+      "index_2015": 99.26271684794767,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2018,
+      "mode": "RMB",
+      "journeys_thousands": 105150.955,
+      "index_2015": 87.02623151220438,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2019,
+      "mode": "GMB",
+      "journeys_thousands": 539626.4029999999,
+      "index_2015": 96.67697333833101,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2019,
+      "mode": "RMB",
+      "journeys_thousands": 103169.668,
+      "index_2015": 85.38645618963008,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2020,
+      "mode": "GMB",
+      "journeys_thousands": 406697.575,
+      "index_2015": 72.86205863251446,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2020,
+      "mode": "RMB",
+      "journeys_thousands": 66863.482,
+      "index_2015": 55.33831684404684,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2021,
+      "mode": "GMB",
+      "journeys_thousands": 464387.365,
+      "index_2015": 83.19749488751906,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2021,
+      "mode": "RMB",
+      "journeys_thousands": 76371.271,
+      "index_2015": 63.20726151205474,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2022,
+      "mode": "GMB",
+      "journeys_thousands": 427081.045,
+      "index_2015": 76.5138669480032,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2022,
+      "mode": "RMB",
+      "journeys_thousands": 58203.591,
+      "index_2015": 48.17111918011258,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2023,
+      "mode": "GMB",
+      "journeys_thousands": 476748.975,
+      "index_2015": 85.41214382564532,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2023,
+      "mode": "RMB",
+      "journeys_thousands": 57595.254,
+      "index_2015": 47.66764038051976,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2024,
+      "mode": "GMB",
+      "journeys_thousands": 485329.68700000003,
+      "index_2015": 86.94942454548419,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2024,
+      "mode": "RMB",
+      "journeys_thousands": 53489.623,
+      "index_2015": 44.2696912709783,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2025,
+      "mode": "GMB",
+      "journeys_thousands": 495802.414,
+      "index_2015": 88.82566993179198,
+      "measurement_basis": "reported",
+      "includes_estimates": false,
+      "is_provisional": false,
+      "is_revised": false
+    },
+    {
+      "year": 2025,
+      "mode": "RMB",
+      "journeys_thousands": 50742.718,
+      "index_2015": 41.99626645546396,
+      "measurement_basis": "estimated",
+      "includes_estimates": true,
+      "is_provisional": false,
+      "is_revised": false
+    }
+  ],
+  "kpis": {
+    "plb_change_pct": -19.507514205791075,
+    "gmb_change_pct": -11.174330068208027,
+    "rmb_change_pct": -58.00373354453604,
+    "rmb_recovery_2019_pct": 49.183756217961275
+  },
+  "narrative": {
+    "gmb_share_2015_pct": 82.20523107496889,
+    "gmb_share_2025_pct": 90.7157314137417,
+    "gmb_change_2023_2025_pct": 3.996534864076009,
+    "rmb_change_2023_2025_pct": -11.897744213438143
+  },
+  "recovery": [
+    {
+      "mode": "GMB",
+      "recovery_pct": 91.87882787862773,
+      "measurement_basis": "reported",
+      "includes_estimates": false
+    },
+    {
+      "mode": "RMB",
+      "recovery_pct": 49.183756217961275,
+      "measurement_basis": "estimated",
+      "includes_estimates": true
+    },
+    {
+      "mode": "PLB",
+      "recovery_pct": 85.02620919100173,
+      "measurement_basis": "mixed",
+      "includes_estimates": true
+    },
+    {
+      "mode": "MTR",
+      "recovery_pct": 101.986736364914,
+      "measurement_basis": "reported",
+      "includes_estimates": false
+    },
+    {
+      "mode": "FRANCHISED_BUS",
+      "recovery_pct": 91.62910047348359,
+      "measurement_basis": "reported",
+      "includes_estimates": false
+    }
+  ],
+  "recovery_definition": {
+    "baseline_year": 2019,
+    "reference_year": 2025,
+    "formula": "100 × own 2025 annual journeys / own 2019 annual journeys",
+    "unit": "percent"
+  },
+  "market_share": {
+    "components": [
+      "GMB",
+      "RMB",
+      "MTR",
+      "FRANCHISED_BUS"
+    ],
+    "denominator_includes_estimates": true,
+    "definition": "Share of GMB + RMB + MTR railway services + franchised bus journeys; PLB is the GMB/RMB subtotal, never a fifth denominator component.",
+    "denominators": [
+      {
+        "year": 2015,
+        "journeys_thousands": 3995789.862
+      },
+      {
+        "year": 2016,
+        "journeys_thousands": 4018250.7139999997
+      },
+      {
+        "year": 2017,
+        "journeys_thousands": 4059459.466
+      },
+      {
+        "year": 2018,
+        "journeys_thousands": 4132502.417
+      },
+      {
+        "year": 2019,
+        "journeys_thousands": 3999908.858
+      },
+      {
+        "year": 2020,
+        "journeys_thousands": 2853603.2079999996
+      },
+      {
+        "year": 2021,
+        "journeys_thousands": 3373753.194
+      },
+      {
+        "year": 2022,
+        "journeys_thousands": 3088619.582
+      },
+      {
+        "year": 2023,
+        "journeys_thousands": 3711737.663
+      },
+      {
+        "year": 2024,
+        "journeys_thousands": 3815044.822
+      },
+      {
+        "year": 2025,
+        "journeys_thousands": 3815582.55
+      }
+    ],
+    "annual": [
+      {
+        "year": 2015,
+        "mode": "GMB",
+        "share_pct": 13.969070353479966,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2015,
+        "mode": "RMB",
+        "share_pct": 3.0238511076136265,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2015,
+        "mode": "MTR",
+        "share_pct": 47.24101710031317,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2015,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 35.76606143859324,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2015,
+        "mode": "PLB",
+        "share_pct": 16.99292146109359,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      },
+      {
+        "year": 2016,
+        "mode": "GMB",
+        "share_pct": 13.911845745521594,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2016,
+        "mode": "RMB",
+        "share_pct": 2.7987043120077453,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2016,
+        "mode": "MTR",
+        "share_pct": 47.24390049595099,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2016,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 36.04554944651968,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2016,
+        "mode": "PLB",
+        "share_pct": 16.71055005752934,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      },
+      {
+        "year": 2017,
+        "mode": "GMB",
+        "share_pct": 13.662596181715392,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2017,
+        "mode": "RMB",
+        "share_pct": 2.655044295988544,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2017,
+        "mode": "MTR",
+        "share_pct": 48.01793246923875,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2017,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 35.66442705305731,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2017,
+        "mode": "PLB",
+        "share_pct": 16.317640477703936,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      },
+      {
+        "year": 2018,
+        "mode": "GMB",
+        "share_pct": 13.407357409417337,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2018,
+        "mode": "RMB",
+        "share_pct": 2.5444862310893597,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2018,
+        "mode": "MTR",
+        "share_pct": 48.238911507937296,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2018,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 35.809244851556,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2018,
+        "mode": "PLB",
+        "share_pct": 15.951843640506697,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      },
+      {
+        "year": 2019,
+        "mode": "GMB",
+        "share_pct": 13.490967473439364,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2019,
+        "mode": "RMB",
+        "share_pct": 2.579300470650874,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2019,
+        "mode": "MTR",
+        "share_pct": 46.571816162117166,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2019,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 37.3579158937926,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2019,
+        "mode": "PLB",
+        "share_pct": 16.070267944090237,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      },
+      {
+        "year": 2020,
+        "mode": "GMB",
+        "share_pct": 14.252071691671581,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2020,
+        "mode": "RMB",
+        "share_pct": 2.3431247137846647,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2020,
+        "mode": "MTR",
+        "share_pct": 44.46208892823757,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2020,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 38.942714666306195,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2020,
+        "mode": "PLB",
+        "share_pct": 16.595196405456246,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      },
+      {
+        "year": 2021,
+        "mode": "GMB",
+        "share_pct": 13.764710644094613,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2021,
+        "mode": "RMB",
+        "share_pct": 2.2636887350213204,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2021,
+        "mode": "MTR",
+        "share_pct": 46.415804504755954,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2021,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 37.55579611612811,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2021,
+        "mode": "PLB",
+        "share_pct": 16.028399379115932,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      },
+      {
+        "year": 2022,
+        "mode": "GMB",
+        "share_pct": 13.827570332356975,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2022,
+        "mode": "RMB",
+        "share_pct": 1.8844532146076385,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2022,
+        "mode": "MTR",
+        "share_pct": 47.58877695932448,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2022,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 36.69919949371091,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2022,
+        "mode": "PLB",
+        "share_pct": 15.712023546964614,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      },
+      {
+        "year": 2023,
+        "mode": "GMB",
+        "share_pct": 12.844360735738775,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2023,
+        "mode": "RMB",
+        "share_pct": 1.5517059455502795,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2023,
+        "mode": "MTR",
+        "share_pct": 49.54848407884369,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2023,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 36.05544923986725,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2023,
+        "mode": "PLB",
+        "share_pct": 14.396066681289055,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      },
+      {
+        "year": 2024,
+        "mode": "GMB",
+        "share_pct": 12.721467496299837,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2024,
+        "mode": "RMB",
+        "share_pct": 1.4020706307706914,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2024,
+        "mode": "MTR",
+        "share_pct": 49.65914159317313,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2024,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 36.217320279756336,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2024,
+        "mode": "PLB",
+        "share_pct": 14.123538127070528,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      },
+      {
+        "year": 2025,
+        "mode": "GMB",
+        "share_pct": 12.994147223993357,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2025,
+        "mode": "RMB",
+        "share_pct": 1.3298812785481473,
+        "measurement_basis": "estimated",
+        "includes_estimates": true,
+        "is_subtotal": false
+      },
+      {
+        "year": 2025,
+        "mode": "MTR",
+        "share_pct": 49.79160325072773,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2025,
+        "mode": "FRANCHISED_BUS",
+        "share_pct": 35.884368246730766,
+        "measurement_basis": "reported",
+        "includes_estimates": false,
+        "is_subtotal": false
+      },
+      {
+        "year": 2025,
+        "mode": "PLB",
+        "share_pct": 14.324028502541504,
+        "measurement_basis": "mixed",
+        "includes_estimates": true,
+        "is_subtotal": true
+      }
+    ],
+    "endpoints": {
+      "plb_share_2015_pct": 16.99292146109359,
+      "plb_share_2025_pct": 14.324028502541504,
+      "plb_share_change_pp": -2.668892958552087
+    }
+  },
+  "fleet": {
+    "stock_measurement_basis": "reported",
+    "definitions": {
+      "stock": "December month-end licensed vehicles",
+      "proxy": "annual passenger journeys in thousands × 1,000 / sum(month-end licensed vehicles × calendar days)",
+      "index_stock_2015": "own December 2015 licensed stock = 100",
+      "index_proxy_2015": "own 2015 annual journeys per licensed vehicle-day proxy = 100",
+      "measurement_basis": "Annual-row measurement_basis and includes_estimates describe the proxy passenger input; licensed stock is reported for both GMB and RMB."
+    },
+    "annual": [
+      {
+        "year": 2015,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3203,
+        "licensed_vehicle_days_proxy": 1158127,
+        "journeys_per_licensed_vehicle_day_proxy": 481.9632881367933,
+        "index_stock_2015": 100.0,
+        "index_proxy_2015": 100.0,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2015,
+        "mode": "RMB",
+        "december_licensed_vehicles": 1141,
+        "licensed_vehicle_days_proxy": 428123,
+        "journeys_per_licensed_vehicle_day_proxy": 282.2243514130285,
+        "index_stock_2015": 100.0,
+        "index_proxy_2015": 100.0,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      },
+      {
+        "year": 2016,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3254,
+        "licensed_vehicle_days_proxy": 1182542,
+        "journeys_per_licensed_vehicle_day_proxy": 472.721341821263,
+        "index_stock_2015": 101.59225725881986,
+        "index_proxy_2015": 98.08243769950644,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2016,
+        "mode": "RMB",
+        "december_licensed_vehicles": 1093,
+        "licensed_vehicle_days_proxy": 407609,
+        "journeys_per_licensed_vehicle_day_proxy": 275.8990993820058,
+        "index_stock_2015": 95.7931638913234,
+        "index_proxy_2015": 97.75878587394966,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      },
+      {
+        "year": 2017,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3275,
+        "licensed_vehicle_days_proxy": 1193400,
+        "journeys_per_licensed_vehicle_day_proxy": 464.74572984749454,
+        "index_stock_2015": 102.24789260068685,
+        "index_proxy_2015": 96.42762037833636,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2017,
+        "mode": "RMB",
+        "december_licensed_vehicles": 1063,
+        "licensed_vehicle_days_proxy": 391392,
+        "journeys_per_licensed_vehicle_day_proxy": 275.37723561033437,
+        "index_stock_2015": 93.16389132340052,
+        "index_proxy_2015": 97.57387490894662,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      },
+      {
+        "year": 2018,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3295,
+        "licensed_vehicle_days_proxy": 1199751,
+        "journeys_per_licensed_vehicle_day_proxy": 461.8119668164477,
+        "index_stock_2015": 102.87230721198875,
+        "index_proxy_2015": 95.81890948618764,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2018,
+        "mode": "RMB",
+        "december_licensed_vehicles": 1028,
+        "licensed_vehicle_days_proxy": 381326,
+        "journeys_per_licensed_vehicle_day_proxy": 275.7508142639107,
+        "index_stock_2015": 90.09640666082385,
+        "index_proxy_2015": 97.70624429936453,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      },
+      {
+        "year": 2019,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3294,
+        "licensed_vehicle_days_proxy": 1203418,
+        "journeys_per_licensed_vehicle_day_proxy": 448.41144390394686,
+        "index_stock_2015": 102.84108648142366,
+        "index_proxy_2015": 93.03850623922966,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2019,
+        "mode": "RMB",
+        "december_licensed_vehicles": 1021,
+        "licensed_vehicle_days_proxy": 374553,
+        "journeys_per_licensed_vehicle_day_proxy": 275.4474480247122,
+        "index_stock_2015": 89.4829097283085,
+        "index_proxy_2015": 97.59875313579923,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      },
+      {
+        "year": 2020,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3281,
+        "licensed_vehicle_days_proxy": 1208029,
+        "journeys_per_licensed_vehicle_day_proxy": 336.6620958602815,
+        "index_stock_2015": 102.43521698407743,
+        "index_proxy_2015": 69.85222819807974,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2020,
+        "mode": "RMB",
+        "december_licensed_vehicles": 986,
+        "licensed_vehicle_days_proxy": 362417,
+        "journeys_per_licensed_vehicle_day_proxy": 184.4932274148288,
+        "index_stock_2015": 86.41542506573181,
+        "index_proxy_2015": 65.37112282874111,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      },
+      {
+        "year": 2021,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3251,
+        "licensed_vehicle_days_proxy": 1191672,
+        "journeys_per_licensed_vehicle_day_proxy": 389.6939468242939,
+        "index_stock_2015": 101.49859506712457,
+        "index_proxy_2015": 80.85552497801221,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2021,
+        "mode": "RMB",
+        "december_licensed_vehicles": 977,
+        "licensed_vehicle_days_proxy": 357985,
+        "journeys_per_licensed_vehicle_day_proxy": 213.33651130633962,
+        "index_stock_2015": 85.62664329535495,
+        "index_proxy_2015": 75.59110694673075,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      },
+      {
+        "year": 2022,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3272,
+        "licensed_vehicle_days_proxy": 1184307,
+        "journeys_per_licensed_vehicle_day_proxy": 360.61683752608064,
+        "index_stock_2015": 102.15423040899157,
+        "index_proxy_2015": 74.82247017613683,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2022,
+        "mode": "RMB",
+        "december_licensed_vehicles": 871,
+        "licensed_vehicle_days_proxy": 335634,
+        "journeys_per_licensed_vehicle_day_proxy": 173.41387046604336,
+        "index_stock_2015": 76.33654688869413,
+        "index_proxy_2015": 61.44539604672751,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      },
+      {
+        "year": 2023,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3317,
+        "licensed_vehicle_days_proxy": 1203470,
+        "journeys_per_licensed_vehicle_day_proxy": 396.14529236291725,
+        "index_stock_2015": 103.55916328442086,
+        "index_proxy_2015": 82.19408036125797,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2023,
+        "mode": "RMB",
+        "december_licensed_vehicles": 792,
+        "licensed_vehicle_days_proxy": 301252,
+        "journeys_per_licensed_vehicle_day_proxy": 191.18629585861672,
+        "index_stock_2015": 69.4127957931639,
+        "index_proxy_2015": 67.74266462174279,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      },
+      {
+        "year": 2024,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3338,
+        "licensed_vehicle_days_proxy": 1218812,
+        "journeys_per_licensed_vehicle_day_proxy": 398.19897326248844,
+        "index_stock_2015": 104.21479862628786,
+        "index_proxy_2015": 82.62018769144706,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2024,
+        "mode": "RMB",
+        "december_licensed_vehicles": 739,
+        "licensed_vehicle_days_proxy": 278353,
+        "journeys_per_licensed_vehicle_day_proxy": 192.16470812242008,
+        "index_stock_2015": 64.76774758983348,
+        "index_proxy_2015": 68.08934351706303,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      },
+      {
+        "year": 2025,
+        "mode": "GMB",
+        "december_licensed_vehicles": 3360,
+        "licensed_vehicle_days_proxy": 1224612,
+        "journeys_per_licensed_vehicle_day_proxy": 404.86489924972153,
+        "index_stock_2015": 104.90165469871995,
+        "index_proxy_2015": 84.00326523102538,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "reported",
+        "measurement_basis": "reported",
+        "includes_estimates": false
+      },
+      {
+        "year": 2025,
+        "mode": "RMB",
+        "december_licensed_vehicles": 693,
+        "licensed_vehicle_days_proxy": 259700,
+        "journeys_per_licensed_vehicle_day_proxy": 195.38974971120524,
+        "index_stock_2015": 60.736196319018404,
+        "index_proxy_2015": 69.23206616754946,
+        "stock_measurement_basis": "reported",
+        "proxy_measurement_basis": "estimated",
+        "measurement_basis": "estimated",
+        "includes_estimates": true
+      }
+    ],
+    "endpoints": [
+      {
+        "mode": "GMB",
+        "december_vehicles_2015": 3203,
+        "december_vehicles_2025": 3360,
+        "stock_change_pct": 4.901654698719948,
+        "proxy_change_pct": -15.99673476897463
+      },
+      {
+        "mode": "RMB",
+        "december_vehicles_2015": 1141,
+        "december_vehicles_2025": 693,
+        "stock_change_pct": -39.26380368098159,
+        "proxy_change_pct": -30.767933832450524
+      }
+    ]
+  },
+  "provenance": {
+    "publisher": "Transport Department, HKSAR Government, via DATA.GOV.HK",
+    "snapshot_retrieved_on": "2026-10-11",
+    "expected_revision_date": "2026-09-21",
+    "official_urls": [
+      "https://data.gov.hk/en-data/dataset/hk-td-tis_17-monthly-traffic-and-transport-digest-csv",
+      "https://www.td.gov.hk/datagovhk_tis/mttd-csv/en/table21_eng.csv",
+      "https://www.td.gov.hk/datagovhk_tis/mttd-csv/en/table22_eng.csv"
+    ],
+    "terms_url": "https://data.gov.hk/en/terms-and-conditions",
+    "methodology_url": "https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/docs/analysis_methodology.md",
+    "findings_url": "https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/reports/eda_findings.md",
+    "input_sha256": {
+      "analysis/outputs/annual_ridership.csv": "ed6028c4f89688e25aba45ed643f0a86fce6ba1b12064d66e22a3e1726c00896",
+      "analysis/outputs/endpoint_comparison.csv": "dbc53199138a4d7a3e2039d5d4fc6de6cffd7b2af380d30440a061bffd44c2ce",
+      "analysis/outputs/recovery_2019.csv": "b3c9858b4a64e3e1a40e416816c4387a0c36706251773e8fc196e41a9df4cf17",
+      "analysis/outputs/annual_minibus_composition.csv": "ab2c409d7425e4c9846b16f19f4d3df842364a308fa4633ec49d7967807831db",
+      "analysis/outputs/trend_segments.csv": "02cc522567459371c08977853bfa55a24815b17058642a31f385c8646cc45776",
+      "analysis/outputs/analysis_summary.json": "08c4578fd1634f7e7234515371fd86d264595a2e2f188f5263f1e8267da4ea09",
+      "config/sources.json": "7e2fe83837aeb65f47f803533528dc7ead76a7b9df9d3dfa600d1efe5101d619",
+      "src/hk_minibus/dashboard/metrics.py": "040db4250974816a7c74f9e3aec39bfc523ebece3c1f7a7f607496d32fbd7791",
+      "docs/analysis_methodology.md": "25bf053a0b1b63b69fdd60df264ed1518f4eac9a2cb7999c52442fa5a8164003",
+      "reports/eda_findings.md": "8f6b3dca02efdfb3297ffd04a6320d38dd08a2f7ecf2bf9e8ddab39a54c132dc",
+      "analysis/outputs/annual_market_share.csv": "232ca599bf5051e129c80a87663d291945f16cf838e3fbefcb9935cd06b9f25f",
+      "analysis/outputs/annual_fleet.csv": "629e415f5aaefbee3fcfd00ac8f996db01b5fcce579f3a21668fa110175c6c97",
+      "data/processed/monthly_minibus_fleet.csv": "1bb4a16bf3225b6aaa69e9c23ec750d2f8fe352309868120b41b148228f7a527",
+      "docs/data_dictionary.md": "41b4561d1c13a9965634e689e83e603626c3bf1078faf6795c8ee855e53938d5",
+      "docs/data_sources.md": "143e4c97599d8174575eb987efd55efa4fc0b2ed5a0d08409479ee90bc385907",
+      "reports/reference_discrepancies.md": "19bace0ff126fbf6f6cbf1a52bec9cd4697c7fd7c6206947b90ac80cf6a8c923",
+      "src/hk_minibus/dashboard/charts.py": "99408cfca0c843372c28bc71e5f1c98b90299c0977bcd47917624e5b89c21ffd"
+    },
+    "limitations": [
+      "Red Minibus passenger journeys are estimates, with no published confidence intervals.",
+      "Public Light Bus totals contain estimated Red Minibus journeys.",
+      "Annual totals sum twelve monthly flows from one source vintage; figures may be revised.",
+      "Journeys are aggregate patronage, not unique passengers. These comparisons do not establish causation or passenger switching.",
+      "The comparison group is a defined transport subset, not all Hong Kong public transport; every share denominator contains estimated RMB journeys.",
+      "MTR includes MTR Lines, Airport Express and Light Rail, including cross-boundary MTR Lines services; it excludes Tramways and MTR buses. Network coverage changed during the study.",
+      "Franchised buses include each contemporaneous franchise once, with the July 2023 Citybus/NWFB merger handled in preparation.",
+      "Licensed vehicle-days use reported month-end stocks as a proxy for daily availability; the indicator does not measure occupancy, deployment or operational productivity.",
+      "RMB estimation uses licensed fleet information, so passenger/fleet associations are partly mechanical; no comparable RMB mileage is filled or inferred.",
+      "Six older provisional annual references differ from this preserved monthly-snapshot vintage. Their specific revision causes remain unresolved; cross-vintage differences are not uncertainty bounds for RMB estimates."
+    ]
+  }
+}

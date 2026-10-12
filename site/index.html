@@ -1,0 +1,1213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f4ed" />
+    <meta
+      name="description"
+      content="An interactive research study of Hong Kong's Green and Red Minibus passenger journeys, 2015–2025, using official Transport Department data."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link
+      rel="preload"
+      href="/node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/node_modules/@fontsource/instrument-serif/files/instrument-serif-latin-400-italic.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <title>
+      One Industry. Two Different Futures. — Hong Kong Minibus Research
+    </title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to research</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a
+          class="identity"
+          href="#overview"
+          aria-label="Hong Kong Minibus Research — overview"
+        >
+          <svg
+            class="identity-mark"
+            viewBox="0 0 32 36"
+            width="32"
+            height="36"
+            aria-hidden="true"
+          >
+            <path
+              d="M8 2v23a7 7 0 0 0 7 7h9"
+              fill="none"
+              stroke="#236451"
+              stroke-width="4"
+            />
+            <path
+              d="M24 2v15a7 7 0 0 1-7 7H8"
+              fill="none"
+              stroke="#aa4e44"
+              stroke-width="4"
+            />
+            <circle cx="8" cy="2" r="2" fill="#236451" />
+            <circle cx="24" cy="2" r="2" fill="#aa4e44" />
+          </svg>
+          <span
+            >HONG KONG<span class="identity-sub">MINIBUS RESEARCH</span></span
+          >
+        </a>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="navigation"
+          hidden
+        >
+          Menu <span aria-hidden="true">+</span>
+        </button>
+        <nav class="navigation" id="navigation" aria-label="Main navigation">
+          <a href="#overview" aria-current="page">Overview</a>
+          <a href="#research">Research</a>
+          <a href="#methodology">Methodology</a>
+          <a
+            class="external-link"
+            href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis"
+            >GitHub <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section
+        class="hero container"
+        id="overview"
+        aria-labelledby="hero-title"
+      >
+        <div class="hero-topline">
+          <p class="eyebrow">
+            <span class="small-rule" aria-hidden="true"></span> HONG KONG
+            TRANSPORT STUDY
+          </p>
+          <p class="period">2015—2025</p>
+        </div>
+        <h1 id="hero-title">
+          One Industry.<br /><em>Two Different Futures.</em>
+        </h1>
+        <div class="hero-bottom">
+          <div class="hero-intro">
+            <p class="subtitle">
+              How Hong Kong's Green and Red Minibuses Diverged, 2015–2025.
+            </p>
+            <p class="hero-support">
+              Eleven years of official passenger-journey data trace two
+              different paths through disruption and recovery.
+            </p>
+          </div>
+          <a class="hero-jump" href="#trends"
+            ><span>Explore the divergence</span
+            ><span class="arrow-circle" aria-hidden="true">↓</span></a
+          >
+        </div>
+        <p class="attribution">
+          SOURCE <span>Hong Kong Transport Department · DATA.GOV.HK</span>
+        </p>
+      </section>
+
+      <section class="findings container" aria-labelledby="findings-title">
+        <div class="section-meta">
+          <h2 class="eyebrow" id="findings-title">THE INDUSTRY AT A GLANCE</h2>
+          <p>Annual passenger journeys</p>
+        </div>
+        <div class="kpi-grid" aria-busy="true" id="kpis">
+          <article class="kpi">
+            <h3>Total minibus journeys</h3>
+            <p class="kpi-value" data-kpi="plb_change_pct">—</p>
+            <p class="kpi-note">2015 → 2025 · includes estimates</p>
+          </article>
+          <article class="kpi kpi-green">
+            <h3>
+              <span class="mode-dot" aria-hidden="true"></span>Green Minibus
+              journeys
+            </h3>
+            <p class="kpi-value" data-kpi="gmb_change_pct">—</p>
+            <p class="kpi-note">2015 → 2025</p>
+          </article>
+          <article class="kpi kpi-red">
+            <h3>
+              <span class="mode-diamond" aria-hidden="true"></span>Red Minibus
+              journeys
+            </h3>
+            <p class="kpi-value" data-kpi="rmb_change_pct">—</p>
+            <p class="kpi-note">2015 → 2025 · estimated</p>
+          </article>
+          <article class="kpi kpi-red">
+            <h3>Red Minibus recovery</h3>
+            <p class="kpi-value" data-kpi="rmb_recovery_2019_pct">—</p>
+            <p class="kpi-note">2025 as a share of 2019 · estimated</p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="trends container"
+        id="trends"
+        aria-labelledby="trends-title"
+      >
+        <div class="chart-heading">
+          <div>
+            <p class="eyebrow section-number">01 / THE LONG VIEW</p>
+            <h2 id="trends-title">The divergence, year by year.</h2>
+            <p class="chart-intro">
+              Two services. One starting point. Explore how their paths changed.
+            </p>
+          </div>
+          <div class="view-switch" role="group" aria-label="Chart measurement">
+            <button
+              type="button"
+              data-view="index"
+              aria-pressed="true"
+              disabled
+            >
+              Indexed <span>2015 = 100</span>
+            </button>
+            <button
+              type="button"
+              data-view="absolute"
+              aria-pressed="false"
+              disabled
+            >
+              Absolute <span>million journeys</span>
+            </button>
+          </div>
+        </div>
+        <div class="plot-meta">
+          <p id="chart-unit">Index · own 2015 annual journeys = 100</p>
+          <ul class="chart-legend" aria-label="Chart legend">
+            <li class="legend-green">
+              <span class="legend-line" aria-hidden="true"></span>Green
+              Minibuses
+            </li>
+            <li class="legend-red">
+              <span class="legend-line" aria-hidden="true"></span>Red Minibuses
+              <span class="estimated-label">· estimated</span>
+            </li>
+          </ul>
+        </div>
+        <div class="chart-shell" id="chart-shell" aria-busy="true">
+          <div
+            id="ridership-chart"
+            role="img"
+            aria-label="Annual Green and estimated Red Minibus passenger journeys, 2015–2025. Use the year selector or data table below for accessible values."
+            aria-describedby="chart-note"
+          ></div>
+          <div class="data-status" id="data-status" role="status">
+            <span class="status-line" aria-hidden="true"></span>
+            <p id="status-message">Loading the verified research data…</p>
+            <button class="text-link" id="retry-data" type="button" hidden>
+              Try again <span aria-hidden="true">↻</span>
+            </button>
+          </div>
+        </div>
+        <div class="year-inspector" id="year-inspector" hidden>
+          <label for="inspect-year">Explore a year</label
+          ><select id="inspect-year" aria-describedby="year-help"></select
+          ><span class="sr-only" id="year-help"
+            >Selecting a year updates the comparison and highlights the chart.
+            Values also appear in the full data table.</span
+          >
+          <div
+            class="year-values"
+            id="year-values"
+            aria-live="polite"
+            aria-atomic="true"
+          ></div>
+        </div>
+        <div class="chart-bottom">
+          <p class="chart-note" id="chart-note">
+            RMB journeys are estimates; PLB totals include them. Annual totals
+            sum twelve monthly observations from one consistent official data
+            snapshot. Shading marks 2020–2022 as a disruption period, without
+            attributing changes to a single cause.
+          </p>
+          <details class="data-table-disclosure">
+            <summary>
+              View annual data <span aria-hidden="true">+</span>
+            </summary>
+            <div class="table-wrap">
+              <table>
+                <caption>
+                  Annual passenger journeys, 2015–2025. Red Minibus figures are
+                  estimates. Units: millions of journeys and index (own 2015 =
+                  100).
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Year</th>
+                    <th scope="col">GMB<br /><span>million journeys</span></th>
+                    <th scope="col">
+                      RMB · est.<br /><span>million journeys</span>
+                    </th>
+                    <th scope="col">GMB<br /><span>index</span></th>
+                    <th scope="col">RMB · est.<br /><span>index</span></th>
+                  </tr>
+                </thead>
+                <tbody id="annual-table">
+                  <tr>
+                    <td colspan="5">Research data is loading.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <noscript
+          ><p class="noscript-note">
+            Enable JavaScript to load the interactive chart and KPI values. The
+            complete
+            <a
+              href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/reports/eda_findings.md"
+              >research findings</a
+            >
+            and
+            <a
+              href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/analysis/outputs/annual_ridership.csv"
+              >annual CSV</a
+            >
+            remain available on GitHub.
+          </p></noscript
+        >
+      </section>
+
+      <section class="research" id="research" aria-labelledby="research-title">
+        <div class="container research-inner">
+          <div class="research-label">
+            <p class="eyebrow section-number">02 / THE CENTRAL FINDING</p>
+            <p class="research-margin">
+              A closer look at<br />a changing industry.
+            </p>
+          </div>
+          <div class="research-copy">
+            <h2 id="research-title">
+              A shared industry.<br /><em>An uneven recovery.</em>
+            </h2>
+            <p class="research-lead">
+              The combined minibus total tells only part of the story.
+            </p>
+            <p>
+              Between 2015 and 2025, total minibus journeys fell by
+              <strong data-value="plb_change_pct" data-unsigned>19.51%</strong>.
+              Green Minibus journeys fell by
+              <strong data-value="gmb_change_pct" data-unsigned>11.17%</strong>,
+              while estimated Red Minibus journeys fell by
+              <strong data-value="rmb_change_pct" data-unsigned>58.00%</strong>.
+            </p>
+            <p>
+              The recovery paths also diverged. Green Minibus journeys increased
+              in each annual transition from 2022 to 2025; Red Minibus journeys
+              decreased in each. By 2025, estimated Red Minibus demand stood at
+              <strong data-value="rmb_recovery_2019_pct">49.18%</strong> of its
+              2019 level. The recent recovery in the combined industry was
+              driven by Green Minibuses.
+            </p>
+            <p class="research-caution">
+              These patterns describe published passenger journeys. They do not
+              establish why demand changed, show that the same passengers
+              switched services, or predict either industry's future.
+            </p>
+            <a
+              class="text-link research-link"
+              href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/reports/eda_findings.md"
+              >Read the research findings <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <nav class="chapter-contents container" aria-label="Research chapters">
+        <p class="eyebrow">CONTINUE THE RESEARCH</p>
+        <div class="chapter-links">
+          <a href="#recovery"
+            ><span>03</span> The uneven recovery
+            <span aria-hidden="true">↘</span></a
+          >
+          <a href="#landscape"
+            ><span>04</span> A changing landscape
+            <span aria-hidden="true">↘</span></a
+          >
+          <a href="#fleet"
+            ><span>05</span> Fleet and demand
+            <span aria-hidden="true">↘</span></a
+          >
+          <a href="#methodology"
+            ><span>06</span> Methodology &amp; sources
+            <span aria-hidden="true">↘</span></a
+          >
+        </div>
+      </nav>
+
+      <section
+        class="chapter chapter-recovery container"
+        id="recovery"
+        aria-labelledby="recovery-title"
+      >
+        <p class="eyebrow section-number">03 / THE UNEVEN RECOVERY</p>
+        <div class="chapter-heading">
+          <h2 id="recovery-title">
+            Who recovered —<br /><em>and who was left behind?</em>
+          </h2>
+          <div class="chapter-introduction">
+            <p>
+              A common benchmark reveals how differently the published passenger
+              series returned after disruption.
+            </p>
+            <p>
+              In 2025, MTR railway journeys reached
+              <strong data-recovery="MTR">—</strong> of their 2019 level.
+              Estimated Red Minibus journeys stood at
+              <strong data-recovery="RMB">—</strong>. The combined PLB total
+              reached <strong data-recovery="PLB">—</strong>, concealing the gap
+              between its two components.
+            </p>
+          </div>
+        </div>
+        <div class="plot-meta chapter-plot-meta">
+          <p>2025 annual journeys as a share of own 2019 annual journeys</p>
+          <p class="baseline-note">
+            <span aria-hidden="true"></span>100% = 2019 benchmark
+          </p>
+        </div>
+        <div class="chapter-chart-shell" id="recovery-shell" aria-busy="true">
+          <div
+            class="chapter-chart recovery-chart"
+            id="recovery-chart"
+            role="img"
+            aria-label="Recovery comparison is loading."
+            aria-describedby="recovery-note"
+          ></div>
+          <div class="data-status" id="recovery-status" role="status">
+            <span class="status-line" aria-hidden="true"></span>
+            <p>Loading the verified recovery comparison…</p>
+            <button class="text-link" type="button" data-retry-chapters hidden>
+              Retry research data <span aria-hidden="true">↻</span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="year-inspector mode-inspector"
+          id="recovery-inspector"
+          hidden
+        >
+          <label for="recovery-mode">Inspect a mode</label
+          ><select
+            id="recovery-mode"
+            aria-describedby="recovery-select-help"
+          ></select
+          ><span id="recovery-select-help" class="sr-only"
+            >Selecting a transport mode highlights its bar and updates its exact
+            recovery percentage.</span
+          >
+          <div
+            class="recovery-readout"
+            id="recovery-readout"
+            aria-live="polite"
+            aria-atomic="true"
+          ></div>
+        </div>
+        <div class="chapter-support">
+          <p class="chart-note" id="recovery-note">
+            Recovery is 2025 annual journeys divided by the same mode's 2019
+            total, multiplied by 100. Values above 100% exceed the benchmark.
+            RMB is estimated and PLB includes those estimates. These five bars
+            are separate benchmark comparisons: PLB overlaps GMB and RMB, so the
+            bars must not be added together.
+          </p>
+          <details class="data-table-disclosure">
+            <summary>
+              View recovery data <span aria-hidden="true">+</span>
+            </summary>
+            <div class="table-wrap">
+              <table>
+                <caption>
+                  Full-year 2025 / full-year 2019 passenger journeys. These are
+                  separate mode benchmarks, not additive market shares.
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Transport mode</th>
+                    <th scope="col">Recovery</th>
+                    <th scope="col">Passenger measurement</th>
+                  </tr>
+                </thead>
+                <tbody id="recovery-table">
+                  <tr>
+                    <td colspan="3">Research data is loading.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div class="chapter-end">
+          <p>
+            Recovery describes departure from a benchmark; it does not identify
+            the causes of change or passenger switching. MTR service coverage
+            also changed over the study.
+          </p>
+          <a
+            class="text-link"
+            href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/analysis/outputs/recovery_2019.csv"
+            >Recovery source table <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+
+      <section
+        class="chapter chapter-landscape"
+        id="landscape"
+        aria-labelledby="landscape-title"
+      >
+        <div class="container">
+          <p class="eyebrow section-number">
+            04 / A CHANGING TRANSPORT LANDSCAPE
+          </p>
+          <div class="chapter-heading">
+            <h2 id="landscape-title">
+              Is the minibus industry<br /><em
+                >losing its relative position?</em
+              >
+            </h2>
+            <div class="chapter-introduction">
+              <p>
+                The minibus share of a defined transport comparison group became
+                smaller, even as Green Minibuses gained weight inside the
+                industry.
+              </p>
+              <p>
+                Combined PLB share moved from
+                <strong data-share-endpoint="plb_share_2015_pct">—</strong> in
+                2015 to
+                <strong data-share-endpoint="plb_share_2025_pct">—</strong> in
+                2025: a decrease of
+                <strong data-share-endpoint="plb_share_change_pp" data-absolute
+                  >—</strong
+                >
+                percentage points.
+              </p>
+            </div>
+          </div>
+          <div class="chapter-chart-toolbar">
+            <p class="denominator-note">
+              GMB + RMB + MTR railway services + franchised buses = 100%<span
+                >PLB is the GMB/RMB subtotal, not an additional component.</span
+              >
+            </p>
+            <div
+              class="view-switch"
+              role="group"
+              aria-label="Market share view"
+            >
+              <button
+                type="button"
+                data-share-focus="all"
+                aria-pressed="true"
+                disabled
+              >
+                All selected modes</button
+              ><button
+                type="button"
+                data-share-focus="minibuses"
+                aria-pressed="false"
+                disabled
+              >
+                Minibus detail
+              </button>
+            </div>
+          </div>
+          <div class="plot-meta chapter-plot-meta">
+            <p id="share-unit">
+              Share of the four-mode comparison group · percent
+            </p>
+            <ul
+              class="chart-legend research-legend"
+              id="share-legend"
+              aria-label="Market share legend"
+            >
+              <li class="legend-green">
+                <span class="legend-line" aria-hidden="true"></span>Green
+                Minibuses
+              </li>
+              <li class="legend-red">
+                <span class="legend-line" aria-hidden="true"></span>Red
+                Minibuses · estimated
+              </li>
+              <li class="legend-mtr">
+                <span class="legend-line" aria-hidden="true"></span>MTR railway
+              </li>
+              <li class="legend-bus">
+                <span class="legend-line" aria-hidden="true"></span>Franchised
+                buses
+              </li>
+            </ul>
+          </div>
+          <div class="chapter-chart-shell" id="share-shell" aria-busy="true">
+            <div
+              class="chapter-chart"
+              id="share-chart"
+              role="img"
+              aria-label="Comparison-group shares are loading."
+              aria-describedby="share-note"
+            ></div>
+            <div class="data-status" id="share-status" role="status">
+              <span class="status-line" aria-hidden="true"></span>
+              <p>Loading the verified comparison-group shares…</p>
+              <button
+                class="text-link"
+                type="button"
+                data-retry-chapters
+                hidden
+              >
+                Retry research data <span aria-hidden="true">↻</span>
+              </button>
+            </div>
+          </div>
+          <div
+            class="year-inspector share-inspector"
+            id="share-inspector"
+            hidden
+          >
+            <label for="share-year">Explore a year</label
+            ><select id="share-year" aria-describedby="share-year-help"></select
+            ><span class="sr-only" id="share-year-help"
+              >The comparison displays four nonoverlapping components and the
+              PLB subtotal. Changing the view never changes the
+              denominator.</span
+            >
+            <div
+              class="share-values"
+              id="share-readout"
+              aria-live="polite"
+              aria-atomic="true"
+            ></div>
+          </div>
+          <div class="chapter-support">
+            <p class="chart-note" id="share-note">
+              This comparison group is a selected subset, not the entire Hong
+              Kong public transport market. Every denominator includes estimated
+              RMB journeys. Annual shares divide annual totals; changes reflect
+              both the numerator and the group total. Minibus detail changes the
+              vertical range to 0–20% while keeping the same four-mode
+              denominator.
+            </p>
+            <details class="data-table-disclosure">
+              <summary>
+                View comparison-group data <span aria-hidden="true">+</span>
+              </summary>
+              <div class="table-wrap">
+                <table>
+                  <caption>
+                    Annual shares in percent. The first four components sum to
+                    100%; PLB is shown only as a subtotal. All denominators
+                    include estimated RMB journeys.
+                  </caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Year</th>
+                      <th scope="col">GMB</th>
+                      <th scope="col">RMB<br /><span>estimated</span></th>
+                      <th scope="col">MTR<br /><span>railway</span></th>
+                      <th scope="col">Franchised<br /><span>buses</span></th>
+                      <th scope="col">PLB<br /><span>subtotal</span></th>
+                      <th scope="col">
+                        Group total<br /><span>million journeys</span>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody id="share-table">
+                    <tr>
+                      <td colspan="7">Research data is loading.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </details>
+          </div>
+          <div
+            class="composition-story"
+            id="composition-story"
+            aria-busy="true"
+          >
+            <div>
+              <p class="eyebrow">WITHIN THE MINIBUS INDUSTRY</p>
+              <h3>Smaller in the group.<br /><em>More Green within.</em></h3>
+              <p>
+                GMB's share of combined PLB journeys rose from
+                <strong data-composition="gmb_share_2015_pct">—</strong> to
+                <strong data-composition="gmb_share_2025_pct">—</strong>. This
+                is a different denominator: GMB + RMB only.
+              </p>
+            </div>
+            <div class="composition-strips" id="composition-strips">
+              <div class="composition-row">
+                <span>2015</span>
+                <div
+                  class="composition-track"
+                  id="composition-2015"
+                  role="img"
+                  aria-label="2015 composition is loading."
+                >
+                  <span class="composition-green"></span
+                  ><span class="composition-red"></span>
+                </div>
+                <strong data-composition="gmb_share_2015_pct">—</strong>
+              </div>
+              <div class="composition-row">
+                <span>2025</span>
+                <div
+                  class="composition-track"
+                  id="composition-2025"
+                  role="img"
+                  aria-label="2025 composition is loading."
+                >
+                  <span class="composition-green"></span
+                  ><span class="composition-red"></span>
+                </div>
+                <strong data-composition="gmb_share_2025_pct">—</strong>
+              </div>
+              <p>
+                <span class="mode-dot" aria-hidden="true"></span> GMB share of
+                PLB
+                <span class="mode-diamond" aria-hidden="true"></span> Estimated
+                RMB remainder
+              </p>
+            </div>
+          </div>
+          <div class="chapter-end">
+            <p>
+              MTR includes cross-boundary services within MTR Lines; network
+              coverage changed. Franchised buses use each contemporaneous
+              franchise once, with the July 2023 Citybus/NWFB merger handled in
+              preparation. Neither share comparison identifies individual mode
+              switching.
+            </p>
+            <a
+              class="text-link"
+              href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/analysis/outputs/annual_market_share.csv"
+              >Share source table <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="chapter chapter-fleet container"
+        id="fleet"
+        aria-labelledby="fleet-title"
+      >
+        <p class="eyebrow section-number">
+          05 / FLEET SIZE AND PASSENGER DEMAND
+        </p>
+        <div class="chapter-heading">
+          <h2 id="fleet-title">
+            Did the fleet change<br /><em>as much as demand?</em>
+          </h2>
+          <div class="chapter-introduction">
+            <p>
+              Licensed vehicle stocks and annual passenger journeys moved at
+              different rates.
+            </p>
+            <p>
+              Between December 2015 and December 2025, GMB stock rose from
+              <strong data-fleet-endpoint="GMB.december_vehicles_2015"
+                >—</strong
+              >
+              to
+              <strong data-fleet-endpoint="GMB.december_vehicles_2025"
+                >—</strong
+              >
+              vehicles. RMB stock fell from
+              <strong data-fleet-endpoint="RMB.december_vehicles_2015"
+                >—</strong
+              >
+              to
+              <strong data-fleet-endpoint="RMB.december_vehicles_2025">—</strong
+              >, while its estimated journeys fell further.
+            </p>
+          </div>
+        </div>
+        <div class="fleet-toolbar">
+          <div class="selection-group">
+            <p id="fleet-mode-label">Minibus service</p>
+            <div
+              class="view-switch"
+              role="group"
+              aria-labelledby="fleet-mode-label"
+            >
+              <button
+                type="button"
+                data-fleet-mode="GMB"
+                aria-pressed="false"
+                disabled
+              >
+                Green Minibuses</button
+              ><button
+                type="button"
+                data-fleet-mode="RMB"
+                aria-pressed="true"
+                disabled
+              >
+                Red Minibuses <span>journeys estimated</span>
+              </button>
+            </div>
+          </div>
+          <div class="selection-group">
+            <p id="fleet-measure-label">Measure</p>
+            <div
+              class="view-switch"
+              role="group"
+              aria-labelledby="fleet-measure-label"
+            >
+              <button
+                type="button"
+                data-fleet-measure="compare"
+                aria-pressed="true"
+                disabled
+              >
+                Stock &amp; journeys</button
+              ><button
+                type="button"
+                data-fleet-measure="proxy"
+                aria-pressed="false"
+                disabled
+              >
+                Vehicle-day proxy
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="plot-meta chapter-plot-meta">
+          <p id="fleet-unit">RMB · own 2015 = 100 for each measure</p>
+          <ul
+            class="chart-legend research-legend"
+            id="fleet-legend"
+            aria-label="Fleet comparison legend"
+          >
+            <li class="legend-stock">
+              <span class="legend-line" aria-hidden="true"></span>December
+              licensed stock
+            </li>
+            <li class="legend-red">
+              <span class="legend-line" aria-hidden="true"></span>Annual
+              journeys · estimated
+            </li>
+          </ul>
+        </div>
+        <div class="chapter-chart-shell" id="fleet-shell" aria-busy="true">
+          <div
+            class="chapter-chart"
+            id="fleet-chart"
+            role="img"
+            aria-label="Licensed fleet comparison is loading."
+            aria-describedby="fleet-note"
+          ></div>
+          <div class="data-status" id="fleet-status" role="status">
+            <span class="status-line" aria-hidden="true"></span>
+            <p>Loading the verified fleet comparison…</p>
+            <button class="text-link" type="button" data-retry-chapters hidden>
+              Retry research data <span aria-hidden="true">↻</span>
+            </button>
+          </div>
+        </div>
+        <div class="year-inspector fleet-inspector" id="fleet-inspector" hidden>
+          <label for="fleet-year">Explore a year</label
+          ><select id="fleet-year" aria-describedby="fleet-year-help"></select
+          ><span class="sr-only" id="fleet-year-help"
+            >Selecting a year shows the original December vehicle stock and the
+            chosen annual measurement, with different units clearly
+            labeled.</span
+          >
+          <div
+            class="fleet-readout"
+            id="fleet-readout"
+            aria-live="polite"
+            aria-atomic="true"
+          ></div>
+        </div>
+        <p class="fleet-endpoint-note" id="fleet-endpoint-note">
+          Endpoint comparison is loading.
+        </p>
+        <div class="chapter-support">
+          <p class="chart-note" id="fleet-note">
+            The common 2015 index compares change in separate measures: December
+            licensed vehicle stock and full-year passenger journeys. They share
+            an index axis, not their original units. The vehicle-day view uses
+            the existing annual journey proxy, with all twelve month-end stocks
+            weighted by calendar days; its denominator is not December stock.
+          </p>
+          <details class="data-table-disclosure">
+            <summary>
+              View fleet and proxy data <span aria-hidden="true">+</span>
+            </summary>
+            <div class="table-wrap">
+              <table>
+                <caption id="fleet-table-caption">
+                  Annual GMB/RMB fleet context. Stocks are reported licensing
+                  records; RMB journeys and the resulting proxy include
+                  estimates.
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Year</th>
+                    <th scope="col">
+                      December stock<br /><span>licensed vehicles</span>
+                    </th>
+                    <th scope="col">
+                      Annual journeys<br /><span>million</span>
+                    </th>
+                    <th scope="col">
+                      Vehicle-day<br /><span>proxy denominator</span>
+                    </th>
+                    <th scope="col">
+                      Journeys per<br /><span>licensed vehicle-day proxy</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="fleet-table">
+                  <tr>
+                    <td colspan="5">Research data is loading.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </details>
+        </div>
+        <div class="interpretation-note">
+          <p class="eyebrow">READ THIS COMPARISON WITH CARE</p>
+          <p>
+            Licensed stock is not daily deployment. Journeys per licensed
+            vehicle-day is a descriptive proxy; it does not measure occupancy,
+            utilization or operational productivity. RMB passenger estimation
+            already uses licensed fleet information, so its passenger/fleet
+            relationship is partly mechanical.
+          </p>
+          <p>
+            The annual proxy changed by
+            <strong data-fleet-endpoint="GMB.proxy_change_pct">—</strong> for
+            GMB and
+            <strong data-fleet-endpoint="RMB.proxy_change_pct">—</strong> for
+            RMB between 2015 and 2025. These associations do not establish
+            causal effects.
+          </p>
+        </div>
+        <div class="chapter-end">
+          <p>
+            Read the December stock and annual proxy as distinct summaries. No
+            comparable RMB mileage is supplied or inferred.
+          </p>
+          <a
+            class="text-link"
+            href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/analysis/outputs/annual_fleet.csv"
+            >Fleet source table <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+
+      <section
+        class="methodology chapter-methodology"
+        id="methodology"
+        aria-labelledby="methodology-title"
+      >
+        <div class="container">
+          <p class="eyebrow section-number">06 / METHODOLOGY &amp; SOURCES</p>
+          <div class="chapter-heading">
+            <h2 id="methodology-title">
+              Read the evidence.<br /><em>Know its limits.</em>
+            </h2>
+            <div class="chapter-introduction">
+              <p>
+                Eleven complete years, one source vintage and explicit
+                measurement boundaries keep the comparisons reproducible.
+              </p>
+              <p>
+                The research covers January 2015 through December 2025: 132
+                months per passenger series. Official Transport Department
+                tables supply monthly passenger journeys, average daily journeys
+                and licensed minibus stocks.
+              </p>
+            </div>
+          </div>
+          <div class="method-at-a-glance">
+            <p><strong>132</strong><span>complete months per mode</span></p>
+            <p>
+              <strong>2015–2025</strong
+              ><span>eleven complete calendar years</span>
+            </p>
+            <p>
+              <strong>One vintage</strong
+              ><span>consistent published snapshot</span>
+            </p>
+          </div>
+          <div class="method-details">
+            <details open>
+              <summary>
+                <span>01</span> Scope, official sources and minibus definitions
+                <span class="disclosure-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="method-detail-body">
+                <p>
+                  Green Minibuses (GMB) and Red Minibuses (RMB) are the two
+                  passenger series within Public Light Buses (PLB). PLB is their
+                  sum. Passenger journeys count aggregate trips, not unique
+                  people.
+                </p>
+                <p>
+                  The Hong Kong Transport Department's Monthly Traffic and
+                  Transport Digest supplies Table 2.1 monthly journeys, Table
+                  2.1S average daily journeys and Table 2.2 month-end licensed
+                  stocks. The analysis preserves 132 consecutive months from
+                  January 2015 to December 2025.
+                </p>
+                <div class="method-source-links">
+                  <a
+                    href="https://data.gov.hk/en-data/dataset/hk-td-tis_17-monthly-traffic-and-transport-digest-csv"
+                    >Official dataset catalogue ↗</a
+                  ><a
+                    href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/docs/data_sources.md"
+                    >Verified source inventory ↗</a
+                  >
+                </div>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>02</span> Annual totals, indices and the recovery
+                benchmark
+                <span class="disclosure-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="method-detail-body">
+                <p>
+                  Annual passenger flows sum twelve monthly totals in thousands.
+                  Displaying millions divides those totals by 1,000. Annual
+                  shares are ratios of annual flows, not averages of monthly
+                  percentages.
+                </p>
+                <div class="method-formula">
+                  <p>
+                    <span>Trend index</span>Annual measure ÷ its own 2015
+                    measure × 100
+                  </p>
+                  <p>
+                    <span>Recovery</span>2025 annual journeys ÷ own 2019 annual
+                    journeys × 100
+                  </p>
+                </div>
+                <p>
+                  A value of 100 is the stated benchmark. The index and recovery
+                  views deliberately use different years. Percentage-point
+                  changes compare shares directly; they are not relative
+                  percentage changes. Lines connect the annual observations; no
+                  synthetic observations or smoothing are introduced.
+                </p>
+                <a
+                  href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/docs/analysis_methodology.md"
+                  >Complete calculation rules ↗</a
+                >
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>03</span> Comparison-group denominator and transport
+                boundaries
+                <span class="disclosure-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="method-detail-body">
+                <p>
+                  The comparison-group denominator is GMB + RMB + MTR railway
+                  services + franchised buses. These four components appear once
+                  each. PLB is the GMB/RMB subtotal, not an additional
+                  component. This group does not represent all Hong Kong
+                  transport; every denominator contains estimated RMB journeys.
+                </p>
+                <p>
+                  MTR railway services combine MTR Lines, Airport Express and
+                  Light Rail. MTR Lines include cross-boundary services; Hong
+                  Kong Tramways and MTR buses are excluded. Changing service
+                  coverage makes this a published-series comparison, not a
+                  constant-network comparison.
+                </p>
+                <p>
+                  Each contemporaneous franchised-bus component is counted once.
+                  Through June 2023, monthly totals include Citybus franchises 1
+                  and 2 plus NWFB. From July 2023, Citybus franchise 3 replaces
+                  franchise 1 and NWFB, while franchise 2 continues. KMB, LWB
+                  and NLB remain included. Residents' services and MTR buses are
+                  excluded. Preparation preserves the total boundary across the
+                  merger.
+                </p>
+                <a
+                  href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/docs/cleaning_methodology.md"
+                  >Preparation and merger treatment ↗</a
+                >
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>04</span> Fleet stock and the licensed vehicle-day proxy
+                <span class="disclosure-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="method-detail-body">
+                <p>
+                  The fleet comparison uses December month-end licensed vehicles
+                  as an annual stock snapshot. The annual proxy uses all twelve
+                  month-end stocks, weighted by each month's actual calendar
+                  days, including leap days.
+                </p>
+                <div class="method-formula">
+                  <p>
+                    <span>Annual proxy</span>Annual journeys in thousands ×
+                    1,000<br />÷ Σ(month-end licensed vehicles × month days)
+                  </p>
+                </div>
+                <p>
+                  Month-end licensing stocks stand in for daily availability.
+                  They are not the operating fleet, and the proxy does not
+                  measure actual occupancy, deployment, vehicle utilization or
+                  operational productivity. RMB journey estimation uses fleet
+                  information, limiting independent interpretation of the
+                  passenger/fleet association.
+                </p>
+                <a
+                  href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/docs/analysis_methodology.md#fleet-interpretation"
+                  >Fleet interpretation ↗</a
+                >
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>05</span> Validation, reconciliation and publication
+                revisions
+                <span class="disclosure-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="method-detail-body">
+                <p>
+                  Preparation checks complete month/mode keys, unique
+                  observations, valid units, numeric values and estimation
+                  labels. Reconciliation checks PLB = GMB + RMB,
+                  calendar-adjusted daily/monthly consistency and
+                  comparison-group shares summing to 100%. Independent SQL and
+                  Pandas calculations agree on the core analytical outputs.
+                  Source hashes preserve traceability.
+                </p>
+                <p>
+                  The preserved snapshot was retrieved on
+                  <span id="snapshot-date">11 October 2026</span>; the dataset
+                  reports a revision date of
+                  <span id="revision-date">21 September 2026</span>. Six older
+                  provisional annual minibus references differ from the current
+                  monthly sums. Publication updates are the best-supported
+                  explanation, but their specific reasons remain unresolved. The
+                  analysis retains one consistent current vintage.
+                </p>
+                <p>
+                  Source reconciliation checks internal consistency, not
+                  independent passenger-count accuracy. Cross-vintage
+                  differences are not uncertainty intervals for RMB estimates.
+                  An unmarked status flag does not guarantee finality or
+                  measurement certainty.
+                </p>
+                <div class="method-source-links">
+                  <a
+                    href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/reports/reference_discrepancies.md"
+                    >Revision investigation ↗</a
+                  ><a
+                    href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/docs/validation_report.md"
+                    >Preparation validation ↗</a
+                  >
+                </div>
+              </div>
+            </details>
+            <details>
+              <summary>
+                <span>06</span> Estimates, interpretation and what journeys can
+                show <span class="disclosure-plus" aria-hidden="true">+</span>
+              </summary>
+              <div class="method-detail-body">
+                <p>
+                  RMB patronage is estimated using survey, fleet and other
+                  information rather than regular operator returns. The source
+                  provides no quantified confidence interval or complete
+                  parameter history. PLB totals and comparison-group
+                  denominators inherit the estimated RMB component.
+                </p>
+                <p>
+                  Reported GMB, MTR and bus values describe published
+                  provenance, not independently audited certainty. These
+                  historical comparisons do not isolate causal effects or
+                  identify passengers switching modes. Fleet associations and
+                  period timing remain descriptive.
+                </p>
+                <p>
+                  The full report also examines calendar-day-adjusted profiles.
+                  Month length and within-year trends must remain distinct from
+                  passenger demand; those profiles do not establish a stable
+                  seasonal mechanism.
+                </p>
+                <a
+                  href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/reports/eda_findings.md"
+                  >Read the complete findings and limitations ↗</a
+                >
+              </div>
+            </details>
+          </div>
+          <div class="method-publication-links">
+            <a
+              class="text-link"
+              href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/docs/analysis_methodology.md"
+              >Full analytical methodology <span aria-hidden="true">↗</span></a
+            ><a
+              class="text-link"
+              href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/docs/data_dictionary.md"
+              >Definitions and data dictionary
+              <span aria-hidden="true">↗</span></a
+            ><a
+              class="text-link"
+              href="https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis"
+              >Explore the research repository
+              <span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <p class="footer-title">HONG KONG MINIBUS RESEARCH</p>
+          <p>A Decade in Transition · 2015–2025</p>
+        </div>
+        <div class="footer-sources">
+          <p>
+            Official data:
+            <a
+              href="https://data.gov.hk/en-data/dataset/hk-td-tis_17-monthly-traffic-and-transport-digest-csv"
+              >Transport Department / DATA.GOV.HK</a
+            >
+          </p>
+          <p>
+            Government data retains its source rights.
+            <a href="https://data.gov.hk/en/terms-and-conditions">Data terms</a>
+            · <a href="./licenses/NOTICE.txt">Site asset notices</a>
+          </p>
+          <p>Independent research. No government endorsement.</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
