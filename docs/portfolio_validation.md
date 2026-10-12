@@ -2,7 +2,9 @@
 
 Phase 5A reviewed on **11–12 October 2026**. The project is prepared for a subsequent
 publication decision. No GitHub repository, remote push or hosted deployment was
-performed. The historical analytical findings and data remain unchanged.
+performed during Phase 5A. Subsequent source publication and the GitHub Pages
+research website release are recorded in [website_deployment.md](website_deployment.md).
+The historical analytical findings and data remain unchanged.
 
 ## Review scope and changes
 

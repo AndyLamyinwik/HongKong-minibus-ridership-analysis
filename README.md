@@ -2,9 +2,13 @@
 
 **One Industry, Two Different Futures.** A historical transport analytics study, 2015–2025.
 
+**[Explore the Interactive Research Website](https://andylamyinwik.github.io/hong-kong-minibus-ridership-analysis/)**
+
+Read the complete research through interactive annual trends, recovery comparisons, transport shares and fleet context. The publication is hosted on GitHub Pages, with visible methodology, source links and estimation qualifications.
+
 Hong Kong's Green and Red Minibuses share an industry headline but follow different passenger-demand trajectories. This project examines eleven complete years of official transport statistics to distinguish long-term change, disruption-period patterns and subsequent recovery, with MTR railway services and franchised buses as comparators.
 
-The study connects source verification, Python preparation, a constrained SQLite model, independent SQL/Pandas calculations and an interactive dashboard. It shows why transport planning and industry discussion benefit from examining the two minibus categories separately. Findings describe published aggregate journeys; Red Minibus (RMB) volumes are estimates.
+The study connects source verification, Python preparation, a constrained SQLite model, independent SQL/Pandas calculations and the interactive research website. A separate Streamlit implementation presents the same analytical tables. The research shows why transport planning and industry discussion benefit from examining the two minibus categories separately. Findings describe published aggregate journeys; Red Minibus (RMB) volumes are estimates.
 
 ## Research questions
 
@@ -27,7 +31,7 @@ The [research plan](docs/project_plan.md) specifies seven questions and their in
 
 These claims trace to the unrounded [endpoint table](analysis/outputs/endpoint_comparison.csv), [minibus composition](analysis/outputs/annual_minibus_composition.csv) and [comparison-group shares](analysis/outputs/annual_market_share.csv). Read the [findings report](reports/eda_findings.md) for subperiods, alternative benchmarks and fleet context. These comparisons do not establish causes or individual passenger switching.
 
-## Dashboard preview
+## Streamlit implementation preview
 
 ![Executive overview of the functioning dashboard, with four verified KPIs and annual GMB/RMB indices](assets/dashboard_overview.jpg)
 
@@ -56,11 +60,13 @@ All previews use the verified research outputs. **Data source: Transport Departm
 
 **Python 3.12 · pandas · SQLite/SQL · Matplotlib · Streamlit · Plotly · pytest**
 
+**Research website: HTML/CSS/JavaScript · Apache ECharts · Vite · GitHub Pages**
+
 1. **Verify sources:** preserve official CSV bytes and record coverage, revision dates, schemas and SHA-256 hashes.
 2. **Prepare:** parse dates and status flags, map service components, retain RMB estimation metadata and build separate monthly-total, daily-rate and fleet tables with lineage.
 3. **Validate:** check keys, coverage, units, calendar reconciliation, aggregation identities and annual publication discrepancies before replacing outputs.
 4. **Analyze:** calculate complete-year trends, growth, composition, recovery and fleet proxies; cross-check six independent SQL queries against Pandas.
-5. **Present:** generate seven research figures and a five-section dashboard that reads the included analytical tables.
+5. **Present:** generate seven research figures, a five-section Streamlit dashboard and a static editorial website that reuse the validated analytical outputs.
 
 The [cleaning methodology](docs/cleaning_methodology.md), [data dictionary](docs/data_dictionary.md), [analytical methods](docs/analysis_methodology.md) and [SQL examples using CTEs and window functions](sql/analysis/README.md) explain the implementation. The [portfolio validation record](docs/portfolio_validation.md) and [fresh-environment reproduction check](docs/reproducibility_check.md) document quality assurance.
 
@@ -79,6 +85,8 @@ The preserved snapshot was retrieved **11 October 2026**, with official revision
 ## Project structure
 
 ```text
+├── site/                     # Published research website, static export and frontend tests
+├── .github/workflows/        # Tested build and GitHub Pages deployment
 ├── dashboard/app.py          # Streamlit entry point
 ├── src/hk_minibus/           # Preparation, analysis, figures and dashboard modules
 ├── scripts/                  # Preparation and analytical runners
@@ -94,9 +102,21 @@ The preserved snapshot was retrieved **11 October 2026**, with official revision
 └── tests/                    # Preparation, SQL parity, metrics, charts and app tests
 ```
 
-Root files include pinned `requirements.txt`, `pyproject.toml`, `LICENSE`, `THIRD_PARTY_NOTICES.md` and `.gitignore`; `.streamlit/config.toml` sets the dashboard theme. Included outputs let reviewers run the dashboard immediately.
+Root files include pinned `requirements.txt`, `pyproject.toml`, `LICENSE`, `THIRD_PARTY_NOTICES.md` and `.gitignore`; `.streamlit/config.toml` sets the dashboard theme. Included outputs let reviewers run the dashboard immediately. [Website source, metrics and local instructions](site/README.md); [deployment and verification record](docs/website_deployment.md).
 
 ## Run locally
+
+For the website, use Node.js **24.19.0** and pnpm **11.25.0**. From the repository root:
+
+```bash
+cd site
+pnpm install --frozen-lockfile
+pnpm dev
+```
+
+Open [the local research website](http://127.0.0.1:5173/hong-kong-minibus-ridership-analysis/). Website tests and build instructions are in [site/README.md](site/README.md).
+
+For the separate Streamlit implementation, start from the repository root.
 
 **Python 3.12 is the verified runtime.** Run from the repository root:
 
@@ -130,7 +150,7 @@ The analytical runner executes all six SQL queries and checks their results agai
 python -m pytest -q --basetemp analysis/.pytest-tmp-review -p no:cacheprovider
 ```
 
-The named test directory is disposable; pytest replaces it. A fresh Windows/Python 3.12 environment reproduced the CSVs, SQLite contents and figures. Local socket permission is required for Streamlit's app tests. Linux/Community Cloud execution remains to be verified in the future [publication and deployment plan](docs/publication_plan.md).
+The named test directory is disposable; pytest replaces it. A fresh Windows/Python 3.12 environment reproduced the CSVs, SQLite contents and figures. Local socket permission is required for Streamlit's app tests. The website's GitHub Actions build verifies frontend and standard-library exporter checks on Ubuntu. Full Python/Streamlit Linux execution and Community Cloud deployment remain separate, unverified milestones in the [publication and deployment plan](docs/publication_plan.md).
 
 ## Interpretation and reuse
 

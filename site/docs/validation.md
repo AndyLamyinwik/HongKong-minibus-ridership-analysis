@@ -1,6 +1,6 @@
 # Website validation record
 
-The Phase 6A record below preserves the approved homepage checks. The [Phase 6B record](#phase-6b--complete-research-publication) documents the completed publication and its current local verification.
+The Phase 6A and Phase 6B entries preserve their original local verification. The [Phase 6C public release record](#phase-6c--public-release) documents the deployed research website and latest release checks.
 
 ## Phase 6A — Approved homepage
 
@@ -152,3 +152,58 @@ From `site/`, run `pnpm test` and `pnpm build`. From the repository root, run `p
 Owned local preview/QA servers are stopped after verification. Restart the local preview using [the website instructions](../README.md#local-development). Phase 6B is complete for visual review. Phase 6C should establish the final release file list, rerun checks on the approved release, publish the authorized website changes, configure GitHub Pages and verify the public URL, links, data and responsive behavior.
 
 No website commit, push or public deployment was performed in Phase 6B.
+
+## Phase 6C — Public release
+
+Verified on **12 October 2026**. The [public research website](https://andylamyinwik.github.io/hong-kong-minibus-ridership-analysis/) is deployed through GitHub Actions from public `main`. This phase preserves the approved visual design, all historical data and analytical conclusions; necessary changes configure the Pages path, automated release and portfolio documentation.
+
+### Release checks
+
+| Check | Result |
+| --- | --- |
+| Locked frontend installation | `pnpm install --frozen-lockfile` passed using pnpm 11.25.0 |
+| Frontend regression | **146 passed, 0 failed** |
+| Isolated exporter contracts | **16 passed, 0 failed**, 0.942 seconds |
+| Original Python / SQL / Streamlit regression | **201 passed, 0 failed**, 84.11 seconds; dependency check passed and owned fixtures removed |
+| Deterministic static export | Read-only `--check` passed; original JSON remains 36,628 bytes with seventeen matching input hashes |
+| Local Vite build | Vite 8.3.4, 596 modules, 188 ms; no chunk-size warning |
+| Build artifact | **26 files, 919,856 bytes**; only `site/dist/` is uploaded by the workflow |
+| Release file list | **141 files**: original 108, website 31, one workflow and one deployment document; excluded artifacts absent |
+| Source review | All site files reviewed; bounded credential/private-path scans passed, with no localhost or placeholder URL findings in checked runtime text |
+| Attribution | Ten public assets, ten fonts and seven dependency license texts match preserved originals |
+
+The two unchanged tslib license/copyright texts preserve the dependency's original CRLF and final-newline bytes. The scoped Git whitespace check excludes those two files; the rest of the release diff passes. No license text was normalized to conceal a warning.
+
+The full original suite ran locally on Windows/Python 3.12. The successful Ubuntu Actions build separately installed locked frontend dependencies, verified static export, ran the exporter contracts and frontend suite, and built the website. It does not claim full Python/Streamlit Linux runtime testing.
+
+### GitHub Actions and public assets
+
+The [initial website release run](https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/actions/runs/38204286899) completed both **build** and **deploy** successfully for commit `492bc3f31de71bb5b8a0a00e5ed5ce6accbda5d3`. GitHub's deployment record confirmed a successful `github-pages` deployment and returned the exact public URL above. Portfolio documentation updates use the same workflow; [its run history](https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/actions/workflows/deploy-site.yml) identifies the latest deployed commit.
+
+Anonymous requests verified every one of the **26 generated files** with HTTP 200 and matching SHA-256, including scripts, CSS, fonts, notices and bundled JSON. The production base is `/hong-kong-minibus-ridership-analysis/`; all 24 runtime references resolve under that prefix. The actual public data asset matches the preserved export, rather than a newly fetched source vintage.
+
+All ten navigation anchors have real targets. All thirteen GitHub documentation/repository links returned HTTP 200. The local Python HTTP client encountered TLS connection errors for the DATA.GOV.HK catalogue and terms URLs; both official pages were successfully accessed through the web reader. Their authentic URLs remain unchanged, and this client-specific limit is documented rather than represented as an HTTP success.
+
+### Actual public browser observations
+
+| Public scenario | Observed result |
+| --- | --- |
+| Desktop, 1440 × 1000 CSS pixels | All four SVG charts and chapters rendered; no horizontal page overflow |
+| Tablet, 768 × 1024 | Publication and controls resized; document client/scroll widths both 768px |
+| Mobile, 390 × 844 | Four charts rendered with readable headings, legends and controls; client/scroll widths both 390px |
+| Narrow mobile, 320 × 720 | Expanded eleven-row share table scrolls internally; document client/scroll widths both 305px, table client 261px versus content 359px |
+| Annual controls | Absolute 2025 values GMB **495.80 million**, estimated RMB **50.74 million**; return to indexed view worked |
+| Recovery | Selecting MTR highlights its bar and displays **101.99%** against own 2019 total |
+| Shares | Minibus detail and keyboard Enter on all-mode view worked; 2015 PLB subtotal **16.99%** and 2025 **14.32%** retained the four-component denominator |
+| Fleet | RMB vehicle-day view displays **195.39** in 2025; switching to GMB stock/journeys and ArrowDown to 2016 displays **3,254 vehicles** and **559.01 million journeys** |
+| Tables and methodology | Eleven fleet rows opened; transport-boundary disclosure displayed the MTR definition and July 2023 franchise treatment |
+| Navigation | Real recovery, landscape, fleet and methodology chapter destinations operated; mobile menu closed after Methodology selection |
+| Logs | No unexpected application errors or warnings captured during nominal public loading and tested interactions |
+
+Full-page desktop, tablet and mobile screenshots plus representative recovery/share captures were taken from the actual public URL. Private QA screenshots are not committed or uploaded as website content.
+
+### Portfolio and remaining limits
+
+The opening repository README links prominently to the verified publication and retains its five major findings, source links and original Python/SQL/Streamlit instructions. The repository website field points to the same Pages URL. Status documentation distinguishes the public static website from the separately documented local Streamlit implementation. Historical Phase 6A/B no-publication statements remain explicitly scoped to their earlier phases.
+
+No release-blocking defect was identified. Browser checks used the available Chromium-based browser; Safari, Firefox, physical touchscreen devices and complete assistive-technology verification remain outside the tested matrix. RMB estimation, source revisions and transport/fleet measurement limitations remain visible in the research. See [the deployment record](../../docs/website_deployment.md) for maintenance and verification steps.

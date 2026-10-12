@@ -1,6 +1,18 @@
 # Research Website Deployment
 
-The static research publication is released from [`site/`](../site/) in the public [GitHub repository](https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis). The approved design, historical snapshot and analytical definitions remain unchanged. This record describes the Phase 6C configuration; public deployment verification is recorded after the hosted release succeeds.
+The static research publication is released from [`site/`](../site/) in the public [GitHub repository](https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis). The approved design, historical snapshot and analytical definitions remain unchanged.
+
+**[Explore the Interactive Research Website](https://andylamyinwik.github.io/hong-kong-minibus-ridership-analysis/)** — publicly verified on **12 October 2026**.
+
+## Verified initial deployment
+
+The [initial release workflow](https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/actions/runs/38204286899) completed both build and deployment successfully for commit `492bc3f31de71bb5b8a0a00e5ed5ce6accbda5d3`. GitHub's deployment record returned the public URL above and a successful `github-pages` status for that exact commit. Subsequent pushes use the same gated workflow; its [run history](https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/actions/workflows/deploy-site.yml) identifies the currently deployed release.
+
+Anonymous HTTP checks verified all **26 generated files**, including the homepage, scripts, CSS, fonts, licenses and JSON. Every SHA-256 matched the local release build. The 36,628-byte JSON retained all seventeen source hashes. Ten navigation anchors resolved, and all thirteen GitHub documentation/repository links returned HTTP 200.
+
+The public website was operated in the available Chromium browser at desktop and mobile sizes. All four SVG charts rendered; annual/index controls, recovery selection, share focus/year selection, fleet mode/measure/year selection and methodology disclosures responded with the validated values. No unexpected application errors or warnings were captured. The [website validation record](../site/docs/validation.md#phase-6c--public-release) gives the scope and results.
+
+The local Python HTTP client encountered a TLS connection error for the two DATA.GOV.HK links. Both the official catalogue and terms pages were accessible through the web reader, so their authentic URLs were retained. This is a client-specific verification limit; the website serves its preserved research data from its own static artifact.
 
 ## Automated release
 

@@ -1,8 +1,8 @@
 # Publication and Deployment Plan
 
-Phase 5A prepared the local portfolio for review. **Phase 5B-1 covers GitHub publication; Phase 5B-2 covers Streamlit Community Cloud deployment. Each requires separate approval.** No public repository or hosted application has been created. The commands below are future instructions, not evidence of completed publication.
+The public [GitHub repository](https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis) was published in Phase 5B-1. The [interactive research website](https://andylamyinwik.github.io/hong-kong-minibus-ridership-analysis/) is deployed and verified on GitHub Pages in Phase 6C; its [deployment record](website_deployment.md) describes the workflow and public checks. The original Streamlit application remains available for local use. **Phase 5B-2 Streamlit Community Cloud deployment remains a separate, unverified milestone requiring approval.**
 
-## Proposed GitHub presentation
+## GitHub presentation
 
 - **Repository name:** `hong-kong-minibus-ridership-analysis`
 - **Description:** An 11-year analysis of Hong Kong's Green and Red Minibus ridership, pandemic recovery, and transport market share using Python, SQL, and Streamlit.
@@ -10,7 +10,7 @@ Phase 5A prepared the local portfolio for review. **Phase 5B-1 covers GitHub pub
 - **Suggested topics:** `data-analysis`, `python`, `sql`, `sqlite`, `pandas`, `streamlit`, `plotly`, `hong-kong`, `public-transport`.
 - **Portfolio narrative:** One Industry, Two Different Futures — separate the Green and Red Minibus trajectories while retaining estimation and comparison-boundary qualifications.
 
-## Files to publish
+## Release contents
 
 Keep the complete source, SQL, tests and documentation; the verified raw CSV snapshot; prepared CSVs and SQLite database; analytical tables and figures; reports; and genuine portfolio screenshots. These compact artifacts let a reviewer explore the dashboard immediately. Full workflow reproduction additionally requires the official data-specification PDF downloaded with its pinned hash. The [data reuse review](data_reuse.md) and [third-party notices](../THIRD_PARTY_NOTICES.md) govern source-material attribution and distinguish it from the original code license.
 
@@ -20,43 +20,20 @@ The dashboard's required runtime inputs are twelve CSVs in `analysis/outputs/`: 
 
 Exclude the PDF above, virtual environments, Python/pytest caches, disposable verification directories, credentials, local logs and machine-specific files using `.gitignore`. Inspect the actual staged file list before publication; an ignore file alone does not establish what has been staged. In particular, confirm that the locally present PDF is not staged, even when staging the `data/raw` directory.
 
-## Phase 5B-1: GitHub publication
+## Completed GitHub publication and website release
 
-Before creating a public repository or pushing files, complete a final local inspection and present the intended owner, repository name and visibility, exact file count and total size, licensing and attribution decisions, secret-scan results, complete software-suite results and unresolved risks. **Stop for explicit approval of this publication checklist.** Authentication must use a secure GitHub sign-in flow; do not place tokens or passwords in project files or chat.
+Phase 5B-1 published the approved 108-file analytical project to public `main`, with initial commit `75df532bfc829bfc25b1e3e26f0121907bbcd21b`. Phase 6C adds the approved website source, deployment workflow and release documentation while preserving historical data and analytical conclusions. The repository website field and opening README link point to the verified GitHub Pages publication.
 
-After that approval, confirm the intended GitHub account and repository visibility, check whether the proposed repository already exists, then:
+The Pages workflow builds and publishes only `site/dist/`; the complete repository retains the Python, SQL, Streamlit, research and reproducibility assets. Generated build files, frontend dependencies and private verification artifacts remain untracked. Future release changes require inspection of the actual diff and file list; use ordinary commits and pushes without overwriting unrelated remote work. Authentication uses the account's normal GitHub flow, with no credentials in project files.
 
-1. Rerun the documented verification checks, inspect source-material notices and review the staged files.
-2. If it does not exist, create an empty public GitHub repository with the approved name and description. Do not generate another README, license or ignore file remotely; the project already contains them. If an existing repository is found, inspect it before proceeding; do not overwrite unrelated contents or force-push.
-3. From the project root, initialize the local repository only if it is still untracked, then stage the explicit project allowlist below. If Git already exists, inspect its status, branch and remotes before proceeding.
-
-```text
-git init -b main
-git add README.md LICENSE THIRD_PARTY_NOTICES.md .gitignore .streamlit/config.toml requirements.txt pyproject.toml dashboard src scripts sql tests config docs assets data/raw data/processed analysis/outputs analysis/figures reports
-git diff --cached --name-only
-git diff --cached --stat
-git diff --cached --check
-```
-
-4. Review the staged diff, confirm that ignored local artifacts and credentials are absent, and create the first commit. Replace `YOUR-ACCOUNT` with the approved account; verify the resulting remote before pushing.
-
-```text
-git commit -m "Prepare validated Hong Kong minibus ridership portfolio"
-git remote add origin https://github.com/YOUR-ACCOUNT/hong-kong-minibus-ridership-analysis.git
-git remote -v
-git push -u origin main
-```
-
-5. Inspect the published README, all four preview images, source/notice links, research reports and example SQL. Add the proposed topics and pin the repository if desired. Verify installation and dashboard startup from a fresh clone before presenting it as reproducible.
-
-These instructions follow the [official GitHub guide for adding locally hosted code](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github). Authentication must use the account's normal GitHub flow; credentials do not belong in project files.
+See the [website deployment record](website_deployment.md) and [website validation record](../site/docs/validation.md#phase-6c--public-release) for the current static publication. The remaining instructions below apply specifically to a future Streamlit Community Cloud release.
 
 ## Streamlit Community Cloud configuration
 
 | Setting | Project value |
 | --- | --- |
-| Repository | The approved GitHub account / `hong-kong-minibus-ridership-analysis` |
-| Branch | `main`, after the publication commit |
+| Repository | `AndyLamyinwik/hong-kong-minibus-ridership-analysis` |
+| Branch | `main` |
 | Main file path | `dashboard/app.py` |
 | Python | Select **3.12** in Advanced settings; this is the verified local major/minor runtime |
 | Python dependencies | Root `requirements.txt`; pinned preparation, analysis, dashboard and test environment |
@@ -77,7 +54,7 @@ After publication and approval to deploy:
 2. Select the published repository, `main` and `dashboard/app.py`. In **Advanced settings**, explicitly select Python 3.12 and leave secrets empty. Choose an available, memorable subdomain if desired.
 3. Start deployment and review dependency/build logs. Treat a successful local install as preparation; the cloud build must establish Linux compatibility.
 4. Check all five sections, four headline KPIs, mode/year/frequency controls, recovery above 100%, comparison-group denominators, fleet labels, source notes and report/CSV downloads. Repeat desktop and narrow-screen checks on the hosted URL.
-5. Once the hosted version passes those checks, add its real URL to the README and repository website field. Do not add a placeholder live-demo link or an unverified deployment badge.
+5. Once the hosted version passes those checks, add its real URL to the README as a separate Streamlit implementation link. Keep the research website as the primary presentation and repository website field. Do not add a placeholder live-demo link or an unverified deployment badge.
 
 The repository, branch, entry point and Python selection are documented in [Streamlit's official deployment guide](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy). Cloud settings and service availability should be checked again when Phase 5B-2 begins.
 

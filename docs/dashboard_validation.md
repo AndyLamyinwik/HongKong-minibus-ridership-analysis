@@ -1,6 +1,6 @@
 # Phase 4 Dashboard Validation Record
 
-Verified on **11 October 2026**. This is the completed Phase 4 execution record. The later [Phase 5A portfolio validation](portfolio_validation.md) records final packaging and layout review; Phase 5B publication and deployment await approval. The dashboard remains a local presentation of the preserved historical research.
+Verified on **11 October 2026**. This is the completed Phase 4 execution record. The later [Phase 5A portfolio validation](portfolio_validation.md) records final packaging and layout review. Phase 5B-1 published the source repository, and Phase 6C verified the separate [GitHub Pages research website](website_deployment.md). The Streamlit dashboard remains a local presentation of the preserved historical research; its Community Cloud deployment is unverified and requires separate approval.
 
 ## Environment and complete suite
 
@@ -70,4 +70,4 @@ SHA-256 checks before and after dashboard work confirmed that **all 73 protected
 
 No known functional failures remain in the verified environment. Setup was exercised on Windows/Python 3.12; the documented macOS/Linux commands and other browser engines were not executed. The browser checks cover representative controls and narrow layouts, rather than an exhaustive device or screen-reader audit. The underlying analytical limits remain: estimated RMB volumes, vintage revisions, changing MTR coverage, a selected transport denominator, descriptive recovery comparisons and licensed-stock proxies.
 
-Phase 5A completed the licensing, attribution, clean-environment, portfolio-image and repository reviews recorded in [portfolio_validation.md](portfolio_validation.md). Phase 5B publication and hosted verification remain pending approval.
+Phase 5A completed the licensing, attribution, clean-environment, portfolio-image and repository reviews recorded in [portfolio_validation.md](portfolio_validation.md). GitHub source publication and the separate static research website release are complete. Streamlit Community Cloud deployment and hosted verification remain pending approval.
