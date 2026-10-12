@@ -2,7 +2,7 @@
 
 **One Industry, Two Different Futures.** A historical transport analytics study, 2015–2025.
 
-**[Explore the Interactive Research Website](https://andylamyinwik.github.io/hong-kong-minibus-ridership-analysis/)**
+**[Explore the Interactive Research Website](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/)**
 
 Read the complete research through interactive annual trends, recovery comparisons, transport shares and fleet context. The publication is hosted on GitHub Pages, with visible methodology, source links and estimation qualifications.
 
@@ -114,7 +114,7 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Open [the local research website](http://127.0.0.1:5173/hong-kong-minibus-ridership-analysis/). Website tests and build instructions are in [site/README.md](site/README.md).
+Open [the local research website](http://127.0.0.1:5173/HongKong-minibus-ridership-analysis/). Website tests and build instructions are in [site/README.md](site/README.md).
 
 For the separate Streamlit implementation, start from the repository root.
 

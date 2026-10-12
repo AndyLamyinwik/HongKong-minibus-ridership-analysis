@@ -43,7 +43,7 @@ INPUTS = (
     "reports/reference_discrepancies.md",
     "src/hk_minibus/dashboard/charts.py",
 )
-REPOSITORY = "https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis"
+REPOSITORY = "https://github.com/AndyLamyinwik/HongKong-minibus-ridership-analysis"
 
 
 def read_csv(root: Path, filename: str, required: set[str], *,

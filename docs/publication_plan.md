@@ -1,10 +1,10 @@
 # Publication and Deployment Plan
 
-The public [GitHub repository](https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis) was published in Phase 5B-1. The [interactive research website](https://andylamyinwik.github.io/hong-kong-minibus-ridership-analysis/) is deployed and verified on GitHub Pages in Phase 6C; its [deployment record](website_deployment.md) describes the workflow and public checks. The original Streamlit application remains available for local use. **Phase 5B-2 Streamlit Community Cloud deployment remains a separate, unverified milestone requiring approval.**
+The public [GitHub repository](https://github.com/AndyLamyinwik/HongKong-minibus-ridership-analysis) was published in Phase 5B-1. The [interactive research website](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/) is deployed and verified on GitHub Pages in Phase 6C; its [deployment record](website_deployment.md) describes the workflow and public checks. The original Streamlit application remains available for local use. **Phase 5B-2 Streamlit Community Cloud deployment remains a separate, unverified milestone requiring approval.**
 
 ## GitHub presentation
 
-- **Repository name:** `hong-kong-minibus-ridership-analysis`
+- **Repository name:** `HongKong-minibus-ridership-analysis`
 - **Description:** An 11-year analysis of Hong Kong's Green and Red Minibus ridership, pandemic recovery, and transport market share using Python, SQL, and Streamlit.
 - **Visibility and default branch:** Public; `main`.
 - **Suggested topics:** `data-analysis`, `python`, `sql`, `sqlite`, `pandas`, `streamlit`, `plotly`, `hong-kong`, `public-transport`.
@@ -32,7 +32,7 @@ See the [website deployment record](website_deployment.md) and [website validati
 
 | Setting | Project value |
 | --- | --- |
-| Repository | `AndyLamyinwik/hong-kong-minibus-ridership-analysis` |
+| Repository | `AndyLamyinwik/HongKong-minibus-ridership-analysis` |
 | Branch | `main` |
 | Main file path | `dashboard/app.py` |
 | Python | Select **3.12** in Advanced settings; this is the verified local major/minor runtime |

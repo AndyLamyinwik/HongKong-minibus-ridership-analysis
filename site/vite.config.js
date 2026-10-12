@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/hong-kong-minibus-ridership-analysis/",
+  base: "/HongKong-minibus-ridership-analysis/",
   build: {
     target: "es2022",
     rolldownOptions: {

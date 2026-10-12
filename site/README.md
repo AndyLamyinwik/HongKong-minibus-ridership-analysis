@@ -2,7 +2,7 @@
 
 An editorial research website for **Hong Kong Minibus Ridership: A Decade in Transition (2015–2025)**. The approved homepage introduces **“One Industry. Two Different Futures.”** through four verified findings and an interactive annual Green / Red Minibus comparison. Four subsequent chapters examine recovery, comparison-group shares, fleet context and methodology.
 
-**[Explore the published research website](https://andylamyinwik.github.io/hong-kong-minibus-ridership-analysis/)** — verified on GitHub Pages on 12 October 2026.
+**[Explore the published research website](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/)** — verified on GitHub Pages on 12 October 2026.
 
 The site uses warm paper, deep ink, jade and muted coral, with self-hosted Instrument Serif and DM Sans. Its [design system](docs/design-system.md) describes the visual and accessibility rules. [Metric provenance](docs/metric_provenance.md) maps every numerical view to the existing analytical tables. The [validation record](docs/validation.md) records implementation checks, build results and browser evidence.
 
@@ -18,7 +18,7 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Open **http://127.0.0.1:5173/hong-kong-minibus-ridership-analysis/**. The development server binds to the local computer and requires that port to be available. Stop it with Ctrl+C when finished.
+Open **http://127.0.0.1:5173/HongKong-minibus-ridership-analysis/**. The development server binds to the local computer and requires that port to be available. Stop it with Ctrl+C when finished.
 
 To test and preview the production build, from `site/`:
 
@@ -28,7 +28,7 @@ pnpm build
 pnpm preview
 ```
 
-Open **http://127.0.0.1:4173/hong-kong-minibus-ridership-analysis/**. Serve `dist/` over HTTP; opening `index.html` with `file://` prevents the data fetch from working in normal browser security settings.
+Open **http://127.0.0.1:4173/HongKong-minibus-ridership-analysis/**. Serve `dist/` over HTTP; opening `index.html` with `file://` prevents the data fetch from working in normal browser security settings.
 
 Dependency installation requires network access. The production website reads its bundled static files over HTTP. It is independent of the existing Streamlit application and Python runtime.
 
@@ -125,7 +125,7 @@ See the original [research findings](../reports/eda_findings.md), [analytical me
 
 ## Static hosting compatibility and release status
 
-`vite.config.js` uses `base: '/hong-kong-minibus-ridership-analysis/'`. Generated scripts, CSS, fonts and the favicon use the project-site path; licenses and JSON resolve beneath the publication homepage. Navigation uses anchors within the same HTML document. The production build and repository-path verification are covered by the [validation record](docs/validation.md).
+`vite.config.js` uses `base: '/HongKong-minibus-ridership-analysis/'`. Generated scripts, CSS, fonts and the favicon use the project-site path; licenses and JSON resolve beneath the publication homepage. Navigation uses anchors within the same HTML document. The production build and repository-path verification are covered by the [validation record](docs/validation.md).
 
 The research publication is deployed on GitHub Pages. The [GitHub Pages workflow](../.github/workflows/deploy-site.yml) checks the deterministic data export, runs exporter/frontend tests and builds the site before uploading only `site/dist/`. A separate dependent job deploys that artifact to the `github-pages` environment. [Deployment configuration and verification](../docs/website_deployment.md) record the successful release and maintenance steps.
 

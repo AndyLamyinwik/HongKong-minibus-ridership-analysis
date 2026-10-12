@@ -155,7 +155,7 @@ No website commit, push or public deployment was performed in Phase 6B.
 
 ## Phase 6C — Public release
 
-Verified on **12 October 2026**. The [public research website](https://andylamyinwik.github.io/hong-kong-minibus-ridership-analysis/) is deployed through GitHub Actions from public `main`. This phase preserves the approved visual design, all historical data and analytical conclusions; necessary changes configure the Pages path, automated release and portfolio documentation.
+Verified on **12 October 2026**. The [public research website](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/) is deployed through GitHub Actions from public `main`. This phase preserves the approved visual design, all historical data and analytical conclusions; necessary changes configure the Pages path, automated release and portfolio documentation.
 
 ### Release checks
 
@@ -178,7 +178,7 @@ The full original suite ran locally on Windows/Python 3.12. The successful Ubunt
 
 ### GitHub Actions and public assets
 
-The [initial website release run](https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/actions/runs/38204286899) completed both **build** and **deploy** successfully for commit `492bc3f31de71bb5b8a0a00e5ed5ce6accbda5d3`. GitHub's deployment record confirmed a successful `github-pages` deployment and returned the exact public URL above. Portfolio documentation updates use the same workflow; [its run history](https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/actions/workflows/deploy-site.yml) identifies the latest deployed commit.
+The [initial website release run](https://github.com/AndyLamyinwik/HongKong-minibus-ridership-analysis/actions/runs/38204286899) completed both **build** and **deploy** successfully for commit `492bc3f31de71bb5b8a0a00e5ed5ce6accbda5d3`. GitHub's deployment record confirmed a successful `github-pages` deployment under the former repository path `/hong-kong-minibus-ridership-analysis/`. The current website link reflects the later repository rename. Portfolio documentation updates use the same workflow; [its run history](https://github.com/AndyLamyinwik/HongKong-minibus-ridership-analysis/actions/workflows/deploy-site.yml) identifies the latest deployed commit.
 
 Anonymous requests verified every one of the **26 generated files** with HTTP 200 and matching SHA-256, including scripts, CSS, fonts, notices and bundled JSON. The production base is `/hong-kong-minibus-ridership-analysis/`; all 24 runtime references resolve under that prefix. The actual public data asset matches the preserved export, rather than a newly fetched source vintage.
 
@@ -207,3 +207,9 @@ Full-page desktop, tablet and mobile screenshots plus representative recovery/sh
 The opening repository README links prominently to the verified publication and retains its five major findings, source links and original Python/SQL/Streamlit instructions. The repository website field points to the same Pages URL. Status documentation distinguishes the public static website from the separately documented local Streamlit implementation. Historical Phase 6A/B no-publication statements remain explicitly scoped to their earlier phases.
 
 No release-blocking defect was identified. Browser checks used the available Chromium-based browser; Safari, Firefox, physical touchscreen devices and complete assistive-technology verification remain outside the tested matrix. RMB estimation, source revisions and transport/fleet measurement limitations remain visible in the research. See [the deployment record](../../docs/website_deployment.md) for maintenance and verification steps.
+
+### Repository rename repair — 12 October 2026
+
+The repository's current name is `HongKong-minibus-ridership-analysis`. The old README Pages link returned HTTP 404, and the new homepage still referenced assets under the old Vite base. The repair synchronizes active links and the build base with the exact current path `/HongKong-minibus-ridership-analysis/`.
+
+The frontend regression suite returned **146 passed, 0 failed** and the exporter contracts returned **16 passed, 0 failed**. The deterministic export check passed. Comparing the JSON with the previous release permits changes only to `provenance.methodology_url` and `provenance.findings_url`; all numerical observations, KPIs, definitions and seventeen input hashes remain identical. The original analytical code, datasets and research conclusions are unchanged. Historical checks above retain their original tested URLs, paths and byte counts.

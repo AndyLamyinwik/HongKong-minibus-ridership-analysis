@@ -1113,8 +1113,8 @@
       "https://www.td.gov.hk/datagovhk_tis/mttd-csv/en/table22_eng.csv"
     ],
     "terms_url": "https://data.gov.hk/en/terms-and-conditions",
-    "methodology_url": "https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/docs/analysis_methodology.md",
-    "findings_url": "https://github.com/AndyLamyinwik/hong-kong-minibus-ridership-analysis/blob/main/reports/eda_findings.md",
+    "methodology_url": "https://github.com/AndyLamyinwik/HongKong-minibus-ridership-analysis/blob/main/docs/analysis_methodology.md",
+    "findings_url": "https://github.com/AndyLamyinwik/HongKong-minibus-ridership-analysis/blob/main/reports/eda_findings.md",
     "input_sha256": {
       "analysis/outputs/annual_ridership.csv": "ed6028c4f89688e25aba45ed643f0a86fce6ba1b12064d66e22a3e1726c00896",
       "analysis/outputs/endpoint_comparison.csv": "dbc53199138a4d7a3e2039d5d4fc6de6cffd7b2af380d30440a061bffd44c2ce",
