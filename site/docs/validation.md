@@ -2,6 +2,8 @@
 
 The Phase 6A and Phase 6B entries preserve their original local verification. The [Phase 6C public release record](#phase-6c--public-release) documents the deployed research website and latest release checks.
 
+The [bilingual implementation verification](#bilingual-interface--implementation-verification) records the subsequent English / Traditional Chinese interface checks separately from historical deployment evidence.
+
 ## Phase 6A — Approved homepage
 
 Validated locally on **12 October 2026**. The scope is the design system and functional static homepage. The checks below describe observed results in the local environment; they do not claim testing of a hosted production service.
@@ -213,3 +215,46 @@ No release-blocking defect was identified. Browser checks used the available Chr
 The repository's current name is `HongKong-minibus-ridership-analysis`. The old README Pages link returned HTTP 404, and the new homepage still referenced assets under the old Vite base. The repair synchronizes active links and the build base with the exact current path `/HongKong-minibus-ridership-analysis/`.
 
 The frontend regression suite returned **146 passed, 0 failed** and the exporter contracts returned **16 passed, 0 failed**. The deterministic export check passed. Comparing the JSON with the previous release permits changes only to `provenance.methodology_url` and `provenance.findings_url`; all numerical observations, KPIs, definitions and seventeen input hashes remain identical. The original analytical code, datasets and research conclusions are unchanged. Historical checks above retain their original tested URLs, paths and byte counts.
+
+## Bilingual interface — Implementation verification
+
+Verified locally on **12 October 2026**. The header now supports English and Traditional Chinese through native **English / 繁體中文** buttons outside the collapsible mobile navigation. This section records implementation and local browser evidence; it does not claim verification of a public deployment of this feature.
+
+### Automated checks and preservation
+
+| Check | Observed result |
+| --- | --- |
+| Frontend Node suite | **177 passed, 0 failed**: all 146 existing tests, 25 chart-localization tests and six language-controller tests |
+| Isolated standard-library exporter contracts | **16 passed, 0 failed** |
+| Deterministic export `--check` | Passed; the research JSON remains consistent with the seventeen preserved analytical input and definition files |
+| Presentation-only scope | Historical observations, KPIs, formulas, measurement definitions and analytical conclusions are unchanged |
+| Original Python / SQL / Streamlit suite | Not rerun for this interface change; the original analytical implementation and datasets were not modified |
+| Typography dependencies | No new font package; Chinese glyphs use available system-font fallbacks |
+
+Localization tests exercise translated chart labels, tooltip qualifications, accessibility descriptions and unchanged numerical series, alongside language resolution and static translation coverage. Existing tests continue to cover source agreement, chart behavior and chapter contracts. The previous full analytical-suite results remain in their dated historical entries rather than being presented as a new run.
+
+### Actual local browser observations
+
+| Scenario | Observed result |
+| --- | --- |
+| Language selection | English is the default; both native buttons switch the publication and update selected state and document language metadata |
+| URL and saved preference | A supported `?lang=en` or `?lang=zh-Hant` selection takes precedence over an optional saved choice; switching preserves other query parameters and the current chapter anchor |
+| Translation coverage | Chapter copy, navigation, controls, chart labels/tooltips/descriptions, table headings/captions, readouts, loading/error messages and formatted revision date change with the selected language |
+| Reader-state preservation | English ↔ Traditional Chinese retains annual absolute view with 2019 selected, MTR recovery, minibus share focus with 2017 selected, GMB fleet proxy with 2018 selected, and an open disclosure |
+| Desktop, 1440 × 1000 CSS pixels | Traditional Chinese renders all four SVG charts without horizontal page overflow; document client and scroll widths both 1425px |
+| Tablet, 768 × 1024 CSS pixels | Chinese publication and controls fit; all four SVG charts render without horizontal page overflow |
+| Mobile, 390 × 844 | Chinese headings, controls and charts remain readable; the language switch is available with the menu closed, and the mobile menu works |
+| Narrow mobile, 320 × 720 | Four SVG charts render without horizontal page overflow; the share table scrolls within a 261px container around 330px content |
+| Controlled loading | Loading messages translate in both languages while the analytical controls remain in their loading state |
+| Controlled unavailable data | Failure messages and retry labels translate in both languages; unavailable values are not presented as zero |
+| Missing recovery chapter | In both languages, only recovery displays its localized error; the annual, share and fleet charts remain available and the original four KPIs remain valid |
+| Retry | Restoring the controlled response and using Retry restores all four plots and the exact headline KPI values |
+| Nominal application logs | No warnings or errors captured during normal browser loading and tested interactions |
+
+The interface preserves RMB estimate labels, recovery baselines, the four-mode share denominator and the limitations of the licensed vehicle-day proxy in both languages. Source links continue to point to the existing research documentation, whose language is unchanged.
+
+### Review limits
+
+Actual browser observations used the available Chromium-based browser. These checks do not constitute a Safari/Firefox matrix, testing on physical touchscreen devices, a full assistive-technology audit or professional translation certification. Chinese glyph appearance and line breaks depend on installed system fonts. Browser storage may be unavailable; persistence is optional and language selection remains usable without it.
+
+The existing [GitHub Pages workflow](https://github.com/AndyLamyinwik/HongKong-minibus-ridership-analysis/actions/workflows/deploy-site.yml) repeats the automated checks before deployment. Its run details identify the deployed commit. Hosted behavior can be checked directly using the [English publication](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/?lang=en) and [Traditional Chinese publication](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/?lang=zh-Hant), including a switch in each direction, retained chart selections and a reload. The observations above describe the local production build tested for this update.

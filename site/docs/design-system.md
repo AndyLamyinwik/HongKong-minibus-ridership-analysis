@@ -42,9 +42,11 @@ Do not use the rule token for essential control boundaries or focus indicators: 
 
 Self-host Instrument Serif in regular and italic styles for display headings and DM Sans for interface and body text. Retain the font licenses beside the distributed font assets. Font files are static resources; the page should not request fonts from a third-party service at runtime.
 
+Traditional Chinese uses available system-font fallbacks for Chinese glyphs, including Microsoft JhengHei and PingFang TC for body text, and Songti TC or PMingLiU for display headings. Noto faces may be used when already installed. No additional Chinese font package or remote font service is introduced. Chinese headings use adjusted line height and spacing, and Chinese emphasis uses normal upright glyphs. Exact glyph appearance and wrapping depend on the fonts available on the reader's device.
+
 Use the serif face for the hero and principal narrative headings. Use DM Sans for navigation, paragraphs, metrics, controls, tables and chart labels. Numbers in the KPI strip should use tabular numerals to keep the percentage signs and decimals visually stable. Display text scales responsively with `clamp()`; readable body text maintains a comfortable line height and a restrained line length. Reserve uppercase lettering for brief metadata, such as the study period, rather than long reading passages.
 
-The hero preserves the approved language exactly:
+In English, the hero preserves the approved language exactly:
 
 > **One Industry. Two Different Futures.**
 >
@@ -54,7 +56,7 @@ The second phrase may use italic display type and a restrained accent. Keep one 
 
 ## Publication composition
 
-1. **Navigation:** project identity, Overview, Research, Methodology and the existing GitHub repository. Internal links are anchors in the same HTML document. A research contents navigation introduces Recovery, Landscape, Fleet and Methods.
+1. **Navigation:** project identity, Overview, Research, Methodology and the existing GitHub repository. Native English / 繁體中文 language buttons remain in the header outside the collapsible mobile menu. Internal links are anchors in the same HTML document. A research contents navigation introduces Recovery, Landscape, Fleet and Methods.
 2. **Hero:** the exact headline and subtitle, a concise explanation of the study, the 2015–2025 period and discreet government-data attribution. The typography introduces the story without stock imagery.
 3. **Findings strip:** four figures with visible units, baselines and estimate qualifications. The first three describe 2015–2025 percentage change; the final figure describes 2025 RMB journeys as a percentage of their 2019 level.
 4. **Interactive evidence:** one ECharts comparison of annual Green and Red Minibus journeys, with an indexed view, an absolute view and accessible alternatives.
@@ -81,6 +83,8 @@ Indexed trends use **each mode's own 2015 annual journeys = 100**. Absolute tren
 
 Use chart legends reading “Green Minibuses” and “Red Minibuses · estimated.” Tooltips identify the year, category and displayed measurement, retaining the estimate label. Avoid smoothing that suggests unobserved measurements between the annual observations. The actual data points and the full 2015–2025 coverage remain clear in both chart views.
 
+The Traditional Chinese equivalents are “專線小巴” and “紅色小巴（估算）.” Use “乘客旅次” and “百萬旅次” for passenger-flow units, “公布數字” and “估算” for measurement qualifications, and “持牌車輛數” for licensing stocks. Describe the proxy fully as “持牌車輛日旅次指標（proxy）,” with shorter labels such as “每持牌車輛日旅次” where space requires. Retain the explanation that this descriptive measure does not establish occupancy or operational productivity. A language change must not alter the numerical series, units, baselines, comparison-group denominator or interpretation limits.
+
 The central narrative describes published historical change. It does not establish causes, identify individual passengers switching modes or predict future demand. Descriptive period shading, if used, should carry a timing label such as “Disruption period,” rather than a causal claim.
 
 ### Chapter measurement boundaries
@@ -104,10 +108,20 @@ The central narrative describes published historical change. It does not establi
 - Treat loading, empty data and data-load failure as distinct states. Explain the state in text and prevent unavailable controls from implying that missing observations equal zero.
 - Honor `prefers-reduced-motion`. Disable chart animation and animated scrolling when reduced motion is requested; any other transitions should be brief and purposeful.
 
+### Bilingual behavior
+
+The native language buttons have visible selected styling, accurate `aria-pressed` values and their own `lang` attributes. The document's `lang` is `en` or `zh-Hant` according to the active choice. Translate navigation, chapter copy, button/selector labels, chart descriptions and tooltips, table headings and captions, live readouts, loading/error messages and formatted dates together. The numerical data and source links remain common to both languages.
+
+English is the default. A supported `lang` URL parameter takes precedence over an optional saved browser preference; unsupported or absent choices fall back to the saved supported language or English. On a switch, preserve unrelated query parameters and the current anchor. Storage access is optional and must not block interaction.
+
+Keep selected chart views, services, years and open native disclosures when changing language. Ready charts redraw with translated presentation; unavailable and loading chapters retain their current state with translated explanations. A language switch should not restart a data download or reset a reader's analytical selections.
+
 ## Responsive behavior
 
 Use **680px** and **960px** as the principal layout breakpoints. The wide layout gives the narrative, findings and chart enough room without excessively stretching body text. The intermediate layout reduces columns and adjusts chart spacing. The compact layout keeps the page in a single reading flow, allows navigation and chart controls to wrap, and reduces display type without truncating the headline.
 
 The finding strip moves from four columns to a compact arrangement as space narrows. Its captions and signs remain legible; no figure depends on hovering to reveal its baseline. Each chart keeps a reserved height to limit layout shifts and resizes with its container. Reduce the number of visible year ticks on small screens while retaining all eleven observations and the complete annual tables. Recovery uses compact plotted service labels, with full service definitions available in the selected readout and table. Wrap research legends, chapter links and native controls intentionally. Use responsive label spacing rather than shrinking chart text to an unreadable size.
+
+The mobile header places the language switch on its own row, visible while the navigation menu is closed. Check both languages at narrow widths: Chinese headings and methodology should wrap naturally, estimation labels must remain legible, and a wide data table must scroll within its own region rather than widening the whole page.
 
 Body content and controls must fit the viewport without horizontal page scrolling. An overflowing data table may use its own clearly bounded scrolling region. Desktop, tablet and mobile screenshots should document the rendered behavior separately from this intended specification.

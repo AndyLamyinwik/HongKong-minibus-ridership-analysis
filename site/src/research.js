@@ -5,7 +5,6 @@ import {
   validateFleet,
   selectedShareRows,
   selectedFleetRow,
-  shareComponents,
 } from "./research-data.js";
 import {
   recoveryOptions,
@@ -13,14 +12,15 @@ import {
   fleetOptions,
   recoveryModes,
   modeColors,
-  modeLabels,
+  getModeLabels,
 } from "./research-charts.js";
+import { getResearchText } from "./research-translations.js";
 
 const integer = (value) =>
   new Intl.NumberFormat("en-GB", { maximumFractionDigits: 0 }).format(value);
 const elements = (id) => document.querySelector(`#${id}`);
 
-export function createResearch(echarts, retryData) {
+export function createResearch(echarts, retryData, getLanguage = () => "en") {
   const motion = matchMedia("(prefers-reduced-motion: reduce)");
   const mobile = matchMedia("(max-width: 680px)");
   const states = {
@@ -47,9 +47,12 @@ export function createResearch(echarts, retryData) {
   let shareFocus = "all";
   let fleetMode = "RMB";
   let fleetMeasure = "compare";
+  const text = () => getResearchText(getLanguage());
+  const labels = () => getModeLabels(getLanguage());
   const options = () => ({
     mobile: mobile.matches,
     reducedMotion: motion.matches,
+    language: getLanguage(),
   });
 
   function buttonState(selector, key, value) {
@@ -95,9 +98,11 @@ export function createResearch(echarts, retryData) {
       element.textContent = format(getter(element));
     });
   }
-  function setStatus(name, message, loading = false) {
+  function setStatus(name, statusKey, loading = false) {
     const state = states[name];
     state.ready = false;
+    state.statusKey = statusKey;
+    state.loading = loading;
     if (!loading) {
       state.chart?.dispose();
       state.chart = null;
@@ -105,12 +110,12 @@ export function createResearch(echarts, retryData) {
     const status = elements(`${name}-status`);
     status.hidden = false;
     status.setAttribute("role", loading ? "status" : "alert");
-    status.querySelector("p").textContent = message;
+    status.querySelector("p").textContent = text().statuses[statusKey];
     status.querySelector("button").hidden = loading;
     elements(`${name}-shell`).setAttribute("aria-busy", String(loading));
     elements(`${name}-chart`).setAttribute(
       "aria-label",
-      `${name === "share" ? "Comparison-group shares" : name === "fleet" ? "Licensed fleet comparison" : "Recovery comparison"} ${loading ? "is loading" : "is unavailable"}.`,
+      text().chartState(name, loading),
     );
     elements(`${name}-inspector`).hidden = true;
     const sectionId = name === "share" ? "landscape" : name;
@@ -132,14 +137,14 @@ export function createResearch(echarts, retryData) {
     });
     if (name === "fleet")
       elements("fleet-endpoint-note").textContent = loading
-        ? "Endpoint comparison is loading."
-        : "Endpoint comparison is unavailable.";
+        ? text().endpointLoading
+        : text().endpointUnavailable;
     const tr = document.createElement("tr");
     const cell = document.createElement("td");
     cell.colSpan = state.tableColumns;
     cell.textContent = loading
-      ? "Research data is loading."
-      : "This comparison is unavailable. Use the linked source documentation or retry.";
+      ? text().tableLoading
+      : text().tableUnavailable;
     tr.append(cell);
     elements(`${name}-table`).replaceChildren(tr);
     if (name === "share") {
@@ -149,9 +154,12 @@ export function createResearch(echarts, retryData) {
   }
   function markReady(name) {
     states[name].ready = true;
+    states[name].statusKey = null;
+    states[name].loading = false;
     elements(`${name}-status`).hidden = true;
     elements(`${name}-shell`).setAttribute("aria-busy", "false");
     elements(`${name}-inspector`).hidden = false;
+    elements(`${name}-chart`).setAttribute("aria-label", text().chartReady(name));
     const sectionId = name === "share" ? "landscape" : name;
     document
       .querySelectorAll(`#${sectionId} button, #${sectionId} select`)
@@ -173,7 +181,7 @@ export function createResearch(echarts, retryData) {
       { notMerge: true },
     );
     elements("recovery-readout").textContent =
-      `${modeLabels[mode]}: ${percentage(row.recovery_pct)} of its own 2019 annual journeys in 2025.`;
+      text().recoveryReadout(labels()[mode], percentage(row.recovery_pct));
     elements("recovery-readout").style.color = modeColors[mode];
   }
   function shareYear(showTooltip = false) {
@@ -187,8 +195,8 @@ export function createResearch(echarts, retryData) {
         const label = document.createElement("span");
         label.textContent =
           row.mode === "PLB"
-            ? "PLB subtotal · includes estimates"
-            : modeLabels[row.mode];
+            ? text().plbSubtotal
+            : labels()[row.mode];
         const value = document.createElement("strong");
         value.textContent = percentage(row.share_pct);
         span.style.color = modeColors[row.mode];
@@ -208,10 +216,7 @@ export function createResearch(echarts, retryData) {
       shareOptions(data, { ...options(), focus: shareFocus }),
       { notMerge: true },
     );
-    elements("share-unit").textContent =
-      shareFocus === "minibuses"
-        ? "Minibus detail · 0–20% · same four-mode denominator"
-        : "Share of the four-mode comparison group · percent";
+    elements("share-unit").textContent = text().shareUnit(shareFocus);
     elements("share-legend")
       .querySelectorAll(".legend-mtr, .legend-bus")
       .forEach((item) => {
@@ -226,11 +231,13 @@ export function createResearch(echarts, retryData) {
     const annual = data.annual.find(
       (row) => row.mode === fleetMode && row.year === year,
     );
-    const text =
-      fleetMeasure === "compare"
-        ? `${integer(row.december_licensed_vehicles)} reported licensed vehicles in December · ${(annual.journeys_thousands / 1000).toFixed(2)} million annual journeys${fleetMode === "RMB" ? " · estimated" : ""}`
-        : `${row.journeys_per_licensed_vehicle_day_proxy.toFixed(2)} journeys per licensed vehicle-day (proxy)${fleetMode === "RMB" ? " · estimated passenger input" : ""}`;
-    elements("fleet-readout").textContent = text;
+    elements("fleet-readout").textContent = text().fleetReadout(
+      fleetMeasure,
+      integer(row.december_licensed_vehicles),
+      (annual.journeys_thousands / 1000).toFixed(2),
+      row.journeys_per_licensed_vehicle_day_proxy.toFixed(2),
+      fleetMode === "RMB",
+    );
     if (showTooltip)
       states.fleet.chart.dispatchAction({
         type: "showTip",
@@ -240,15 +247,7 @@ export function createResearch(echarts, retryData) {
   }
   function fleetLegend() {
     const legend = elements("fleet-legend");
-    const names =
-      fleetMeasure === "compare"
-        ? [
-            "December licensed stock · reported",
-            `Annual journeys${fleetMode === "RMB" ? " · estimated" : ""}`,
-          ]
-        : [
-            `Annual vehicle-day proxy${fleetMode === "RMB" ? " · estimated passenger input" : ""}`,
-          ];
+    const names = text().fleetLegend(fleetMeasure, fleetMode === "RMB");
     legend.replaceChildren(
       ...names.map((name, index) => {
         const item = document.createElement("li");
@@ -271,17 +270,23 @@ export function createResearch(echarts, retryData) {
       fleetOptions(data, fleetMode, fleetMeasure, options()),
       { notMerge: true },
     );
-    elements("fleet-unit").textContent =
-      `${fleetMode} · ${fleetMeasure === "compare" ? "own 2015 = 100 for each measure" : "own 2015 annual vehicle-day proxy = 100"}`;
+    elements("fleet-unit").textContent = text().fleetUnit(fleetMode, fleetMeasure);
     const endpoint = data.fleet.endpoints.find((row) => row.mode === fleetMode);
-    elements("fleet-endpoint-note").textContent =
-      `${fleetMode} · December licensed stock: ${integer(endpoint.december_vehicles_2015)} → ${integer(endpoint.december_vehicles_2025)} (${endpoint.stock_change_pct >= 0 ? "+" : ""}${percentage(endpoint.stock_change_pct)}). Annual vehicle-day proxy change, 2015 → 2025: ${percentage(endpoint.proxy_change_pct)}${fleetMode === "RMB" ? " · estimated passenger input" : ""}.`;
+    elements("fleet-endpoint-note").textContent = text().fleetEndpoint(
+      fleetMode,
+      integer(endpoint.december_vehicles_2015),
+      integer(endpoint.december_vehicles_2025),
+      `${endpoint.stock_change_pct >= 0 ? "+" : ""}${percentage(endpoint.stock_change_pct)}`,
+      percentage(endpoint.proxy_change_pct),
+      fleetMode === "RMB",
+    );
     buttonState("[data-fleet-mode]", "fleetMode", fleetMode);
     buttonState("[data-fleet-measure]", "fleetMeasure", fleetMeasure);
     fleetLegend();
     fleetYear();
-    elements("fleet-table-caption").textContent =
-      `${fleetMode === "RMB" ? "Red" : "Green"} Minibus annual context. December licensing stocks are reported; ${fleetMode === "RMB" ? "journeys and the proxy include RMB estimates" : "journeys use reported passenger totals"}. The vehicle-day denominator sums all twelve month-end stocks × calendar days.`;
+    elements("fleet-table-caption").textContent = text().fleetTableCaption(
+      fleetMode === "RMB",
+    );
     tableRows(
       "fleet-table",
       data.fleet.annual
@@ -308,7 +313,7 @@ export function createResearch(echarts, retryData) {
         const option = document.createElement("option");
         option.value = mode;
         option.textContent =
-          mode === "PLB" ? "PLB total · includes estimates" : modeLabels[mode];
+          mode === "PLB" ? text().plbOption : labels()[mode];
         return option;
       }),
     );
@@ -324,13 +329,13 @@ export function createResearch(echarts, retryData) {
       recoveryModes.map((mode) => {
         const row = data.recovery.find((row) => row.mode === mode);
         return [
-          modeLabels[mode],
+          labels()[mode],
           percentage(row.recovery_pct),
           row.mode === "PLB"
-            ? "Includes estimates"
+            ? text().basis.includesEstimates
             : row.mode === "RMB"
-              ? "Estimated"
-              : "Reported",
+              ? text().basis.estimated
+              : text().basis.reported,
         ];
       }),
     );
@@ -355,7 +360,7 @@ export function createResearch(echarts, retryData) {
       track.style.setProperty("--gmb-share", `${gmb}%`);
       track.setAttribute(
         "aria-label",
-        `${year} PLB composition: Green Minibuses ${gmb.toFixed(2)}%, estimated Red Minibuses ${(100 - gmb).toFixed(2)}%.`,
+        text().composition(year, gmb.toFixed(2), (100 - gmb).toFixed(2)),
       );
     }
     elements("composition-strips").hidden = false;
@@ -456,15 +461,12 @@ export function createResearch(echarts, retryData) {
   return {
     loading() {
       Object.keys(states).forEach((name) =>
-        setStatus(name, "Loading the verified research comparison…", true),
+        setStatus(name, "loading", true),
       );
     },
     unavailable() {
       Object.keys(states).forEach((name) =>
-        setStatus(
-          name,
-          "The verified research data could not be loaded. Please try again.",
-        ),
+        setStatus(name, "unavailable"),
       );
     },
     render(researchData) {
@@ -479,16 +481,33 @@ export function createResearch(echarts, retryData) {
           render();
           markReady(name);
         } catch {
-          setStatus(
-            name,
-            "This research comparison is missing or invalid. Retry, or read the linked source documentation.",
-          );
+          setStatus(name, "invalid");
         }
       }
       const date = data.provenance?.expected_revision_date;
       if (/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
         elements("revision-date").textContent = new Intl.DateTimeFormat(
-          "en-GB",
+          text().locale,
+          { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" },
+        ).format(new Date(`${date}T00:00:00Z`));
+    },
+    refreshLanguage() {
+      for (const [name, render] of [
+        ["recovery", renderRecovery],
+        ["share", renderShare],
+        ["fleet", renderFleet],
+      ]) {
+        if (states[name].ready) {
+          render();
+          markReady(name);
+        } else if (states[name].statusKey) {
+          setStatus(name, states[name].statusKey, states[name].loading);
+        }
+      }
+      const date = data?.provenance?.expected_revision_date;
+      if (/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+        elements("revision-date").textContent = new Intl.DateTimeFormat(
+          text().locale,
           { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" },
         ).format(new Date(`${date}T00:00:00Z`));
     },

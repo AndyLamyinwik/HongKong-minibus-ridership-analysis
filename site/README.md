@@ -2,6 +2,8 @@
 
 An editorial research website for **Hong Kong Minibus Ridership: A Decade in Transition (2015–2025)**. The approved homepage introduces **“One Industry. Two Different Futures.”** through four verified findings and an interactive annual Green / Red Minibus comparison. Four subsequent chapters examine recovery, comparison-group shares, fleet context and methodology.
 
+The publication supports **English and Traditional Chinese**. The header provides a native **English / 繁體中文** switch, including when the mobile navigation menu is closed. Both languages use the same validated historical data and analytical definitions.
+
 **[Explore the published research website](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/)** — verified on GitHub Pages on 12 October 2026.
 
 The site uses warm paper, deep ink, jade and muted coral, with self-hosted Instrument Serif and DM Sans. Its [design system](docs/design-system.md) describes the visual and accessibility rules. [Metric provenance](docs/metric_provenance.md) maps every numerical view to the existing analytical tables. The [validation record](docs/validation.md) records implementation checks, build results and browser evidence.
@@ -50,6 +52,16 @@ Tooltips expose values in their original units, while labeled native controls an
 
 Loading states reserve chart space and display em dashes rather than zero-valued findings. Empty, invalid and unavailable data receive explanatory messages; retry is available for a failed download. Reduced-motion preferences disable chart animation and animated scrolling. Mobile layouts wrap controls and legends, shorten plotted labels where necessary, retain estimate qualifications and allow wide tables to scroll within bounded regions.
 
+## Language selection
+
+English is the default when no supported language is specified or saved. Selecting **繁體中文** translates the publication, navigation, controls, chart labels and tooltips, data-table headings, accessibility descriptions, loading/error messages and displayed revision date. The supporting research documents linked from the website retain their existing language.
+
+The selected language is saved locally when browser storage is available. A valid `?lang=en` or `?lang=zh-Hant` URL takes precedence over a saved preference, so a language choice can be shared in a link. Switching languages updates that URL parameter while preserving other query parameters and the current chapter anchor. Storage restrictions do not prevent the switch from working.
+
+Switching languages keeps the current annual view/year, recovery service, share focus/year and fleet service/measure/year. Open methodology and table disclosures remain open. It changes presentation only: the source asset, observations, formulas, estimation qualifications and research findings remain the same.
+
+Traditional Chinese typography uses available system-font fallbacks and language-specific spacing; it adds no font package or remote font request. Font appearance and line breaks can vary with the reader's operating system. The [bilingual validation record](docs/validation.md#bilingual-interface--implementation-verification) documents actual browser checks and their limits.
+
 ## Technology and file structure
 
 The site uses HTML5, CSS and JavaScript ES modules with **Apache ECharts 6.1.0** and **Vite 8.3.4**. The build bundles required line/bar chart components, the SVG renderer and locally served fonts. ECharts and zrender have separate vendor chunks for caching.
@@ -59,21 +71,26 @@ site/
   index.html                    Semantic publication and chapter copy
   package.json                  Development, test and build commands
   pnpm-lock.yaml                Locked dependency graph
-  vite.config.js                Relative build paths and vendor chunks
+  vite.config.js                GitHub Pages base path and vendor chunks
   src/
     main.js                     Loading, rendering and native interactions
+    i18n.js                     Language resolution, switch and persistence
+    static-translations.js      English and Traditional Chinese chapter copy
+    annual-translations.js      Annual readouts and loading/error messages
+    chart-translations.js       Shared chart labels, terminology and fonts
     data.js                     Runtime contracts and display formatting
     chart.js                    Preserved indexed / absolute annual chart
     research-charts.js          Recovery, comparison-group and fleet charts
     research-data.js            Runtime contracts for the new chapter data
     research.js                 Chapter rendering and native interactions
+    research-translations.js    Chapter readouts, captions and status messages
     style.css                   Responsive editorial layouts
   public/
     data/research.json          Verified static research asset
     favicon.svg                 Original vector project mark
     licenses/                   Dependency and font attribution texts
   scripts/export_data.py        Deterministic export and stale-file check
-  tests/                        Source agreement, contracts and presentation
+  tests/                        Source agreement, contracts and localization
   docs/
     design-system.md            Visual and interaction specification
     metric_provenance.md        Source columns, formulas and interpretation
