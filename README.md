@@ -1,10 +1,16 @@
 # Hong Kong Minibus Ridership: A Decade in Transition
 
+**Language / 語言 / 语言:** [English](#english) · [繁體中文](#traditional-chinese) · [简体中文](#simplified-chinese)
+
+<a id="english"></a>
+
 **One Industry, Two Different Futures.** A historical transport analytics study, 2015–2025.
 
 **[Explore the Interactive Research Website](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/)**
 
 Read the complete research through interactive annual trends, recovery comparisons, transport shares and fleet context. The publication is hosted on GitHub Pages, with visible methodology, source links and estimation qualifications.
+
+**Using the website:** open the link above in your browser, choose **English / 繁體中文** at the top, then explore the chapters using the year selectors, transport-mode controls and chart views. Tooltips and expandable data tables provide exact values. Read **Methodology & sources** for definitions and interpretation limits. No installation is needed to browse the published website.
 
 Hong Kong's Green and Red Minibuses share an industry headline but follow different passenger-demand trajectories. This project examines eleven complete years of official transport statistics to distinguish long-term change, disruption-period patterns and subsequent recovery, with MTR railway services and franchised buses as comparators.
 
@@ -162,3 +168,65 @@ The named test directory is disposable; pytest replaces it. A fresh Windows/Pyth
 - **Period comparisons are descriptive:** COVID-19 timing, recovery ratios and aggregate associations do not identify causal effects.
 
 Original project code is [MIT licensed](LICENSE). Government source materials and derived factual values retain separate [reuse conditions and attribution](docs/data_reuse.md), documented in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). No external dataset ownership or Government endorsement is claimed. The four raw CSVs accompany the project; the specification PDF and linked annual publications are not rehosted in the publication set.
+
+---
+
+<a id="traditional-chinese"></a>
+
+## 繁體中文簡介
+
+### 這個項目研究甚麼？
+
+本項目利用香港運輸署的官方統計，研究 **2015–2025 年專線小巴（GMB）與紅色小巴（RMB）的乘客旅次變化**，並與港鐵鐵路服務及專營巴士比較。分析涵蓋 **11 個完整年份、132 個月**，結合 Python 資料處理、SQLite／SQL 驗證及互動視覺化，探索長期趨勢、受衝擊時期的變化、需求復甦與車隊背景。
+
+### 網站入口與使用方式
+
+**[開啟互動研究網站（繁體中文）](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/?lang=zh-Hant)** · [開啟英文版](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/?lang=en)
+
+網站可直接在瀏覽器使用，毋須安裝軟件。
+
+1. **選擇語言：** 在網站頂部切換 **English / 繁體中文**；瀏覽器允許儲存時，網站會記住你的選擇。
+2. **瀏覽研究章節：** 從首頁重點開始，向下查看年度趨勢、復甦比較、交通比較組別佔比，以及車隊與乘客需求。
+3. **互動查看數據：** 使用年份選單、交通模式及圖表視圖選項進行比較；透過圖表提示或展開資料表查看數值。切換語言會保留已選的圖表設定。
+4. **了解定義與限制：** 閱讀「研究方法與資料來源」。年度趨勢指數以各服務自身的 **2015 年旅次 = 100**；復甦比較則以各服務自身的 **2019 年旅次 = 100%**，兩者基準不同。
+
+**解讀提醒：** 紅色小巴旅次屬估算，公共小巴總數也包含這部分估算。交通佔比只涵蓋公共小巴、港鐵鐵路服務與專營巴士的指定比較組別，並非全港公共交通市場。研究描述歷史變化，不能據此確定因果或個別乘客轉用交通模式。
+
+### 完整報告、程式碼與本機執行
+
+- [完整研究結果（英文）](reports/eda_findings.md) · [官方資料來源與品質說明（英文）](docs/data_sources.md)
+- [本機執行方式（英文）](#run-locally)：包含研究網站與另一個 Streamlit 本機版本的安裝及啟動指令。
+- [研究網站開發說明（英文）](site/README.md) · [Streamlit 使用說明（英文）](docs/dashboard.md)；Streamlit 程式入口為 [`dashboard/app.py`](dashboard/app.py)。
+
+[返回英文介紹](#english) · [查看简体中文简介](#simplified-chinese)
+
+---
+
+<a id="simplified-chinese"></a>
+
+## 简体中文简介
+
+### 这个项目研究什么？
+
+本项目利用香港运输署的官方统计，研究 **2015–2025 年专线小巴（GMB）与红色小巴（RMB）的乘客旅次变化**，并与港铁铁路服务及专营巴士比较。分析覆盖 **11 个完整年份、132 个月**，结合 Python 数据处理、SQLite／SQL 验证及交互式可视化，探索长期趋势、受冲击时期的变化、需求恢复与车队背景。
+
+### 网站入口与使用方法
+
+**[打开交互研究网站（繁体中文界面）](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/?lang=zh-Hant)** · [打开英文版](https://andylamyinwik.github.io/HongKong-minibus-ridership-analysis/?lang=en)
+
+网站可直接在浏览器使用，无需安装软件。**网站目前提供英语和繁体中文界面；本节为简体中文使用说明。**
+
+1. **选择语言：** 在网站顶部切换 **English / 繁體中文**；浏览器允许存储时，网站会记住你的选择。
+2. **浏览研究章节：** 从首页重点开始，向下查看年度趋势、恢复比较、交通比较组别占比，以及车队与乘客需求。
+3. **交互查看数据：** 使用年份菜单、交通方式及图表视图选项进行比较；通过图表提示或展开数据表查看数值。切换语言会保留已选的图表设置。
+4. **了解定义与限制：** 阅读「研究方法与资料来源」。年度趋势指数以各服务自身的 **2015 年旅次 = 100**；恢复比较则以各服务自身的 **2019 年旅次 = 100%**，两者基准不同。
+
+**解读提醒：** 红色小巴旅次为估算，公共小巴合计也包含这部分估算。交通占比仅覆盖公共小巴、港铁铁路服务与专营巴士的指定比较组别，并非全港公共交通市场。研究描述历史变化，不能据此确定因果或个别乘客改用其他交通方式。
+
+### 完整报告、代码与本地运行
+
+- [完整研究结果（英文）](reports/eda_findings.md) · [官方数据来源与质量说明（英文）](docs/data_sources.md)
+- [本地运行方法（英文）](#run-locally)：包含研究网站与另一个 Streamlit 本地版本的安装及启动命令。
+- [研究网站开发说明（英文）](site/README.md) · [Streamlit 使用说明（英文）](docs/dashboard.md)；Streamlit 程序入口为 [`dashboard/app.py`](dashboard/app.py)。
+
+[返回英文介绍](#english) · [查看繁體中文簡介](#traditional-chinese)
